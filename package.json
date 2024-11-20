@@ -1,0 +1,12 @@
+{
+    "name": "Node_red_brain2API",
+    "description": "Test of Brain2 API capabilities",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "flows.json",
+            "credentialsFile": "flows_cred.json"
+        }
+    }
+}
