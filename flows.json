@@ -1,1 +1,1332 @@
-[]
+[
+    {
+        "id": "8eab0a3c643bf6ac",
+        "type": "tab",
+        "label": "Bearer Token Authentication",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "d2df3ee586784503",
+        "type": "ui_spacer",
+        "z": "8eab0a3c643bf6ac",
+        "name": "spacer",
+        "group": "f2f686aa2b9f097c",
+        "order": 3,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "b6ae1172792ff4d5",
+        "type": "ui_spacer",
+        "z": "8eab0a3c643bf6ac",
+        "name": "spacer",
+        "group": "f2f686aa2b9f097c",
+        "order": 4,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "b35b991b388efa02",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "f2f686aa2b9f097c",
+        "type": "ui_group",
+        "name": "Devices",
+        "tab": "65c5f36ea34fe529",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7c885960ff9c5601",
+        "type": "ui_group",
+        "name": "Production Lines",
+        "tab": "1760e0edd51dbc3b",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "aad64061aabbae8c",
+        "type": "ui_group",
+        "name": "Login",
+        "tab": "395325b70f97b6f7",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8821f8eafdf5cf1e",
+        "type": "ui_group",
+        "name": "Select Application",
+        "tab": "83728c03327c5a04",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1fe72b217c0fd98c",
+        "type": "ui_group",
+        "name": "Package records",
+        "tab": "6464622b81bffdfb",
+        "order": 1,
+        "disp": true,
+        "width": 31,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "65c5f36ea34fe529",
+        "type": "ui_tab",
+        "name": "Gx Devices",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1760e0edd51dbc3b",
+        "type": "ui_tab",
+        "name": "Production Lines",
+        "icon": "dashboard",
+        "order": 7,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "395325b70f97b6f7",
+        "type": "ui_tab",
+        "name": "Authenticate",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "83728c03327c5a04",
+        "type": "ui_tab",
+        "name": "Selection Page",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6464622b81bffdfb",
+        "type": "ui_tab",
+        "name": "Package Records",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c4d64e4df26f63e4",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "name": "username/pass",
+        "func": "msg.payload = {'userName': 'bizerba-service',\n               'password': '_Bizerba170306'};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 160,
+        "wires": [
+            [
+                "e9af013e299f3822"
+            ]
+        ]
+    },
+    {
+        "id": "30c7a8d1ed8d7530",
+        "type": "inject",
+        "z": "8eab0a3c643bf6ac",
+        "name": "Manual trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 160,
+        "wires": [
+            [
+                "c4d64e4df26f63e4"
+            ]
+        ]
+    },
+    {
+        "id": "23dafad1aea9401e",
+        "type": "comment",
+        "z": "8eab0a3c643bf6ac",
+        "name": "1) Request bearer access token ",
+        "info": "",
+        "x": 210,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "0977192164c33b85",
+        "type": "debug",
+        "z": "8eab0a3c643bf6ac",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1310,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "dd9a228b504e8ed4",
+        "type": "json",
+        "z": "8eab0a3c643bf6ac",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 890,
+        "y": 160,
+        "wires": [
+            [
+                "106eacc2abe7b949"
+            ]
+        ]
+    },
+    {
+        "id": "106eacc2abe7b949",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "name": "set_bearer_token",
+        "func": "flow.set(\"bearer_token\", \"Bearer \" + msg.payload.token);\nmsg.payload = flow.get(\"bearer_token\");\n\nswitch(msg.statusCode) {\n        case 401 : \n             msg.payload = \"Invalid credentials\";\n             msg.topic = \"rgba(255,0,0,1.1)\";\n            break; \n        case 200 :\n            msg.payload =  \"OK! Token obtained\";\n            msg.topic = \"rgba(60,158,63,1.1)\";\n        break;\n}\n//msg.payload = msg.statusCode;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 160,
+        "wires": [
+            [
+                "0977192164c33b85",
+                "fea9c305df03f20b",
+                "9a38180656d78f4d"
+            ]
+        ]
+    },
+    {
+        "id": "af50607763bda623",
+        "type": "comment",
+        "z": "8eab0a3c643bf6ac",
+        "name": "2) Request production lines",
+        "info": "",
+        "x": 190,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "74eea60081e77078",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "name": "Build header",
+        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 420,
+        "wires": [
+            [
+                "4e029ffa1e1ff8c8"
+            ]
+        ]
+    },
+    {
+        "id": "4e029ffa1e1ff8c8",
+        "type": "http request",
+        "z": "8eab0a3c643bf6ac",
+        "name": "/api/v1/production-lines",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://172.28.29.100:9998/api/v1/production-lines",
+        "tls": "b35b991b388efa02",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 610,
+        "y": 420,
+        "wires": [
+            [
+                "3275b0e1a403ace7"
+            ]
+        ]
+    },
+    {
+        "id": "3275b0e1a403ace7",
+        "type": "json",
+        "z": "8eab0a3c643bf6ac",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 810,
+        "y": 420,
+        "wires": [
+            [
+                "a3543e10ae77a1b8"
+            ]
+        ]
+    },
+    {
+        "id": "7ada82d763464874",
+        "type": "catch",
+        "z": "8eab0a3c643bf6ac",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 140,
+        "y": 20,
+        "wires": [
+            [
+                "d9ffd4fa43299976"
+            ]
+        ]
+    },
+    {
+        "id": "d9ffd4fa43299976",
+        "type": "debug",
+        "z": "8eab0a3c643bf6ac",
+        "name": "ERROR!",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "e9af013e299f3822",
+        "type": "http request",
+        "z": "8eab0a3c643bf6ac",
+        "name": "https://172.28.184.36:9998/api/v1/token",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://172.28.29.100:9998/api/v1/token",
+        "tls": "b35b991b388efa02",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 640,
+        "y": 160,
+        "wires": [
+            [
+                "dd9a228b504e8ed4"
+            ]
+        ]
+    },
+    {
+        "id": "f677486f12487667",
+        "type": "comment",
+        "z": "8eab0a3c643bf6ac",
+        "name": "3) Request Devices",
+        "info": "",
+        "x": 170,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "53582853cf894365",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "name": "Build header",
+        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 560,
+        "wires": [
+            [
+                "e51a5a36f48595f2"
+            ]
+        ]
+    },
+    {
+        "id": "e51a5a36f48595f2",
+        "type": "http request",
+        "z": "8eab0a3c643bf6ac",
+        "name": "/api/v1/devices",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://172.28.29.100:9998/api/v1/devices",
+        "tls": "b35b991b388efa02",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 580,
+        "y": 560,
+        "wires": [
+            [
+                "0a6a80f78db83902"
+            ]
+        ]
+    },
+    {
+        "id": "0a6a80f78db83902",
+        "type": "json",
+        "z": "8eab0a3c643bf6ac",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 810,
+        "y": 560,
+        "wires": [
+            [
+                "be145a87d0f9ed31"
+            ]
+        ]
+    },
+    {
+        "id": "847dba193704a40a",
+        "type": "comment",
+        "z": "8eab0a3c643bf6ac",
+        "name": "4) Package Records",
+        "info": "",
+        "x": 150,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "95c993db02c8d0e6",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "name": "Build header",
+        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\n\n//msg.payload = \"deviceName=GLPmaxx%20YK&startDate=2024-11-01&endDate=2024-11-04&packageType=singlePackage&take=10&sort=Identity-\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 780,
+        "wires": [
+            [
+                "fabb81e58f33c43b",
+                "e817333c9076e8dc"
+            ]
+        ]
+    },
+    {
+        "id": "fabb81e58f33c43b",
+        "type": "http request",
+        "z": "8eab0a3c643bf6ac",
+        "name": "/api/v1/package-records",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://172.28.29.100:9998/api/v1/package-records/?{{{post}}}",
+        "tls": "b35b991b388efa02",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 570,
+        "y": 880,
+        "wires": [
+            [
+                "a6fef996028b87fa"
+            ]
+        ]
+    },
+    {
+        "id": "a6fef996028b87fa",
+        "type": "json",
+        "z": "8eab0a3c643bf6ac",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 770,
+        "y": 880,
+        "wires": [
+            [
+                "e772d3ec933e33ea"
+            ]
+        ]
+    },
+    {
+        "id": "e772d3ec933e33ea",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "name": "Prepare Table data",
+        "func": "var packstemp = msg.payload.map(function (el) {\n    function getDevice(device) {\n        return device ? device.name : null;\n    } \n\n    function getActualNetWeight(actualNetWeight) {\n        return actualNetWeight ? actualNetWeight.value : null;\n    }\n\n    function getError(error) {\n        return error ? error.flag : null;\n    }\n\n    return {\n        timestamp: el.timestamp,\n        articleNumber: el.articleNumber,\n        articleName: el.articleName,\n        customerNumber: el.customerNumber,\n        device: getDevice(el.device),\n        actualNetWeight: getActualNetWeight(el.actualNetWeight),\n        error: getError(el.error)\n    };\n});\n\nmsg.payload = packstemp;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 880,
+        "wires": [
+            [
+                "ddcc55230b0734d7",
+                "543843c227a08779"
+            ]
+        ]
+    },
+    {
+        "id": "150986ac4a23e687",
+        "type": "inject",
+        "z": "8eab0a3c643bf6ac",
+        "name": "query parameter",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "deviceName=Labeler1-Top1&startDate=2024-11-01&endDate=2024-11-05&packageType=singlePackage&take=100&sort=Identity-",
+        "payloadType": "str",
+        "x": 160,
+        "y": 780,
+        "wires": [
+            [
+                "dd007931eed7ff99"
+            ]
+        ]
+    },
+    {
+        "id": "dd007931eed7ff99",
+        "type": "change",
+        "z": "8eab0a3c643bf6ac",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "post",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 780,
+        "wires": [
+            [
+                "95c993db02c8d0e6"
+            ]
+        ]
+    },
+    {
+        "id": "e817333c9076e8dc",
+        "type": "debug",
+        "z": "8eab0a3c643bf6ac",
+        "name": "debug 11",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "be145a87d0f9ed31",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "name": "dropdown",
+        "func": "\nmsg.options = msg.payload.map(function(el) {\n    return el.name;\n});\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 560,
+        "wires": [
+            [
+                "286452fbf2bb89a8"
+            ]
+        ]
+    },
+    {
+        "id": "4c6373056476d714",
+        "type": "change",
+        "z": "8eab0a3c643bf6ac",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "options",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 680,
+        "wires": [
+            [
+                "286452fbf2bb89a8"
+            ]
+        ]
+    },
+    {
+        "id": "286452fbf2bb89a8",
+        "type": "ui_dropdown",
+        "z": "8eab0a3c643bf6ac",
+        "name": "",
+        "label": "Devices",
+        "tooltip": "",
+        "place": "Select device",
+        "group": "f2f686aa2b9f097c",
+        "order": 1,
+        "width": 6,
+        "height": 2,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "topicType": "str",
+        "className": "",
+        "x": 1200,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9eff3d8207985c45",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "name": "Clear dropdown",
+        "func": "var e=[];\nmsg.payload= e;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 680,
+        "wires": [
+            [
+                "4c6373056476d714"
+            ]
+        ]
+    },
+    {
+        "id": "4d61ed1a0d509096",
+        "type": "inject",
+        "z": "8eab0a3c643bf6ac",
+        "name": "Trigger reset",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 550,
+        "y": 680,
+        "wires": [
+            [
+                "9eff3d8207985c45"
+            ]
+        ]
+    },
+    {
+        "id": "8d95fa5d680ca63e",
+        "type": "ui_dropdown",
+        "z": "8eab0a3c643bf6ac",
+        "name": "",
+        "label": "Production Lines",
+        "tooltip": "",
+        "place": "Select Line",
+        "group": "7c885960ff9c5601",
+        "order": 2,
+        "width": 6,
+        "height": 2,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1190,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bda26a1d71c2361e",
+        "type": "change",
+        "z": "8eab0a3c643bf6ac",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "options",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 480,
+        "wires": [
+            [
+                "8d95fa5d680ca63e"
+            ]
+        ]
+    },
+    {
+        "id": "c9cd2a0af1544a77",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "name": "Clear dropdown",
+        "func": "var e=[];\nmsg.payload= e;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 480,
+        "wires": [
+            [
+                "bda26a1d71c2361e"
+            ]
+        ]
+    },
+    {
+        "id": "3c45294ec406e1d0",
+        "type": "inject",
+        "z": "8eab0a3c643bf6ac",
+        "name": "Trigger reset",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 550,
+        "y": 480,
+        "wires": [
+            [
+                "c9cd2a0af1544a77"
+            ]
+        ]
+    },
+    {
+        "id": "a3543e10ae77a1b8",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "name": "function 2",
+        "func": "\n// function to prepare options for dropdown menu\nmsg.options = msg.payload.map(function(el) {\n    return el.name;\n});\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 420,
+        "wires": [
+            [
+                "8d95fa5d680ca63e"
+            ]
+        ]
+    },
+    {
+        "id": "3b6fc4cac4e00324",
+        "type": "ui_form",
+        "z": "8eab0a3c643bf6ac",
+        "name": "",
+        "label": "Enter credentials",
+        "group": "aad64061aabbae8c",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "options": [
+            {
+                "label": "Brain2 User",
+                "value": "userName",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Password",
+                "value": "password",
+                "type": "password",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "userName": "",
+            "password": ""
+        },
+        "payload": "",
+        "submit": "Send",
+        "cancel": "cancel",
+        "topic": "",
+        "topicType": "str",
+        "splitLayout": "",
+        "className": "",
+        "x": 270,
+        "y": 220,
+        "wires": [
+            [
+                "e9af013e299f3822"
+            ]
+        ]
+    },
+    {
+        "id": "fea9c305df03f20b",
+        "type": "ui_toast",
+        "z": "8eab0a3c643bf6ac",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "Cancel",
+        "raw": false,
+        "className": "",
+        "topic": "Status",
+        "name": "",
+        "x": 570,
+        "y": 240,
+        "wires": [
+            [
+                "655e6c90f6c56fdf"
+            ]
+        ]
+    },
+    {
+        "id": "4452ea626de03264",
+        "type": "ui_ui_control",
+        "z": "8eab0a3c643bf6ac",
+        "name": "to Selection Page",
+        "events": "change",
+        "x": 1190,
+        "y": 240,
+        "wires": [
+            [
+                "22cb37e8560c7b3a",
+                "fb631216c054d071"
+            ]
+        ]
+    },
+    {
+        "id": "e4efae5a0416559b",
+        "type": "ui_button",
+        "z": "8eab0a3c643bf6ac",
+        "name": "",
+        "group": "f2f686aa2b9f097c",
+        "order": 5,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "Back to Authentcation",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "Authenticate",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 180,
+        "y": 620,
+        "wires": [
+            [
+                "0b59b5147c36e8e3"
+            ]
+        ]
+    },
+    {
+        "id": "0b59b5147c36e8e3",
+        "type": "ui_ui_control",
+        "z": "8eab0a3c643bf6ac",
+        "name": "",
+        "events": "all",
+        "x": 400,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "655e6c90f6c56fdf",
+        "type": "switch",
+        "z": "8eab0a3c643bf6ac",
+        "name": "If then",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "401",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 750,
+        "y": 240,
+        "wires": [
+            [],
+            [
+                "fab6ba3c81d800b6"
+            ]
+        ]
+    },
+    {
+        "id": "fab6ba3c81d800b6",
+        "type": "change",
+        "z": "8eab0a3c643bf6ac",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Selection Page",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 240,
+        "wires": [
+            [
+                "4452ea626de03264"
+            ]
+        ]
+    },
+    {
+        "id": "22cb37e8560c7b3a",
+        "type": "ui_button",
+        "z": "8eab0a3c643bf6ac",
+        "name": "",
+        "group": "8821f8eafdf5cf1e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Production Lines",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "Production Lines",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 410,
+        "y": 300,
+        "wires": [
+            [
+                "380f85e9d66eb3bf"
+            ]
+        ]
+    },
+    {
+        "id": "fb631216c054d071",
+        "type": "ui_button",
+        "z": "8eab0a3c643bf6ac",
+        "name": "",
+        "group": "8821f8eafdf5cf1e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Devices",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "Gx Devices",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 660,
+        "y": 340,
+        "wires": [
+            [
+                "ab559ee6616650e4"
+            ]
+        ]
+    },
+    {
+        "id": "ab559ee6616650e4",
+        "type": "ui_ui_control",
+        "z": "8eab0a3c643bf6ac",
+        "name": "Display Devices",
+        "events": "change",
+        "x": 180,
+        "y": 560,
+        "wires": [
+            [
+                "53582853cf894365"
+            ]
+        ]
+    },
+    {
+        "id": "380f85e9d66eb3bf",
+        "type": "ui_ui_control",
+        "z": "8eab0a3c643bf6ac",
+        "name": "to Prod Lines",
+        "events": "change",
+        "x": 170,
+        "y": 420,
+        "wires": [
+            [
+                "74eea60081e77078"
+            ]
+        ]
+    },
+    {
+        "id": "1333950cb69beef2",
+        "type": "ui_template",
+        "z": "8eab0a3c643bf6ac",
+        "group": "aad64061aabbae8c",
+        "name": "Logo / Clock",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "format": "<script id=\"clockScript1\" type=\"text/javascript\">\n    $(function () {\n        \n        //add logo\n        var div1 = $('<div/>');\n        var logo = new Image();\n\n        logo.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAReSURBVEhL7ZbHS+xJEMffH2HOOQdMqAh6MqCIejB7UEERzBmPinoyIGZx9/JMiBjQg2A8KGIWRBFBMKJiVnwKe3A/O90OM+6Mc1j29r4H6a6u+n6rq6t+44+P/xm/BXRCt8D8/HxaWlpMTEx7e/tfCrCIjY3FuLCwIJ20Q4fA2dmZtbW1vr6+np6egYEBjICFgK2tLQ7SVQu0Cjw/P8N1cXFhZ2dnaGgoGPv6+vr7+9kiyZYjHHDDWYb9C5oF3t7eEhISTE1N19bW9vb2qqqqnJyc4B0cHBwYGIDa2dkZI0c4mJmZJScnEyKD1aFZYHZ2FhbStLGxKSkp2dnZOTw8dHR0/KkAC7YYS0tLqRKeRkZGc3NzMlgdmgWmp6dFEciaYHLc39+vrq7+Q4Gamhq25ubmHOEgQIgMVocGge3t7ZeXl/T0dBEvlLq7uycmJv5UgEVPTw9HwsHY2DgjI4MQ7iQpVPBVoLOzk3zr6uoeHh4iIyOJh93e3v7g4KC2tpb0e3t7OWVLoRAA0dHRONfX13Onrq4uSfQJNYGnpyd3d3dShtfLy8vCwsLFxaWxsfH09JTHRIYuAlCvr6+fnJw0NDS4urpaWlp6e3sLMaIgkXQKqAlAZGVlhUBWVhbztbGxcXx8TKtUVlbymMQPDQ3RSCwYDowc4bC5uUmnZmdnUyua4stkqAnQzmSUl5f3+vra1tZG//CYIyMjiuT+gVLAxMSEW3KEQ1lZGbNNSGFhIQX4MhNqAo+PjxEREVtbWxSaeJCYmIiRIYCULeyATNmSCkdJSUls0eN5COTZtJbo5uYmNDSUyNHR0aWlJaYMRgJub2/d3Nyg4EgIcMTaw8ODo6ioKASwLC8vE8iaFKGSpKoC4htApJ+fH12Rm5vLOiUl5fLykmdkDcQjwwJogaurq9TUVNjz8/MJCQgIENokIUlVBVpbW8VM8relpYU+gYUYiku3hIeHUy5GBMTHx7OluzgKDAykrXlnQril0O7o6JCkqgK0DeziEhUVFSJxvAsKCsj0/f2dHKkvYMH2+vqaV8UBN5wJUQpAJUlVBfjQM0EUnbE8Pz8fGxtDSZSepgwJCfH09BRvQPXZ0pEcURMYx8fHCSGQoWPioJKkqgIC9/f3pEY78rCkVlxcTAvGxcWJ7LAD1gAjpcABNzpqeHiYQMIl0SfUBJgRX19fBwcHUmPiFhcXsdBR1DozMxOjUoAtRo5wwI0x5CWYcH9//+8Gjfr6+PhABGiMu7s7qsGaTJlqbiBKhAAtj5H6UDfceCeMaJDfd4MGaFYY4aKpZmZmxLqoqIivm1IAXra8MIysccNZPAY/R5LoE18FAF9EqlReXr6yskJehJFmWFiYiAcYmSaMCLBeXV2lhfgU8kkXDKrQIACOjo5obS4bFBQkNPgLpqamJicn4cUi2IODg3HDmRAZrA7NAkrs7u7m5OTQfPxENzU1/VKgubmZLf+5cISDdNUCHQL/Hb8FdODj42+NUKunTy7TxAAAAABJRU5ErkJggg=='\n        logo.height = 40;\n        div1[0].style.margin = 'auto 10px auto auto';\n\n        div1.append(logo);\n\n        function addToToolbar() {\n            var toolbar = $('.md-toolbar-tools');\n            \n            if(!toolbar.length) return;\n            \n            toolbar.append(div1);\n        }\n        addToToolbar();\n    });\n</script>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1170,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9a38180656d78f4d",
+        "type": "ui_template",
+        "z": "8eab0a3c643bf6ac",
+        "group": "aad64061aabbae8c",
+        "name": "background color",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"width: 100%; height: 100%; background-color: {{msg.topic}};\">\n    <div class=\"content\">\n        <span>{{(msg.payload)}}</span>\n    </div>\n</div>\n\n",
+        "storeOutMessages": false,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1210,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "633374ecd4636c54",
+        "type": "ui_chart",
+        "z": "8eab0a3c643bf6ac",
+        "name": "",
+        "group": "1fe72b217c0fd98c",
+        "order": 2,
+        "width": "26",
+        "height": "5",
+        "label": "chart",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "Waiting for transaction from server",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1330,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ddcc55230b0734d7",
+        "type": "ui_table",
+        "z": "8eab0a3c643bf6ac",
+        "group": "1fe72b217c0fd98c",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "columns": [
+            {
+                "field": "timestamp",
+                "title": "Timestamp",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "articleNumber",
+                "title": "PLU#",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "customerNumber",
+                "title": "Customer#",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "articleName",
+                "title": "Description",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "device",
+                "title": "Device",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "actualNetWeight",
+                "title": "Weight",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "error",
+                "title": "Error Flag",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 1270,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "543843c227a08779",
+        "type": "change",
+        "z": "8eab0a3c643bf6ac",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[\t{\"labels\": $$.payload.timestamp,\t\"data\":[[$$.payload.actualNetWeight]],\t\"series\":[\"wt\"]\t}]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 980,
+        "wires": [
+            [
+                "633374ecd4636c54"
+            ]
+        ]
+    }
+]
