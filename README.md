@@ -1,9 +1,6 @@
-Node_red_brain2API
-==================
+- 👋 Hi, I’m Yevhen Khanin, @ykhanin80
+- 👀 I’m interested in coding and software development itself
+- 🌱 I’m currently learning C# and Node Red with Raspberry PI
+- 📫 How to reach me ... evgeniy.khanin@gmail.com
 
-Test of Brain2 API capabilities
 
-### About
-
-This is your project's README.md file. It helps users understand what your
-project does, how to use it and anything else they may need to know.
