@@ -249,55 +249,6 @@
         "className": ""
     },
     {
-        "id": "c4d64e4df26f63e4",
-        "type": "function",
-        "z": "8eab0a3c643bf6ac",
-        "name": "username/pass",
-        "func": "msg.payload = {'userName': 'bizerba-service',\n               'password': '_Bizerba170306'};\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 340,
-        "y": 160,
-        "wires": [
-            [
-                "e9af013e299f3822"
-            ]
-        ]
-    },
-    {
-        "id": "30c7a8d1ed8d7530",
-        "type": "inject",
-        "z": "8eab0a3c643bf6ac",
-        "name": "Manual trigger",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 170,
-        "y": 160,
-        "wires": [
-            [
-                "c4d64e4df26f63e4"
-            ]
-        ]
-    },
-    {
         "id": "23dafad1aea9401e",
         "type": "comment",
         "z": "8eab0a3c643bf6ac",
@@ -471,7 +422,7 @@
         "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "https://{url}:9998/api/v1/token",
+        "url": "",
         "tls": "b35b991b388efa02",
         "persist": false,
         "proxy": "",
@@ -1009,11 +960,12 @@
         "topicType": "str",
         "splitLayout": "",
         "className": "",
-        "x": 270,
-        "y": 220,
+        "x": 290,
+        "y": 160,
         "wires": [
             [
-                "e9af013e299f3822"
+                "e9af013e299f3822",
+                "cb421fb5280a7fbf"
             ]
         ]
     },
@@ -1446,11 +1398,63 @@
         "splitLayout": "",
         "className": "",
         "x": 90,
-        "y": 260,
+        "y": 200,
         "wires": [
             [
-                "e9af013e299f3822"
+                "cee5170381dbcfea"
             ]
         ]
+    },
+    {
+        "id": "cee5170381dbcfea",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "name": "function 3",
+        "func": "msg.url = \"https://\" + msg.payload + \":9998/api/v1/token\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 200,
+        "wires": [
+            [
+                "efcf7de50616e5f9"
+            ]
+        ]
+    },
+    {
+        "id": "efcf7de50616e5f9",
+        "type": "debug",
+        "z": "8eab0a3c643bf6ac",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "cb421fb5280a7fbf",
+        "type": "debug",
+        "z": "8eab0a3c643bf6ac",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 100,
+        "wires": []
     }
 ]
