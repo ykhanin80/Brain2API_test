@@ -69,7 +69,7 @@
         "tab": "395325b70f97b6f7",
         "order": 1,
         "disp": true,
-        "width": 18,
+        "width": 12,
         "collapse": false,
         "className": ""
     },
@@ -237,43 +237,43 @@
         }
     },
     {
-        "id": "3c904d76dbc15167",
+        "id": "a84f9187b874c782",
         "type": "ui_spacer",
         "z": "8eab0a3c643bf6ac",
         "name": "spacer",
         "group": "aad64061aabbae8c",
-        "order": 1,
-        "width": 7,
+        "order": 2,
+        "width": 6,
         "height": 1
     },
     {
-        "id": "96a7e6ec5b49bd4d",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "aad64061aabbae8c",
-        "order": 3,
-        "width": 5,
-        "height": 1
-    },
-    {
-        "id": "c4ad28a9bf0271f3",
+        "id": "f7a3fa2c109b4ace",
         "type": "ui_spacer",
         "z": "8eab0a3c643bf6ac",
         "name": "spacer",
         "group": "aad64061aabbae8c",
         "order": 4,
-        "width": 12,
+        "width": 6,
         "height": 1
     },
     {
-        "id": "d53a3f2b84d9bde8",
+        "id": "48c567a3bcf61b4b",
+        "type": "ui_spacer",
+        "z": "8eab0a3c643bf6ac",
+        "name": "spacer",
+        "group": "aad64061aabbae8c",
+        "order": 6,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "45ae34958ecec09c",
         "type": "ui_spacer",
         "z": "8eab0a3c643bf6ac",
         "name": "spacer",
         "group": "aad64061aabbae8c",
         "order": 8,
-        "width": 12,
+        "width": 6,
         "height": 1
     },
     {
@@ -1008,9 +1008,9 @@
         "name": "",
         "label": "Enter credentials",
         "group": "aad64061aabbae8c",
-        "order": 6,
-        "width": 0,
-        "height": 0,
+        "order": 5,
+        "width": 6,
+        "height": 1,
         "options": [
             {
                 "label": "Brain2 User",
@@ -1272,7 +1272,7 @@
         "z": "8eab0a3c643bf6ac",
         "group": "aad64061aabbae8c",
         "name": "Logo / Clock",
-        "order": 2,
+        "order": 7,
         "width": 6,
         "height": 1,
         "format": "<script id=\"clockScript1\" type=\"text/javascript\">\n    $(function () {\n        \n        //add logo\n        var div1 = $('<div/>');\n        var logo = new Image();\n\n        logo.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAReSURBVEhL7ZbHS+xJEMffH2HOOQdMqAh6MqCIejB7UEERzBmPinoyIGZx9/JMiBjQg2A8KGIWRBFBMKJiVnwKe3A/O90OM+6Mc1j29r4H6a6u+n6rq6t+44+P/xm/BXRCt8D8/HxaWlpMTEx7e/tfCrCIjY3FuLCwIJ20Q4fA2dmZtbW1vr6+np6egYEBjICFgK2tLQ7SVQu0Cjw/P8N1cXFhZ2dnaGgoGPv6+vr7+9kiyZYjHHDDWYb9C5oF3t7eEhISTE1N19bW9vb2qqqqnJyc4B0cHBwYGIDa2dkZI0c4mJmZJScnEyKD1aFZYHZ2FhbStLGxKSkp2dnZOTw8dHR0/KkAC7YYS0tLqRKeRkZGc3NzMlgdmgWmp6dFEciaYHLc39+vrq7+Q4Gamhq25ubmHOEgQIgMVocGge3t7ZeXl/T0dBEvlLq7uycmJv5UgEVPTw9HwsHY2DgjI4MQ7iQpVPBVoLOzk3zr6uoeHh4iIyOJh93e3v7g4KC2tpb0e3t7OWVLoRAA0dHRONfX13Onrq4uSfQJNYGnpyd3d3dShtfLy8vCwsLFxaWxsfH09JTHRIYuAlCvr6+fnJw0NDS4urpaWlp6e3sLMaIgkXQKqAlAZGVlhUBWVhbztbGxcXx8TKtUVlbymMQPDQ3RSCwYDowc4bC5uUmnZmdnUyua4stkqAnQzmSUl5f3+vra1tZG//CYIyMjiuT+gVLAxMSEW3KEQ1lZGbNNSGFhIQX4MhNqAo+PjxEREVtbWxSaeJCYmIiRIYCULeyATNmSCkdJSUls0eN5COTZtJbo5uYmNDSUyNHR0aWlJaYMRgJub2/d3Nyg4EgIcMTaw8ODo6ioKASwLC8vE8iaFKGSpKoC4htApJ+fH12Rm5vLOiUl5fLykmdkDcQjwwJogaurq9TUVNjz8/MJCQgIENokIUlVBVpbW8VM8relpYU+gYUYiku3hIeHUy5GBMTHx7OluzgKDAykrXlnQril0O7o6JCkqgK0DeziEhUVFSJxvAsKCsj0/f2dHKkvYMH2+vqaV8UBN5wJUQpAJUlVBfjQM0EUnbE8Pz8fGxtDSZSepgwJCfH09BRvQPXZ0pEcURMYx8fHCSGQoWPioJKkqgIC9/f3pEY78rCkVlxcTAvGxcWJ7LAD1gAjpcABNzpqeHiYQMIl0SfUBJgRX19fBwcHUmPiFhcXsdBR1DozMxOjUoAtRo5wwI0x5CWYcH9//+8Gjfr6+PhABGiMu7s7qsGaTJlqbiBKhAAtj5H6UDfceCeMaJDfd4MGaFYY4aKpZmZmxLqoqIivm1IAXra8MIysccNZPAY/R5LoE18FAF9EqlReXr6yskJehJFmWFiYiAcYmSaMCLBeXV2lhfgU8kkXDKrQIACOjo5obS4bFBQkNPgLpqamJicn4cUi2IODg3HDmRAZrA7NAkrs7u7m5OTQfPxENzU1/VKgubmZLf+5cISDdNUCHQL/Hb8FdODj42+NUKunTy7TxAAAAABJRU5ErkJggg=='\n        logo.height = 40;\n        div1[0].style.margin = 'auto 10px auto auto';\n\n        div1.append(logo);\n\n        function addToToolbar() {\n            var toolbar = $('.md-toolbar-tools');\n            \n            if(!toolbar.length) return;\n            \n            toolbar.append(div1);\n        }\n        addToToolbar();\n    });\n</script>",
@@ -1293,7 +1293,7 @@
         "z": "8eab0a3c643bf6ac",
         "group": "aad64061aabbae8c",
         "name": "background color",
-        "order": 5,
+        "order": 1,
         "width": 6,
         "height": 1,
         "format": "<div style=\"width: 100%; height: 100%; background-color: {{msg.topic}};\">\n    <div class=\"content\">\n        <span>{{(msg.payload)}}</span>\n    </div>\n</div>\n\n",
@@ -1473,7 +1473,7 @@
         "name": "",
         "label": "Host",
         "group": "aad64061aabbae8c",
-        "order": 7,
+        "order": 3,
         "width": 6,
         "height": 1,
         "options": [
