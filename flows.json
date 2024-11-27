@@ -316,7 +316,7 @@
         "type": "function",
         "z": "8eab0a3c643bf6ac",
         "name": "Build header",
-        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\n\nmsg.url = \"https://\" + \"ServerIP\" + \":9998/api/production-lines\";\nreturn msg;\n",
+        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\n\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/production-lines\";\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -918,7 +918,7 @@
         "type": "ui_form",
         "z": "8eab0a3c643bf6ac",
         "name": "",
-        "label": "Enter credentials",
+        "label": "Enter host and credentials",
         "group": "aad64061aabbae8c",
         "order": 1,
         "width": 6,
@@ -1377,7 +1377,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
+        "x": 380,
         "y": 160,
         "wires": [
             [
