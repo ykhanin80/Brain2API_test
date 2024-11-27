@@ -968,11 +968,11 @@
         "topicType": "str",
         "splitLayout": "",
         "className": "",
-        "x": 290,
+        "x": 170,
         "y": 160,
         "wires": [
             [
-                "e9af013e299f3822"
+                "cee5170381dbcfea"
             ]
         ]
     },
@@ -1376,56 +1376,19 @@
         ]
     },
     {
-        "id": "8c73f38608a5cb7c",
-        "type": "ui_form",
-        "z": "8eab0a3c643bf6ac",
-        "name": "",
-        "label": "Host",
-        "group": "302d37942f88cb5d",
-        "order": 1,
-        "width": 6,
-        "height": 1,
-        "options": [
-            {
-                "label": "Brain2 Server IP",
-                "value": "url",
-                "type": "text",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "url": ""
-        },
-        "payload": "",
-        "submit": "ok",
-        "cancel": "cancel",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "className": "",
-        "x": 90,
-        "y": 220,
-        "wires": [
-            [
-                "cee5170381dbcfea"
-            ]
-        ]
-    },
-    {
         "id": "cee5170381dbcfea",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
         "name": "function 3",
-        "func": "msg.url = \"https://\" + msg.payload + \":9998/api/v1/token\";\nreturn msg;",
+        "func": "msg.url = \"https://\" + msg.payload.host + \":9998/api/v1/token\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 220,
-        "y": 220,
+        "x": 360,
+        "y": 160,
         "wires": [
             [
                 "e9af013e299f3822"
