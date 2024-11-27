@@ -238,17 +238,6 @@
         }
     },
     {
-        "id": "302d37942f88cb5d",
-        "type": "ui_group",
-        "name": "Server IP",
-        "tab": "395325b70f97b6f7",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "23dafad1aea9401e",
         "type": "comment",
         "z": "8eab0a3c643bf6ac",
