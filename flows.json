@@ -918,7 +918,7 @@
         "type": "ui_form",
         "z": "8eab0a3c643bf6ac",
         "name": "",
-        "label": "Enter host and credentials",
+        "label": "Enter host and credentials 172.28.184.36",
         "group": "aad64061aabbae8c",
         "order": 1,
         "width": 6,
@@ -958,7 +958,7 @@
         "topicType": "str",
         "splitLayout": "",
         "className": "",
-        "x": 170,
+        "x": 220,
         "y": 160,
         "wires": [
             [
