@@ -960,7 +960,7 @@
         "topicType": "str",
         "splitLayout": "",
         "className": "",
-        "x": 290,
+        "x": 330,
         "y": 160,
         "wires": [
             [
@@ -1398,7 +1398,7 @@
         "splitLayout": "",
         "className": "",
         "x": 90,
-        "y": 200,
+        "y": 160,
         "wires": [
             [
                 "cee5170381dbcfea"
@@ -1417,30 +1417,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 260,
-        "y": 200,
+        "x": 180,
+        "y": 220,
         "wires": [
             [
-                "efcf7de50616e5f9"
+                "3b6fc4cac4e00324"
             ]
         ]
-    },
-    {
-        "id": "efcf7de50616e5f9",
-        "type": "debug",
-        "z": "8eab0a3c643bf6ac",
-        "name": "debug 12",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 400,
-        "y": 200,
-        "wires": []
     },
     {
         "id": "cb421fb5280a7fbf",
