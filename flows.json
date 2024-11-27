@@ -478,7 +478,8 @@
         "y": 560,
         "wires": [
             [
-                "0a6a80f78db83902"
+                "0a6a80f78db83902",
+                "fc0127d79ac340e2"
             ]
         ]
     },
@@ -918,7 +919,7 @@
         "type": "ui_form",
         "z": "8eab0a3c643bf6ac",
         "name": "",
-        "label": "Enter host and credentials 172.28.184.36",
+        "label": "Enter 172.28.184.36",
         "group": "aad64061aabbae8c",
         "order": 1,
         "width": 6,
@@ -958,7 +959,7 @@
         "topicType": "str",
         "splitLayout": "",
         "className": "",
-        "x": 160,
+        "x": 120,
         "y": 160,
         "wires": [
             [
@@ -1349,14 +1350,14 @@
         "type": "function",
         "z": "8eab0a3c643bf6ac",
         "name": "build url",
-        "func": "var ServerIP = msg.payload.host;\nflow.set (\"ServerIP\",ServerIP);\nmsg.url = \"https://\" + msg.payload.host + \":9998/api/v1/token\";\nreturn msg;",
+        "func": "var ServerIP = msg.payload.host;\nflow.set (\"ServerIP\",ServerIP);\n\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/token\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 400,
+        "x": 380,
         "y": 160,
         "wires": [
             [
@@ -1384,5 +1385,22 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "fc0127d79ac340e2",
+        "type": "debug",
+        "z": "8eab0a3c643bf6ac",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 620,
+        "wires": []
     }
 ]
