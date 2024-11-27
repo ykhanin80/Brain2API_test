@@ -935,6 +935,13 @@
         "height": 1,
         "options": [
             {
+                "label": "Brain2 server",
+                "value": "host",
+                "type": "text",
+                "required": false,
+                "rows": null
+            },
+            {
                 "label": "Brain2 User",
                 "value": "userName",
                 "type": "text",
@@ -950,6 +957,7 @@
             }
         ],
         "formValue": {
+            "host": "",
             "userName": "",
             "password": ""
         },
