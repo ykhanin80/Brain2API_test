@@ -260,8 +260,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1310,
-        "y": 140,
+        "x": 1150,
+        "y": 160,
         "wires": []
     },
     {
@@ -272,7 +272,7 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 890,
+        "x": 730,
         "y": 160,
         "wires": [
             [
@@ -292,7 +292,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1070,
+        "x": 930,
         "y": 160,
         "wires": [
             [
@@ -316,7 +316,7 @@
         "type": "function",
         "z": "8eab0a3c643bf6ac",
         "name": "Build header",
-        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\n\nreturn msg;",
+        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\n\nmsg.url = \"https://\" + \"ServerIP\" + \":9998/api/production-lines\";\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -408,7 +408,7 @@
         "id": "e9af013e299f3822",
         "type": "http request",
         "z": "8eab0a3c643bf6ac",
-        "name": "https://{Brain2 server url}:9998/api/v1/token",
+        "name": "/api/v1/token",
         "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
@@ -420,7 +420,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 650,
+        "x": 550,
         "y": 160,
         "wires": [
             [
@@ -1201,8 +1201,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1210,
-        "y": 40,
+        "x": 1070,
+        "y": 20,
         "wires": [
             []
         ]
@@ -1369,8 +1369,8 @@
         "id": "cee5170381dbcfea",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
-        "name": "function 3",
-        "func": "msg.url = \"https://\" + msg.payload.host + \":9998/api/v1/token\";\nreturn msg;",
+        "name": "build url",
+        "func": "var ServerIP = msg.payload.host;\nflow.set (\"ServerIP\",ServerIP);\nmsg.url = \"https://\" + msg.payload.host + \":9998/api/v1/token\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
