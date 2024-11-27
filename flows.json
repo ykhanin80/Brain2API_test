@@ -237,36 +237,6 @@
         }
     },
     {
-        "id": "a84f9187b874c782",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "aad64061aabbae8c",
-        "order": 2,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "f7a3fa2c109b4ace",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "aad64061aabbae8c",
-        "order": 4,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "48c567a3bcf61b4b",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "aad64061aabbae8c",
-        "order": 6,
-        "width": 6,
-        "height": 1
-    },
-    {
         "id": "45ae34958ecec09c",
         "type": "ui_spacer",
         "z": "8eab0a3c643bf6ac",
