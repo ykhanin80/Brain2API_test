@@ -249,16 +249,6 @@
         "className": ""
     },
     {
-        "id": "3e6bf1c4fa9aea20",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "302d37942f88cb5d",
-        "order": 2,
-        "width": 1,
-        "height": 1
-    },
-    {
         "id": "c4d64e4df26f63e4",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
