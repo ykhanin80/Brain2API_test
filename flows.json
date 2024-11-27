@@ -960,12 +960,11 @@
         "topicType": "str",
         "splitLayout": "",
         "className": "",
-        "x": 330,
+        "x": 290,
         "y": 160,
         "wires": [
             [
-                "e9af013e299f3822",
-                "cb421fb5280a7fbf"
+                "e9af013e299f3822"
             ]
         ]
     },
@@ -1398,7 +1397,7 @@
         "splitLayout": "",
         "className": "",
         "x": 90,
-        "y": 160,
+        "y": 220,
         "wires": [
             [
                 "cee5170381dbcfea"
@@ -1417,29 +1416,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 180,
+        "x": 220,
         "y": 220,
         "wires": [
             [
-                "3b6fc4cac4e00324"
+                "e9af013e299f3822"
             ]
         ]
-    },
-    {
-        "id": "cb421fb5280a7fbf",
-        "type": "debug",
-        "z": "8eab0a3c643bf6ac",
-        "name": "debug 13",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 500,
-        "y": 100,
-        "wires": []
     }
 ]
