@@ -69,7 +69,7 @@
         "tab": "395325b70f97b6f7",
         "order": 1,
         "disp": true,
-        "width": 12,
+        "width": 6,
         "collapse": false,
         "className": ""
     },
@@ -143,7 +143,7 @@
         "id": "6b2a3190c2503b6e",
         "type": "ui_base",
         "theme": {
-            "name": "theme-light",
+            "name": "theme-dark",
             "lightTheme": {
                 "default": "#0094CE",
                 "baseColor": "#0094CE",
@@ -155,7 +155,8 @@
                 "default": "#097479",
                 "baseColor": "#097479",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
+                "edited": true,
+                "reset": false
             },
             "customTheme": {
                 "name": "Untitled Theme 1",
@@ -165,44 +166,44 @@
             },
             "themeState": {
                 "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
+                    "default": "#097479",
+                    "value": "#097479",
                     "edited": false
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
+                    "value": "#097479",
                     "edited": false
                 },
                 "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
                     "value": "#111111",
                     "edited": false
                 },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
                 "widget-backgroundColor": {
-                    "value": "#0094ce",
+                    "value": "#097479",
                     "edited": false
                 },
                 "widget-borderColor": {
-                    "value": "#ffffff",
+                    "value": "#333333",
                     "edited": false
                 },
                 "base-font": {
@@ -979,7 +980,7 @@
         "name": "",
         "label": "Enter credentials",
         "group": "aad64061aabbae8c",
-        "order": 5,
+        "order": 2,
         "width": 6,
         "height": 1,
         "options": [
@@ -1243,9 +1244,9 @@
         "z": "8eab0a3c643bf6ac",
         "group": "aad64061aabbae8c",
         "name": "Logo / Clock",
-        "order": 7,
-        "width": 6,
-        "height": 1,
+        "order": 1,
+        "width": 0,
+        "height": 0,
         "format": "<script id=\"clockScript1\" type=\"text/javascript\">\n    $(function () {\n        \n        //add logo\n        var div1 = $('<div/>');\n        var logo = new Image();\n\n        logo.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAReSURBVEhL7ZbHS+xJEMffH2HOOQdMqAh6MqCIejB7UEERzBmPinoyIGZx9/JMiBjQg2A8KGIWRBFBMKJiVnwKe3A/O90OM+6Mc1j29r4H6a6u+n6rq6t+44+P/xm/BXRCt8D8/HxaWlpMTEx7e/tfCrCIjY3FuLCwIJ20Q4fA2dmZtbW1vr6+np6egYEBjICFgK2tLQ7SVQu0Cjw/P8N1cXFhZ2dnaGgoGPv6+vr7+9kiyZYjHHDDWYb9C5oF3t7eEhISTE1N19bW9vb2qqqqnJyc4B0cHBwYGIDa2dkZI0c4mJmZJScnEyKD1aFZYHZ2FhbStLGxKSkp2dnZOTw8dHR0/KkAC7YYS0tLqRKeRkZGc3NzMlgdmgWmp6dFEciaYHLc39+vrq7+Q4Gamhq25ubmHOEgQIgMVocGge3t7ZeXl/T0dBEvlLq7uycmJv5UgEVPTw9HwsHY2DgjI4MQ7iQpVPBVoLOzk3zr6uoeHh4iIyOJh93e3v7g4KC2tpb0e3t7OWVLoRAA0dHRONfX13Onrq4uSfQJNYGnpyd3d3dShtfLy8vCwsLFxaWxsfH09JTHRIYuAlCvr6+fnJw0NDS4urpaWlp6e3sLMaIgkXQKqAlAZGVlhUBWVhbztbGxcXx8TKtUVlbymMQPDQ3RSCwYDowc4bC5uUmnZmdnUyua4stkqAnQzmSUl5f3+vra1tZG//CYIyMjiuT+gVLAxMSEW3KEQ1lZGbNNSGFhIQX4MhNqAo+PjxEREVtbWxSaeJCYmIiRIYCULeyATNmSCkdJSUls0eN5COTZtJbo5uYmNDSUyNHR0aWlJaYMRgJub2/d3Nyg4EgIcMTaw8ODo6ioKASwLC8vE8iaFKGSpKoC4htApJ+fH12Rm5vLOiUl5fLykmdkDcQjwwJogaurq9TUVNjz8/MJCQgIENokIUlVBVpbW8VM8relpYU+gYUYiku3hIeHUy5GBMTHx7OluzgKDAykrXlnQril0O7o6JCkqgK0DeziEhUVFSJxvAsKCsj0/f2dHKkvYMH2+vqaV8UBN5wJUQpAJUlVBfjQM0EUnbE8Pz8fGxtDSZSepgwJCfH09BRvQPXZ0pEcURMYx8fHCSGQoWPioJKkqgIC9/f3pEY78rCkVlxcTAvGxcWJ7LAD1gAjpcABNzpqeHiYQMIl0SfUBJgRX19fBwcHUmPiFhcXsdBR1DozMxOjUoAtRo5wwI0x5CWYcH9//+8Gjfr6+PhABGiMu7s7qsGaTJlqbiBKhAAtj5H6UDfceCeMaJDfd4MGaFYY4aKpZmZmxLqoqIivm1IAXra8MIysccNZPAY/R5LoE18FAF9EqlReXr6yskJehJFmWFiYiAcYmSaMCLBeXV2lhfgU8kkXDKrQIACOjo5obS4bFBQkNPgLpqamJicn4cUi2IODg3HDmRAZrA7NAkrs7u7m5OTQfPxENzU1/VKgubmZLf+5cISDdNUCHQL/Hb8FdODj42+NUKunTy7TxAAAAABJRU5ErkJggg=='\n        logo.height = 40;\n        div1[0].style.margin = 'auto 10px auto auto';\n\n        div1.append(logo);\n\n        function addToToolbar() {\n            var toolbar = $('.md-toolbar-tools');\n            \n            if(!toolbar.length) return;\n            \n            toolbar.append(div1);\n        }\n        addToToolbar();\n    });\n</script>",
         "storeOutMessages": false,
         "fwdInMessages": false,
@@ -1264,7 +1265,7 @@
         "z": "8eab0a3c643bf6ac",
         "group": "aad64061aabbae8c",
         "name": "background color",
-        "order": 1,
+        "order": 3,
         "width": 6,
         "height": 1,
         "format": "<div style=\"width: 100%; height: 100%; background-color: {{msg.topic}};\">\n    <div class=\"content\">\n        <span>{{(msg.payload)}}</span>\n    </div>\n</div>\n\n",
@@ -1444,7 +1445,7 @@
         "name": "",
         "label": "Host",
         "group": "302d37942f88cb5d",
-        "order": 3,
+        "order": 1,
         "width": 6,
         "height": 1,
         "options": [
