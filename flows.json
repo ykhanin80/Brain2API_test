@@ -382,7 +382,8 @@
         "y": 20,
         "wires": [
             [
-                "d9ffd4fa43299976"
+                "d9ffd4fa43299976",
+                "0e8196d8614cac87"
             ]
         ]
     },
@@ -391,7 +392,7 @@
         "type": "debug",
         "z": "8eab0a3c643bf6ac",
         "name": "ERROR!",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -399,8 +400,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 380,
-        "y": 20,
+        "x": 400,
+        "y": 40,
         "wires": []
     },
     {
@@ -1382,6 +1383,27 @@
             [
                 "e9af013e299f3822"
             ]
+        ]
+    },
+    {
+        "id": "0e8196d8614cac87",
+        "type": "ui_toast",
+        "z": "8eab0a3c643bf6ac",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "Cancel",
+        "raw": false,
+        "className": "",
+        "topic": "Status",
+        "name": "",
+        "x": 590,
+        "y": 20,
+        "wires": [
+            []
         ]
     }
 ]
