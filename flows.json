@@ -448,7 +448,7 @@
         "name": "/api/v1/devices",
         "method": "GET",
         "ret": "txt",
-        "paytoqs": "body",
+        "paytoqs": "ignore",
         "url": "",
         "tls": "b35b991b388efa02",
         "persist": false,
@@ -461,7 +461,8 @@
         "y": 560,
         "wires": [
             [
-                "0a6a80f78db83902"
+                "0a6a80f78db83902",
+                "fc0127d79ac340e2"
             ]
         ]
     },
@@ -1150,8 +1151,7 @@
         "y": 560,
         "wires": [
             [
-                "53582853cf894365",
-                "fc0127d79ac340e2"
+                "53582853cf894365"
             ]
         ]
     },
