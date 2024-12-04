@@ -289,8 +289,8 @@
         "z": "8eab0a3c643bf6ac",
         "name": "2) Request production lines",
         "info": "",
-        "x": 190,
-        "y": 380,
+        "x": 390,
+        "y": 360,
         "wires": []
     },
     {
@@ -416,7 +416,7 @@
         "z": "8eab0a3c643bf6ac",
         "name": "3) Request Devices",
         "info": "",
-        "x": 170,
+        "x": 370,
         "y": 520,
         "wires": []
     },
@@ -981,9 +981,7 @@
         "x": 1190,
         "y": 240,
         "wires": [
-            [
-                "fb631216c054d071"
-            ]
+            []
         ]
     },
     {
@@ -1104,8 +1102,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 410,
-        "y": 300,
+        "x": 110,
+        "y": 360,
         "wires": [
             [
                 "380f85e9d66eb3bf"
@@ -1132,10 +1130,12 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 660,
-        "y": 340,
+        "x": 80,
+        "y": 520,
         "wires": [
-            []
+            [
+                "ab559ee6616650e4"
+            ]
         ]
     },
     {
