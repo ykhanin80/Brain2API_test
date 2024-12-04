@@ -1294,13 +1294,13 @@
         "group": "1fe72b217c0fd98c",
         "name": "",
         "order": 3,
-        "width": 0,
-        "height": 0,
+        "width": "27",
+        "height": "5",
         "columns": [
             {
                 "field": "timestamp",
                 "title": "Timestamp",
-                "width": "",
+                "width": "100",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
@@ -1310,7 +1310,7 @@
             {
                 "field": "articleNumber",
                 "title": "PLU#",
-                "width": "",
+                "width": "50",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
