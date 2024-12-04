@@ -27,13 +27,13 @@
             "0b59b5147c36e8e3",
             "fb631216c054d071",
             "ab559ee6616650e4",
-            "4b3546fcfa15ed3a",
-            "c0913ae221e0aae6"
+            "c0913ae221e0aae6",
+            "c0e14ed5320e33b2"
         ],
         "x": 14,
         "y": 359,
-        "w": 1312,
-        "h": 262
+        "w": 1352,
+        "h": 202
     },
     {
         "id": "85f0a8ccb2e137f9",
@@ -126,13 +126,12 @@
             "380f85e9d66eb3bf",
             "d1eb5d49eeb349ec",
             "8e4d716089c72964",
-            "2fa1b034c0bfeb84",
-            "7d2cceca5c21ccb3"
+            "2fa1b034c0bfeb84"
         ],
         "x": 14,
-        "y": 619,
-        "w": 1372,
-        "h": 282
+        "y": 719,
+        "w": 1332,
+        "h": 202
     },
     {
         "id": "d2df3ee586784503",
@@ -417,7 +416,7 @@
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 720,
+        "y": 820,
         "wires": [
             [
                 "4e029ffa1e1ff8c8"
@@ -442,7 +441,7 @@
         "senderr": false,
         "headers": [],
         "x": 630,
-        "y": 720,
+        "y": 820,
         "wires": [
             [
                 "3275b0e1a403ace7"
@@ -459,7 +458,7 @@
         "action": "",
         "pretty": false,
         "x": 830,
-        "y": 720,
+        "y": 820,
         "wires": [
             [
                 "a3543e10ae77a1b8"
@@ -581,7 +580,7 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 830,
+        "x": 770,
         "y": 460,
         "wires": [
             [
@@ -771,7 +770,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 980,
+        "x": 920,
         "y": 460,
         "wires": [
             [
@@ -833,7 +832,7 @@
         "topic": "",
         "topicType": "str",
         "className": "",
-        "x": 1220,
+        "x": 1100,
         "y": 460,
         "wires": [
             [
@@ -919,7 +918,7 @@
         "topicType": "msg",
         "className": "",
         "x": 1230,
-        "y": 720,
+        "y": 820,
         "wires": [
             [
                 "2fa1b034c0bfeb84"
@@ -947,7 +946,7 @@
         "to": "",
         "reg": false,
         "x": 1000,
-        "y": 780,
+        "y": 880,
         "wires": [
             [
                 "8d95fa5d680ca63e"
@@ -968,7 +967,7 @@
         "finalize": "",
         "libs": [],
         "x": 780,
-        "y": 780,
+        "y": 880,
         "wires": [
             [
                 "bda26a1d71c2361e"
@@ -998,7 +997,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 570,
-        "y": 780,
+        "y": 880,
         "wires": [
             [
                 "c9cd2a0af1544a77"
@@ -1019,7 +1018,7 @@
         "finalize": "",
         "libs": [],
         "x": 980,
-        "y": 720,
+        "y": 820,
         "wires": [
             [
                 "8d95fa5d680ca63e"
@@ -1241,7 +1240,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 130,
-        "y": 660,
+        "y": 760,
         "wires": [
             [
                 "380f85e9d66eb3bf"
@@ -1300,7 +1299,7 @@
         "name": "to Prod Lines",
         "events": "change",
         "x": 190,
-        "y": 720,
+        "y": 820,
         "wires": [
             [
                 "74eea60081e77078"
@@ -1575,7 +1574,7 @@
         "topic": "",
         "topicType": "str",
         "x": 730,
-        "y": 660,
+        "y": 760,
         "wires": [
             [
                 "8e4d716089c72964"
@@ -1590,7 +1589,7 @@
         "name": "",
         "events": "all",
         "x": 1000,
-        "y": 660,
+        "y": 760,
         "wires": [
             []
         ]
@@ -1609,29 +1608,10 @@
         "finalize": "",
         "libs": [],
         "x": 1230,
-        "y": 780,
+        "y": 880,
         "wires": [
-            [
-                "7d2cceca5c21ccb3"
-            ]
+            []
         ]
-    },
-    {
-        "id": "7d2cceca5c21ccb3",
-        "type": "debug",
-        "z": "8eab0a3c643bf6ac",
-        "g": "0346d96b42bc27b1",
-        "name": "debug 12",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1280,
-        "y": 860,
-        "wires": []
     },
     {
         "id": "c0913ae221e0aae6",
@@ -1639,36 +1619,32 @@
         "z": "8eab0a3c643bf6ac",
         "g": "f8d98a8bcd1abe89",
         "name": "var device",
-        "func": "var device = msg.payload;\nflow.set(\"device\",device);\n\nreturn msg;",
+        "func": "var device = msg.payload;\nflow.set(\"device\",device);\n\nmsg.payload =\"Package Records\";\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1050,
-        "y": 580,
+        "x": 1270,
+        "y": 460,
         "wires": [
             [
-                "4b3546fcfa15ed3a"
+                "c0e14ed5320e33b2"
             ]
         ]
     },
     {
-        "id": "4b3546fcfa15ed3a",
-        "type": "debug",
+        "id": "c0e14ed5320e33b2",
+        "type": "ui_ui_control",
         "z": "8eab0a3c643bf6ac",
         "g": "f8d98a8bcd1abe89",
-        "name": "debug 13",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1220,
-        "y": 560,
-        "wires": []
+        "name": "",
+        "events": "all",
+        "x": 1240,
+        "y": 520,
+        "wires": [
+            []
+        ]
     }
 ]
