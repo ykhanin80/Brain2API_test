@@ -7,6 +7,130 @@
         "info": ""
     },
     {
+        "id": "f8d98a8bcd1abe89",
+        "type": "group",
+        "z": "8eab0a3c643bf6ac",
+        "name": "Devices",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "53582853cf894365",
+            "e51a5a36f48595f2",
+            "0a6a80f78db83902",
+            "be145a87d0f9ed31",
+            "4c6373056476d714",
+            "286452fbf2bb89a8",
+            "9eff3d8207985c45",
+            "4d61ed1a0d509096",
+            "e4efae5a0416559b",
+            "0b59b5147c36e8e3",
+            "fb631216c054d071",
+            "ab559ee6616650e4"
+        ],
+        "x": 14,
+        "y": 359,
+        "w": 1292,
+        "h": 202
+    },
+    {
+        "id": "8f0cc9d11e72d96a",
+        "type": "group",
+        "z": "8eab0a3c643bf6ac",
+        "name": "Production Lines",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "74eea60081e77078",
+            "4e029ffa1e1ff8c8",
+            "3275b0e1a403ace7",
+            "8d95fa5d680ca63e",
+            "bda26a1d71c2361e",
+            "c9cd2a0af1544a77",
+            "3c45294ec406e1d0",
+            "a3543e10ae77a1b8",
+            "22cb37e8560c7b3a",
+            "380f85e9d66eb3bf",
+            "d1eb5d49eeb349ec",
+            "8e4d716089c72964"
+        ],
+        "x": 14,
+        "y": 639,
+        "w": 1332,
+        "h": 202
+    },
+    {
+        "id": "85f0a8ccb2e137f9",
+        "type": "group",
+        "z": "8eab0a3c643bf6ac",
+        "name": "Token",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "dd9a228b504e8ed4",
+            "106eacc2abe7b949",
+            "e9af013e299f3822",
+            "3b6fc4cac4e00324",
+            "fea9c305df03f20b",
+            "4452ea626de03264",
+            "655e6c90f6c56fdf",
+            "fab6ba3c81d800b6",
+            "cee5170381dbcfea"
+        ],
+        "x": 14,
+        "y": 159,
+        "w": 1312,
+        "h": 162
+    },
+    {
+        "id": "bec69e86cd0143f6",
+        "type": "group",
+        "z": "8eab0a3c643bf6ac",
+        "name": "Catch errors",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "7ada82d763464874",
+            "d9ffd4fa43299976",
+            "0e8196d8614cac87"
+        ],
+        "x": 14,
+        "y": 19,
+        "w": 652,
+        "h": 102
+    },
+    {
+        "id": "803e952a6482c9ec",
+        "type": "group",
+        "z": "8eab0a3c643bf6ac",
+        "name": "Package Records",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "847dba193704a40a",
+            "95c993db02c8d0e6",
+            "fabb81e58f33c43b",
+            "a6fef996028b87fa",
+            "e772d3ec933e33ea",
+            "150986ac4a23e687",
+            "dd007931eed7ff99",
+            "e817333c9076e8dc",
+            "633374ecd4636c54",
+            "ddcc55230b0734d7",
+            "543843c227a08779",
+            "438a1ef390ea88d8",
+            "580e16b5abdd46d4"
+        ],
+        "x": 14,
+        "y": 879,
+        "w": 1372,
+        "h": 322
+    },
+    {
         "id": "d2df3ee586784503",
         "type": "ui_spacer",
         "z": "8eab0a3c643bf6ac",
@@ -238,25 +362,16 @@
         }
     },
     {
-        "id": "23dafad1aea9401e",
-        "type": "comment",
-        "z": "8eab0a3c643bf6ac",
-        "name": "1) Request bearer access token ",
-        "info": "",
-        "x": 210,
-        "y": 80,
-        "wires": []
-    },
-    {
         "id": "dd9a228b504e8ed4",
         "type": "json",
         "z": "8eab0a3c643bf6ac",
+        "g": "85f0a8ccb2e137f9",
         "name": "",
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 730,
-        "y": 160,
+        "x": 750,
+        "y": 200,
         "wires": [
             [
                 "106eacc2abe7b949"
@@ -267,6 +382,7 @@
         "id": "106eacc2abe7b949",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
+        "g": "85f0a8ccb2e137f9",
         "name": "set_bearer_token",
         "func": "flow.set(\"bearer_token\", \"Bearer \" + msg.payload.token);\nmsg.payload = flow.get(\"bearer_token\");\n\nswitch(msg.statusCode) {\n        case 401 : \n             msg.payload = \"Invalid credentials\";\n             msg.topic = \"rgba(255,0,0,1.1)\";\n            break; \n        case 200 :\n            msg.payload =  \"OK! Token obtained\";\n            msg.topic = \"rgba(60,158,63,1.1)\";\n        break;\n}\n//msg.payload = msg.statusCode;\nreturn msg;",
         "outputs": 1,
@@ -275,8 +391,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
-        "y": 160,
+        "x": 950,
+        "y": 200,
         "wires": [
             [
                 "fea9c305df03f20b"
@@ -284,19 +400,10 @@
         ]
     },
     {
-        "id": "af50607763bda623",
-        "type": "comment",
-        "z": "8eab0a3c643bf6ac",
-        "name": "2) Request production lines",
-        "info": "",
-        "x": 390,
-        "y": 360,
-        "wires": []
-    },
-    {
         "id": "74eea60081e77078",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
+        "g": "8f0cc9d11e72d96a",
         "name": "header and url",
         "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\n\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/production-lines\";\nreturn msg;\n",
         "outputs": 1,
@@ -305,8 +412,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
-        "y": 420,
+        "x": 380,
+        "y": 740,
         "wires": [
             [
                 "4e029ffa1e1ff8c8"
@@ -317,6 +424,7 @@
         "id": "4e029ffa1e1ff8c8",
         "type": "http request",
         "z": "8eab0a3c643bf6ac",
+        "g": "8f0cc9d11e72d96a",
         "name": "/api/v1/production-lines",
         "method": "GET",
         "ret": "txt",
@@ -329,8 +437,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 610,
-        "y": 420,
+        "x": 630,
+        "y": 740,
         "wires": [
             [
                 "3275b0e1a403ace7"
@@ -341,12 +449,13 @@
         "id": "3275b0e1a403ace7",
         "type": "json",
         "z": "8eab0a3c643bf6ac",
+        "g": "8f0cc9d11e72d96a",
         "name": "",
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 810,
-        "y": 420,
+        "x": 830,
+        "y": 740,
         "wires": [
             [
                 "a3543e10ae77a1b8"
@@ -357,11 +466,12 @@
         "id": "7ada82d763464874",
         "type": "catch",
         "z": "8eab0a3c643bf6ac",
+        "g": "bec69e86cd0143f6",
         "name": "",
         "scope": null,
         "uncaught": false,
-        "x": 140,
-        "y": 20,
+        "x": 100,
+        "y": 60,
         "wires": [
             [
                 "d9ffd4fa43299976",
@@ -373,6 +483,7 @@
         "id": "d9ffd4fa43299976",
         "type": "debug",
         "z": "8eab0a3c643bf6ac",
+        "g": "bec69e86cd0143f6",
         "name": "ERROR!",
         "active": false,
         "tosidebar": true,
@@ -382,14 +493,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 400,
-        "y": 40,
+        "x": 360,
+        "y": 80,
         "wires": []
     },
     {
         "id": "e9af013e299f3822",
         "type": "http request",
         "z": "8eab0a3c643bf6ac",
+        "g": "85f0a8ccb2e137f9",
         "name": "/api/v1/token",
         "method": "POST",
         "ret": "txt",
@@ -402,8 +514,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 550,
-        "y": 160,
+        "x": 570,
+        "y": 200,
         "wires": [
             [
                 "dd9a228b504e8ed4"
@@ -411,19 +523,10 @@
         ]
     },
     {
-        "id": "f677486f12487667",
-        "type": "comment",
-        "z": "8eab0a3c643bf6ac",
-        "name": "3) Request Devices",
-        "info": "",
-        "x": 370,
-        "y": 520,
-        "wires": []
-    },
-    {
         "id": "53582853cf894365",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
         "name": "header and url",
         "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/devices\";\nreturn msg;",
         "outputs": 1,
@@ -432,8 +535,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
-        "y": 560,
+        "x": 400,
+        "y": 460,
         "wires": [
             [
                 "e51a5a36f48595f2"
@@ -444,6 +547,7 @@
         "id": "e51a5a36f48595f2",
         "type": "http request",
         "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
         "name": "/api/v1/devices",
         "method": "GET",
         "ret": "txt",
@@ -456,12 +560,11 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 580,
-        "y": 560,
+        "x": 600,
+        "y": 460,
         "wires": [
             [
-                "0a6a80f78db83902",
-                "fc0127d79ac340e2"
+                "0a6a80f78db83902"
             ]
         ]
     },
@@ -469,12 +572,13 @@
         "id": "0a6a80f78db83902",
         "type": "json",
         "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
         "name": "",
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 810,
-        "y": 560,
+        "x": 830,
+        "y": 460,
         "wires": [
             [
                 "be145a87d0f9ed31"
@@ -485,16 +589,18 @@
         "id": "847dba193704a40a",
         "type": "comment",
         "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
         "name": "4) Package Records",
         "info": "",
-        "x": 150,
-        "y": 740,
+        "x": 130,
+        "y": 920,
         "wires": []
     },
     {
         "id": "95c993db02c8d0e6",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
         "name": "Build header",
         "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/package-records/?\" + msg.post;\n\n//msg.payload = \"deviceName=GLPmaxx%20YK&startDate=2024-11-01&endDate=2024-11-04&packageType=singlePackage&take=10&sort=Identity-\";\n/* \nhttps://172.28.29.100:9998/api/v1/package-records/?{{{post}}}\n\n*/\nreturn msg;",
         "outputs": 1,
@@ -503,8 +609,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 780,
+        "x": 510,
+        "y": 960,
         "wires": [
             [
                 "fabb81e58f33c43b",
@@ -516,6 +622,7 @@
         "id": "fabb81e58f33c43b",
         "type": "http request",
         "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
         "name": "/api/v1/package-records",
         "method": "GET",
         "ret": "txt",
@@ -528,8 +635,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 570,
-        "y": 880,
+        "x": 550,
+        "y": 1060,
         "wires": [
             [
                 "a6fef996028b87fa"
@@ -540,12 +647,13 @@
         "id": "a6fef996028b87fa",
         "type": "json",
         "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
         "name": "",
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 770,
-        "y": 880,
+        "x": 750,
+        "y": 1060,
         "wires": [
             [
                 "e772d3ec933e33ea"
@@ -556,6 +664,7 @@
         "id": "e772d3ec933e33ea",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
         "name": "Prepare Table data",
         "func": "var packstemp = msg.payload.map(function (el) {\n    function getDevice(device) {\n        return device ? device.name : null;\n    } \n\n    function getActualNetWeight(actualNetWeight) {\n        return actualNetWeight ? actualNetWeight.value : null;\n    }\n\n    function getError(error) {\n        return error ? error.flag : null;\n    }\n\n    return {\n        timestamp: el.timestamp,\n        articleNumber: el.articleNumber,\n        articleName: el.articleName,\n        customerNumber: el.customerNumber,\n        device: getDevice(el.device),\n        actualNetWeight: getActualNetWeight(el.actualNetWeight),\n        error: getError(el.error)\n    };\n});\n\nmsg.payload = packstemp;\nreturn msg;",
         "outputs": 1,
@@ -564,8 +673,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 950,
-        "y": 880,
+        "x": 930,
+        "y": 1060,
         "wires": [
             [
                 "ddcc55230b0734d7",
@@ -577,6 +686,7 @@
         "id": "150986ac4a23e687",
         "type": "inject",
         "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
         "name": "query parameter",
         "props": [
             {
@@ -590,8 +700,8 @@
         "topic": "",
         "payload": "deviceName=Labeler1-Top1&startDate=2024-11-01&endDate=2024-11-05&packageType=singlePackage&take=100&sort=Identity-",
         "payloadType": "str",
-        "x": 160,
-        "y": 780,
+        "x": 140,
+        "y": 960,
         "wires": [
             [
                 "dd007931eed7ff99"
@@ -602,6 +712,7 @@
         "id": "dd007931eed7ff99",
         "type": "change",
         "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
         "name": "",
         "rules": [
             {
@@ -617,8 +728,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 330,
-        "y": 780,
+        "x": 310,
+        "y": 960,
         "wires": [
             [
                 "95c993db02c8d0e6"
@@ -629,6 +740,7 @@
         "id": "e817333c9076e8dc",
         "type": "debug",
         "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
         "name": "debug 11",
         "active": false,
         "tosidebar": true,
@@ -638,14 +750,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
-        "y": 780,
+        "x": 780,
+        "y": 960,
         "wires": []
     },
     {
         "id": "be145a87d0f9ed31",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
         "name": "dropdown",
         "func": "\nmsg.options = msg.payload.map(function(el) {\n    return el.name;\n});\n\nreturn msg;\n",
         "outputs": 1,
@@ -654,8 +767,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
-        "y": 560,
+        "x": 980,
+        "y": 460,
         "wires": [
             [
                 "286452fbf2bb89a8"
@@ -666,6 +779,7 @@
         "id": "4c6373056476d714",
         "type": "change",
         "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
         "name": "",
         "rules": [
             {
@@ -681,8 +795,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 980,
-        "y": 680,
+        "x": 940,
+        "y": 520,
         "wires": [
             [
                 "286452fbf2bb89a8"
@@ -693,6 +807,7 @@
         "id": "286452fbf2bb89a8",
         "type": "ui_dropdown",
         "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
         "name": "",
         "label": "Devices",
         "tooltip": "",
@@ -714,8 +829,8 @@
         "topic": "",
         "topicType": "str",
         "className": "",
-        "x": 1200,
-        "y": 560,
+        "x": 1220,
+        "y": 460,
         "wires": [
             []
         ]
@@ -724,6 +839,7 @@
         "id": "9eff3d8207985c45",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
         "name": "Clear dropdown",
         "func": "var e=[];\nmsg.payload= e;\nreturn msg;",
         "outputs": 1,
@@ -732,8 +848,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
-        "y": 680,
+        "x": 720,
+        "y": 520,
         "wires": [
             [
                 "4c6373056476d714"
@@ -744,6 +860,7 @@
         "id": "4d61ed1a0d509096",
         "type": "inject",
         "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
         "name": "Trigger reset",
         "props": [
             {
@@ -761,8 +878,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 550,
-        "y": 680,
+        "x": 510,
+        "y": 520,
         "wires": [
             [
                 "9eff3d8207985c45"
@@ -773,6 +890,7 @@
         "id": "8d95fa5d680ca63e",
         "type": "ui_dropdown",
         "z": "8eab0a3c643bf6ac",
+        "g": "8f0cc9d11e72d96a",
         "name": "",
         "label": "Production Lines",
         "tooltip": "",
@@ -794,8 +912,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1210,
-        "y": 420,
+        "x": 1230,
+        "y": 740,
         "wires": [
             []
         ]
@@ -804,6 +922,7 @@
         "id": "bda26a1d71c2361e",
         "type": "change",
         "z": "8eab0a3c643bf6ac",
+        "g": "8f0cc9d11e72d96a",
         "name": "",
         "rules": [
             {
@@ -819,8 +938,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 980,
-        "y": 480,
+        "x": 1000,
+        "y": 800,
         "wires": [
             [
                 "8d95fa5d680ca63e"
@@ -831,6 +950,7 @@
         "id": "c9cd2a0af1544a77",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
+        "g": "8f0cc9d11e72d96a",
         "name": "Clear dropdown",
         "func": "var e=[];\nmsg.payload= e;\nreturn msg;",
         "outputs": 1,
@@ -839,8 +959,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
-        "y": 480,
+        "x": 780,
+        "y": 800,
         "wires": [
             [
                 "bda26a1d71c2361e"
@@ -851,6 +971,7 @@
         "id": "3c45294ec406e1d0",
         "type": "inject",
         "z": "8eab0a3c643bf6ac",
+        "g": "8f0cc9d11e72d96a",
         "name": "Trigger reset",
         "props": [
             {
@@ -868,8 +989,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 550,
-        "y": 480,
+        "x": 570,
+        "y": 800,
         "wires": [
             [
                 "c9cd2a0af1544a77"
@@ -880,6 +1001,7 @@
         "id": "a3543e10ae77a1b8",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
+        "g": "8f0cc9d11e72d96a",
         "name": "function 2",
         "func": "\n// function to prepare options for dropdown menu\nmsg.options = msg.payload.map(function(el) {\n    return el.name;\n});\n\nreturn msg;\n",
         "outputs": 1,
@@ -888,8 +1010,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
-        "y": 420,
+        "x": 980,
+        "y": 740,
         "wires": [
             [
                 "8d95fa5d680ca63e"
@@ -900,6 +1022,7 @@
         "id": "3b6fc4cac4e00324",
         "type": "ui_form",
         "z": "8eab0a3c643bf6ac",
+        "g": "85f0a8ccb2e137f9",
         "name": "",
         "label": "Enter 172.28.184.36",
         "group": "aad64061aabbae8c",
@@ -941,8 +1064,8 @@
         "topicType": "str",
         "splitLayout": "",
         "className": "",
-        "x": 120,
-        "y": 160,
+        "x": 140,
+        "y": 200,
         "wires": [
             [
                 "cee5170381dbcfea"
@@ -953,6 +1076,7 @@
         "id": "fea9c305df03f20b",
         "type": "ui_toast",
         "z": "8eab0a3c643bf6ac",
+        "g": "85f0a8ccb2e137f9",
         "position": "dialog",
         "displayTime": "3",
         "highlight": "",
@@ -964,8 +1088,8 @@
         "className": "",
         "topic": "Status",
         "name": "",
-        "x": 570,
-        "y": 240,
+        "x": 590,
+        "y": 280,
         "wires": [
             [
                 "655e6c90f6c56fdf"
@@ -976,10 +1100,11 @@
         "id": "4452ea626de03264",
         "type": "ui_ui_control",
         "z": "8eab0a3c643bf6ac",
+        "g": "85f0a8ccb2e137f9",
         "name": "to Selection Page",
         "events": "change",
-        "x": 1190,
-        "y": 240,
+        "x": 1210,
+        "y": 280,
         "wires": [
             []
         ]
@@ -988,24 +1113,25 @@
         "id": "e4efae5a0416559b",
         "type": "ui_button",
         "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
         "name": "",
         "group": "f2f686aa2b9f097c",
         "order": 5,
         "width": 5,
         "height": 1,
         "passthru": false,
-        "label": "Back to Authentcation",
+        "label": "Back",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
         "className": "",
         "icon": "",
-        "payload": "Authenticate",
+        "payload": "Selection Page",
         "payloadType": "str",
         "topic": "",
         "topicType": "str",
-        "x": 180,
-        "y": 620,
+        "x": 730,
+        "y": 400,
         "wires": [
             [
                 "0b59b5147c36e8e3"
@@ -1016,10 +1142,11 @@
         "id": "0b59b5147c36e8e3",
         "type": "ui_ui_control",
         "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
         "name": "",
         "events": "all",
-        "x": 400,
-        "y": 620,
+        "x": 1000,
+        "y": 400,
         "wires": [
             []
         ]
@@ -1028,6 +1155,7 @@
         "id": "655e6c90f6c56fdf",
         "type": "switch",
         "z": "8eab0a3c643bf6ac",
+        "g": "85f0a8ccb2e137f9",
         "name": "If then",
         "property": "statusCode",
         "propertyType": "msg",
@@ -1046,8 +1174,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 750,
-        "y": 240,
+        "x": 770,
+        "y": 280,
         "wires": [
             [],
             [
@@ -1059,6 +1187,7 @@
         "id": "fab6ba3c81d800b6",
         "type": "change",
         "z": "8eab0a3c643bf6ac",
+        "g": "85f0a8ccb2e137f9",
         "name": "",
         "rules": [
             {
@@ -1074,8 +1203,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 940,
-        "y": 240,
+        "x": 960,
+        "y": 280,
         "wires": [
             [
                 "4452ea626de03264"
@@ -1086,6 +1215,7 @@
         "id": "22cb37e8560c7b3a",
         "type": "ui_button",
         "z": "8eab0a3c643bf6ac",
+        "g": "8f0cc9d11e72d96a",
         "name": "",
         "group": "8821f8eafdf5cf1e",
         "order": 0,
@@ -1102,8 +1232,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 110,
-        "y": 360,
+        "x": 130,
+        "y": 680,
         "wires": [
             [
                 "380f85e9d66eb3bf"
@@ -1114,6 +1244,7 @@
         "id": "fb631216c054d071",
         "type": "ui_button",
         "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
         "name": "",
         "group": "8821f8eafdf5cf1e",
         "order": 1,
@@ -1130,8 +1261,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 80,
-        "y": 520,
+        "x": 100,
+        "y": 420,
         "wires": [
             [
                 "ab559ee6616650e4"
@@ -1142,10 +1273,11 @@
         "id": "ab559ee6616650e4",
         "type": "ui_ui_control",
         "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
         "name": "Display Devices",
         "events": "change",
-        "x": 180,
-        "y": 560,
+        "x": 200,
+        "y": 460,
         "wires": [
             [
                 "53582853cf894365"
@@ -1156,10 +1288,11 @@
         "id": "380f85e9d66eb3bf",
         "type": "ui_ui_control",
         "z": "8eab0a3c643bf6ac",
+        "g": "8f0cc9d11e72d96a",
         "name": "to Prod Lines",
         "events": "change",
-        "x": 170,
-        "y": 420,
+        "x": 190,
+        "y": 740,
         "wires": [
             [
                 "74eea60081e77078"
@@ -1170,6 +1303,7 @@
         "id": "633374ecd4636c54",
         "type": "ui_chart",
         "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
         "name": "",
         "group": "1fe72b217c0fd98c",
         "order": 2,
@@ -1204,8 +1338,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1330,
-        "y": 980,
+        "x": 1310,
+        "y": 1160,
         "wires": [
             []
         ]
@@ -1214,6 +1348,7 @@
         "id": "ddcc55230b0734d7",
         "type": "ui_table",
         "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
         "group": "1fe72b217c0fd98c",
         "name": "",
         "order": 1,
@@ -1293,14 +1428,15 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 1270,
-        "y": 880,
+        "x": 1250,
+        "y": 1060,
         "wires": []
     },
     {
         "id": "543843c227a08779",
         "type": "change",
         "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
         "name": "",
         "rules": [
             {
@@ -1316,8 +1452,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1160,
-        "y": 980,
+        "x": 1140,
+        "y": 1160,
         "wires": [
             [
                 "633374ecd4636c54"
@@ -1328,6 +1464,7 @@
         "id": "cee5170381dbcfea",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
+        "g": "85f0a8ccb2e137f9",
         "name": "build url",
         "func": "var ServerIP = msg.payload.host;\nflow.set (\"ServerIP\",ServerIP);\n\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/token\";\nreturn msg;",
         "outputs": 1,
@@ -1336,8 +1473,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
-        "y": 160,
+        "x": 400,
+        "y": 200,
         "wires": [
             [
                 "e9af013e299f3822"
@@ -1348,6 +1485,7 @@
         "id": "0e8196d8614cac87",
         "type": "ui_toast",
         "z": "8eab0a3c643bf6ac",
+        "g": "bec69e86cd0143f6",
         "position": "dialog",
         "displayTime": "3",
         "highlight": "",
@@ -1359,27 +1497,94 @@
         "className": "",
         "topic": "Status",
         "name": "",
-        "x": 610,
-        "y": 20,
+        "x": 570,
+        "y": 60,
         "wires": [
             []
         ]
     },
     {
-        "id": "fc0127d79ac340e2",
-        "type": "debug",
+        "id": "438a1ef390ea88d8",
+        "type": "ui_button",
         "z": "8eab0a3c643bf6ac",
-        "name": "debug 12",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 740,
-        "y": 620,
-        "wires": []
+        "g": "803e952a6482c9ec",
+        "name": "",
+        "group": "1fe72b217c0fd98c",
+        "order": 5,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "Back",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "Selection Page",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 670,
+        "y": 920,
+        "wires": [
+            [
+                "580e16b5abdd46d4"
+            ]
+        ]
+    },
+    {
+        "id": "580e16b5abdd46d4",
+        "type": "ui_ui_control",
+        "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
+        "name": "",
+        "events": "all",
+        "x": 940,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d1eb5d49eeb349ec",
+        "type": "ui_button",
+        "z": "8eab0a3c643bf6ac",
+        "g": "8f0cc9d11e72d96a",
+        "name": "",
+        "group": "7c885960ff9c5601",
+        "order": 5,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "Back",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "Selection Page",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 730,
+        "y": 680,
+        "wires": [
+            [
+                "8e4d716089c72964"
+            ]
+        ]
+    },
+    {
+        "id": "8e4d716089c72964",
+        "type": "ui_ui_control",
+        "z": "8eab0a3c643bf6ac",
+        "g": "8f0cc9d11e72d96a",
+        "name": "",
+        "events": "all",
+        "x": 1000,
+        "y": 680,
+        "wires": [
+            []
+        ]
     }
 ]
