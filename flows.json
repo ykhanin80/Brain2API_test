@@ -28,7 +28,8 @@
             "fb631216c054d071",
             "ab559ee6616650e4",
             "c0913ae221e0aae6",
-            "c0e14ed5320e33b2"
+            "c0e14ed5320e33b2",
+            "08864386c2adbc87"
         ],
         "x": 14,
         "y": 359,
@@ -98,7 +99,9 @@
             "543843c227a08779",
             "438a1ef390ea88d8",
             "580e16b5abdd46d4",
-            "b6487f60490505c9"
+            "b6487f60490505c9",
+            "2f01a6f9a03ab032",
+            "f7be88a83e02d599"
         ],
         "x": 14,
         "y": 879,
@@ -723,9 +726,7 @@
         "x": 310,
         "y": 920,
         "wires": [
-            [
-                "95c993db02c8d0e6"
-            ]
+            []
         ]
     },
     {
@@ -1630,10 +1631,12 @@
         "g": "f8d98a8bcd1abe89",
         "name": "",
         "events": "all",
-        "x": 1240,
+        "x": 1200,
         "y": 520,
         "wires": [
-            []
+            [
+                "08864386c2adbc87"
+            ]
         ]
     },
     {
@@ -1661,6 +1664,54 @@
         "y": 1100,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "08864386c2adbc87",
+        "type": "link out",
+        "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [],
+        "x": 1325,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "2f01a6f9a03ab032",
+        "type": "link in",
+        "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
+        "name": "link in 1",
+        "links": [],
+        "x": 55,
+        "y": 960,
+        "wires": [
+            [
+                "f7be88a83e02d599"
+            ]
+        ]
+    },
+    {
+        "id": "f7be88a83e02d599",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
+        "name": "query",
+        "func": "\nmsg.post = \"deviceName=\" + flow.get(\"device\") + \"&startDate=2024-11-01&endDate=2024-11-05&packageType=singlePackage&take=100&sort=Identity-\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 150,
+        "y": 960,
+        "wires": [
+            [
+                "95c993db02c8d0e6"
+            ]
         ]
     }
 ]
