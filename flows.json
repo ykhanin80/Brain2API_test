@@ -98,7 +98,8 @@
             "438a1ef390ea88d8",
             "580e16b5abdd46d4",
             "b6487f60490505c9",
-            "2f01a6f9a03ab032"
+            "2f01a6f9a03ab032",
+            "989209ce67f134d8"
         ],
         "x": 14,
         "y": 879,
@@ -1640,6 +1641,27 @@
             [
                 "95c993db02c8d0e6"
             ]
+        ]
+    },
+    {
+        "id": "989209ce67f134d8",
+        "type": "ui_date_picker",
+        "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
+        "name": "",
+        "label": "Start date",
+        "group": "1fe72b217c0fd98c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 600,
+        "y": 1060,
+        "wires": [
+            []
         ]
     }
 ]
