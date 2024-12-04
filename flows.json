@@ -1360,7 +1360,7 @@
             {
                 "field": "error",
                 "title": "Error Flag",
-                "width": "15%",
+                "width": "10%",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
