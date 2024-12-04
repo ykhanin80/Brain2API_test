@@ -100,8 +100,7 @@
             "438a1ef390ea88d8",
             "580e16b5abdd46d4",
             "b6487f60490505c9",
-            "2f01a6f9a03ab032",
-            "f7be88a83e02d599"
+            "2f01a6f9a03ab032"
         ],
         "x": 14,
         "y": 879,
@@ -596,15 +595,15 @@
         "type": "function",
         "z": "8eab0a3c643bf6ac",
         "g": "803e952a6482c9ec",
-        "name": "Build header",
-        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/package-records/?\" + msg.post;\n\n//msg.payload = \"deviceName=GLPmaxx%20YK&startDate=2024-11-01&endDate=2024-11-04&packageType=singlePackage&take=10&sort=Identity-\";\n/* \nhttps://172.28.29.100:9998/api/v1/package-records/?{{{post}}}\n\n*/\nreturn msg;",
+        "name": "Query",
+        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/package-records/?\" + msg.post;\n\nmsg.post = \"deviceName=\" + flow.get(\"device\") + \"&startDate=2024-11-01&endDate=2024-11-05&packageType=singlePackage&take=100&sort=Identity-\";\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 510,
+        "x": 490,
         "y": 920,
         "wires": [
             [
@@ -734,8 +733,8 @@
         "type": "debug",
         "z": "8eab0a3c643bf6ac",
         "g": "803e952a6482c9ec",
-        "name": "debug 11",
-        "active": false,
+        "name": "Query",
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -743,7 +742,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 780,
+        "x": 770,
         "y": 920,
         "wires": []
     },
@@ -1686,27 +1685,6 @@
         "name": "link in 1",
         "links": [],
         "x": 55,
-        "y": 960,
-        "wires": [
-            [
-                "f7be88a83e02d599"
-            ]
-        ]
-    },
-    {
-        "id": "f7be88a83e02d599",
-        "type": "function",
-        "z": "8eab0a3c643bf6ac",
-        "g": "803e952a6482c9ec",
-        "name": "query",
-        "func": "\nmsg.post = \"deviceName=\" + flow.get(\"device\") + \"&startDate=2024-11-01&endDate=2024-11-05&packageType=singlePackage&take=100&sort=Identity-\"\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 150,
         "y": 960,
         "wires": [
             [
