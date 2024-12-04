@@ -248,23 +248,6 @@
         "wires": []
     },
     {
-        "id": "0977192164c33b85",
-        "type": "debug",
-        "z": "8eab0a3c643bf6ac",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 910,
-        "y": 360,
-        "wires": []
-    },
-    {
         "id": "dd9a228b504e8ed4",
         "type": "json",
         "z": "8eab0a3c643bf6ac",
@@ -350,8 +333,7 @@
         "y": 420,
         "wires": [
             [
-                "3275b0e1a403ace7",
-                "0977192164c33b85"
+                "3275b0e1a403ace7"
             ]
         ]
     },
@@ -466,7 +448,7 @@
         "name": "/api/v1/devices",
         "method": "GET",
         "ret": "txt",
-        "paytoqs": "ignore",
+        "paytoqs": "body",
         "url": "",
         "tls": "b35b991b388efa02",
         "persist": false,
