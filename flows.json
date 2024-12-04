@@ -91,8 +91,6 @@
             "fabb81e58f33c43b",
             "a6fef996028b87fa",
             "e772d3ec933e33ea",
-            "150986ac4a23e687",
-            "dd007931eed7ff99",
             "e817333c9076e8dc",
             "633374ecd4636c54",
             "ddcc55230b0734d7",
@@ -104,8 +102,8 @@
         ],
         "x": 14,
         "y": 879,
-        "w": 1452,
-        "h": 282
+        "w": 1332,
+        "h": 262
     },
     {
         "id": "0346d96b42bc27b1",
@@ -603,7 +601,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
+        "x": 150,
         "y": 920,
         "wires": [
             [
@@ -629,8 +627,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 550,
-        "y": 1020,
+        "x": 370,
+        "y": 920,
         "wires": [
             [
                 "a6fef996028b87fa"
@@ -646,8 +644,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 750,
-        "y": 1020,
+        "x": 590,
+        "y": 920,
         "wires": [
             [
                 "e772d3ec933e33ea"
@@ -667,65 +665,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
-        "y": 1020,
+        "x": 790,
+        "y": 920,
         "wires": [
             [
                 "ddcc55230b0734d7",
                 "543843c227a08779"
             ]
-        ]
-    },
-    {
-        "id": "150986ac4a23e687",
-        "type": "inject",
-        "z": "8eab0a3c643bf6ac",
-        "g": "803e952a6482c9ec",
-        "name": "query parameter",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "",
-        "topic": "",
-        "payload": "deviceName=Labeler1-Top1&startDate=2024-11-01&endDate=2024-11-05&packageType=singlePackage&take=100&sort=Identity-",
-        "payloadType": "str",
-        "x": 140,
-        "y": 920,
-        "wires": [
-            [
-                "dd007931eed7ff99"
-            ]
-        ]
-    },
-    {
-        "id": "dd007931eed7ff99",
-        "type": "change",
-        "z": "8eab0a3c643bf6ac",
-        "g": "803e952a6482c9ec",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "post",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 310,
-        "y": 920,
-        "wires": [
-            []
         ]
     },
     {
@@ -742,8 +688,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 770,
-        "y": 920,
+        "x": 210,
+        "y": 1000,
         "wires": []
     },
     {
@@ -1302,9 +1248,9 @@
         "g": "803e952a6482c9ec",
         "name": "",
         "group": "1fe72b217c0fd98c",
-        "order": 2,
-        "width": "26",
-        "height": "10",
+        "order": 4,
+        "width": 0,
+        "height": 0,
         "label": "Package records",
         "chartType": "line",
         "legend": "true",
@@ -1334,8 +1280,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1350,
-        "y": 1120,
+        "x": 1230,
+        "y": 980,
         "wires": [
             []
         ]
@@ -1347,9 +1293,9 @@
         "g": "803e952a6482c9ec",
         "group": "1fe72b217c0fd98c",
         "name": "",
-        "order": 1,
-        "width": "25",
-        "height": "5",
+        "order": 3,
+        "width": 0,
+        "height": 0,
         "columns": [
             {
                 "field": "timestamp",
@@ -1424,8 +1370,8 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 1250,
-        "y": 1020,
+        "x": 1030,
+        "y": 920,
         "wires": []
     },
     {
@@ -1448,8 +1394,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1140,
-        "y": 1120,
+        "x": 1020,
+        "y": 980,
         "wires": [
             [
                 "633374ecd4636c54"
@@ -1506,9 +1452,9 @@
         "g": "803e952a6482c9ec",
         "name": "",
         "group": "1fe72b217c0fd98c",
-        "order": 5,
-        "width": 5,
-        "height": 1,
+        "order": 2,
+        "width": 0,
+        "height": 0,
         "passthru": false,
         "label": "Back",
         "tooltip": "",
@@ -1645,7 +1591,7 @@
         "g": "803e952a6482c9ec",
         "name": "",
         "group": "1fe72b217c0fd98c",
-        "order": 3,
+        "order": 1,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -1689,7 +1635,7 @@
             "08864386c2adbc87"
         ],
         "x": 55,
-        "y": 960,
+        "y": 920,
         "wires": [
             [
                 "95c993db02c8d0e6"
