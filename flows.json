@@ -1300,7 +1300,7 @@
             {
                 "field": "timestamp",
                 "title": "Timestamp",
-                "width": "150",
+                "width": "15%",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
@@ -1310,7 +1310,7 @@
             {
                 "field": "articleNumber",
                 "title": "PLU#",
-                "width": "80",
+                "width": "10%",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
@@ -1320,7 +1320,7 @@
             {
                 "field": "customerNumber",
                 "title": "Customer#",
-                "width": "80",
+                "width": "10%",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
@@ -1330,7 +1330,7 @@
             {
                 "field": "articleName",
                 "title": "Description",
-                "width": "300",
+                "width": "20%",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
@@ -1340,7 +1340,7 @@
             {
                 "field": "device",
                 "title": "Device",
-                "width": "200",
+                "width": "20%",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
@@ -1350,7 +1350,7 @@
             {
                 "field": "actualNetWeight",
                 "title": "Weight",
-                "width": "80",
+                "width": "15%",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
@@ -1360,7 +1360,7 @@
             {
                 "field": "error",
                 "title": "Error Flag",
-                "width": "80",
+                "width": "15%",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
