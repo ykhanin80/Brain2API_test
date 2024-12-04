@@ -338,7 +338,7 @@
         "name": "/api/v1/production-lines",
         "method": "GET",
         "ret": "txt",
-        "paytoqs": "ignore",
+        "paytoqs": "body",
         "url": "",
         "tls": "b35b991b388efa02",
         "persist": false,
@@ -1000,7 +1000,6 @@
         "y": 240,
         "wires": [
             [
-                "22cb37e8560c7b3a",
                 "fb631216c054d071"
             ]
         ]
