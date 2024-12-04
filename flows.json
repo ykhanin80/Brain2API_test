@@ -596,7 +596,7 @@
         "z": "8eab0a3c643bf6ac",
         "g": "803e952a6482c9ec",
         "name": "Query",
-        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/package-records/?\" + msg.post;\n\nmsg.post = \"deviceName=\" + flow.get(\"device\") + \"&startDate=2024-11-01&endDate=2024-11-05&packageType=singlePackage&take=100&sort=Identity-\";\n\nreturn msg;",
+        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.post = \"deviceName=\" + flow.get(\"device\") + \"&startDate=2024-11-01&endDate=2024-11-05&packageType=singlePackage&take=100&sort=Identity-\";\n\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/package-records/?\" + msg.post;\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
