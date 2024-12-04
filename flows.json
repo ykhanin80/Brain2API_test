@@ -1672,7 +1672,9 @@
         "g": "f8d98a8bcd1abe89",
         "name": "link out 1",
         "mode": "link",
-        "links": [],
+        "links": [
+            "2f01a6f9a03ab032"
+        ],
         "x": 1325,
         "y": 520,
         "wires": []
@@ -1683,7 +1685,9 @@
         "z": "8eab0a3c643bf6ac",
         "g": "803e952a6482c9ec",
         "name": "link in 1",
-        "links": [],
+        "links": [
+            "08864386c2adbc87"
+        ],
         "x": 55,
         "y": 960,
         "wires": [
