@@ -1764,8 +1764,8 @@
         "label": "Date and time filter",
         "group": "1fe72b217c0fd98c",
         "order": 6,
-        "width": 0,
-        "height": 0,
+        "width": "3",
+        "height": "3",
         "options": [
             {
                 "label": "Start day",
