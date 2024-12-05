@@ -100,7 +100,9 @@
             "b6487f60490505c9",
             "2f01a6f9a03ab032",
             "18899c2688504e11",
-            "f26b6e1f0c4a5849"
+            "f26b6e1f0c4a5849",
+            "6a8e84c3b461e8a1",
+            "cd9854e511e2da51"
         ],
         "x": 14,
         "y": 819,
@@ -810,7 +812,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 310,
+        "x": 610,
         "y": 860,
         "wires": []
     },
@@ -1603,7 +1605,7 @@
         "g": "803e952a6482c9ec",
         "name": "",
         "events": "all",
-        "x": 360,
+        "x": 220,
         "y": 1060,
         "wires": [
             []
@@ -1714,8 +1716,8 @@
         "name": "",
         "group": "1fe72b217c0fd98c",
         "order": 6,
-        "width": 0,
-        "height": 0,
+        "width": "2",
+        "height": "1",
         "passthru": false,
         "label": "Refresh",
         "tooltip": "",
@@ -1731,7 +1733,7 @@
         "y": 1100,
         "wires": [
             [
-                "95c993db02c8d0e6"
+                "cd9854e511e2da51"
             ]
         ]
     },
@@ -1844,6 +1846,55 @@
         "wires": [
             [
                 "18899c2688504e11"
+            ]
+        ]
+    },
+    {
+        "id": "6a8e84c3b461e8a1",
+        "type": "inject",
+        "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cd9854e511e2da51",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
+        "name": "now",
+        "func": "var now = new Date();\nvar finisht = now.toLocaleTimeString('en-US', {\n        hour: '2-digit',\n        minute: '2-digit',\n        second: '2-digit',\n        hour12: false // This ensures the time is in 24-hour format\n});\nflow.set(\"finishtime\", finisht);\n/*\nvar finishday = new Date(finish);\nvar formattedFinishDate = finishday.getFullYear() + '-' +\n        ('0' + (finishday.getMonth() + 1)).slice(-2) + '-' +\n        ('0' + finishday.getDate()).slice(-2);\nflow.set(\"finishday\", formattedFinishDate);\n\nvar finisht = msg.payload.finish_time;\nvar finishtime = new Date(finisht).toLocaleString('en-US', { \n        hour: '2-digit', \n        minute: '2-digit', \n        second: '2-digit',\n        hour12: false});\n\nflow.set(\"finishtime\",finishtime);\n*/\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 1100,
+        "wires": [
+            [
+                "95c993db02c8d0e6"
             ]
         ]
     }
