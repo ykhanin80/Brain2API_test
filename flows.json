@@ -360,7 +360,7 @@
             "allowSwipe": "false",
             "lockMenu": "false",
             "allowTempTheme": "true",
-            "dateFormat": "dd/MM/YYYY/h:mm:ss a",
+            "dateFormat": "MM/DD/YYYY h:mm:ss a",
             "sizes": {
                 "sx": 48,
                 "sy": 48,
