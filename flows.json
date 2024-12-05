@@ -101,12 +101,14 @@
             "2f01a6f9a03ab032",
             "989209ce67f134d8",
             "68cca2aa339bb2b6",
-            "ec2f16fa28fe8da1"
+            "ec2f16fa28fe8da1",
+            "18899c2688504e11",
+            "94a10dd2153f93bd"
         ],
         "x": 14,
-        "y": 879,
+        "y": 819,
         "w": 1332,
-        "h": 262
+        "h": 322
     },
     {
         "id": "0346d96b42bc27b1",
@@ -605,7 +607,7 @@
         "z": "8eab0a3c643bf6ac",
         "g": "803e952a6482c9ec",
         "name": "Query",
-        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.post = \"deviceName=\" + flow.get(\"device\") + \"&startDate=2024-11-01&endDate=2024-11-05&packageType=singlePackage&take=100&sort=Identity-\";\n\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/package-records/?\" + msg.post;\n\n\nreturn msg;",
+        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.post = \"deviceName=\" + flow.get(\"device\") + \"&startDate=\" \n+ flow.get(\"start\") + \n\"&endDate=\" \n+ flow.get(\"finish\") + \n\"&packageType=singlePackage&take=10000&sort=Identity-\";\n\nmsg.url = \"https://\" + flow.get(\"ServerIP\") \n+ \":9998/api/v1/package-records/?\" + msg.post;\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -699,8 +701,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 210,
-        "y": 1000,
+        "x": 310,
+        "y": 860,
         "wires": []
     },
     {
@@ -955,7 +957,7 @@
         "type": "function",
         "z": "8eab0a3c643bf6ac",
         "g": "0346d96b42bc27b1",
-        "name": "function 2",
+        "name": "name",
         "func": "\n// function to prepare options for dropdown menu\nmsg.options = msg.payload.map(function(el) {\n    return el.name;\n});\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
@@ -963,7 +965,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 980,
+        "x": 970,
         "y": 700,
         "wires": [
             [
@@ -1649,7 +1651,7 @@
         "y": 920,
         "wires": [
             [
-                "95c993db02c8d0e6"
+                "989209ce67f134d8"
             ]
         ]
     },
@@ -1668,11 +1670,11 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 600,
-        "y": 1060,
+        "x": 160,
+        "y": 980,
         "wires": [
             [
-                "ec2f16fa28fe8da1"
+                "18899c2688504e11"
             ]
         ]
     },
@@ -1691,11 +1693,11 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 610,
-        "y": 1100,
+        "x": 470,
+        "y": 980,
         "wires": [
             [
-                "ec2f16fa28fe8da1"
+                "94a10dd2153f93bd"
             ]
         ]
     },
@@ -1715,5 +1717,47 @@
         "x": 820,
         "y": 1060,
         "wires": []
+    },
+    {
+        "id": "18899c2688504e11",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
+        "name": "start",
+        "func": "var start = msg.payload;\nflow.set(\"start\",start);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 980,
+        "wires": [
+            [
+                "68cca2aa339bb2b6"
+            ]
+        ]
+    },
+    {
+        "id": "94a10dd2153f93bd",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
+        "name": "finish",
+        "func": "var finish = msg.payload;\nflow.set(\"finish\",finish);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 980,
+        "wires": [
+            [
+                "95c993db02c8d0e6"
+            ]
+        ]
     }
 ]
