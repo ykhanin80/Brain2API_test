@@ -103,12 +103,13 @@
             "68cca2aa339bb2b6",
             "ec2f16fa28fe8da1",
             "18899c2688504e11",
-            "94a10dd2153f93bd"
+            "94a10dd2153f93bd",
+            "f26b6e1f0c4a5849"
         ],
         "x": 14,
         "y": 819,
         "w": 1332,
-        "h": 322
+        "h": 342
     },
     {
         "id": "0346d96b42bc27b1",
@@ -1751,6 +1752,68 @@
         "wires": [
             [
                 "95c993db02c8d0e6"
+            ]
+        ]
+    },
+    {
+        "id": "f26b6e1f0c4a5849",
+        "type": "ui_form",
+        "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
+        "name": "",
+        "label": "Date and time filter",
+        "group": "1fe72b217c0fd98c",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Start day",
+                "value": "Start_day",
+                "type": "date",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Start time",
+                "value": "start_time",
+                "type": "time",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Finish day",
+                "value": "Finish_day",
+                "type": "date",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Finish time",
+                "value": "finish_time",
+                "type": "time",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "Start_day": "",
+            "start_time": "",
+            "Finish_day": "",
+            "finish_time": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 390,
+        "y": 1120,
+        "wires": [
+            [
+                "ec2f16fa28fe8da1"
             ]
         ]
     }
