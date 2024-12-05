@@ -1786,19 +1786,20 @@
         "type": "function",
         "z": "8eab0a3c643bf6ac",
         "g": "803e952a6482c9ec",
-        "name": "start",
-        "func": "var start = msg.payload.start_day;\nvar startday = new Date(start).toLocaleString('en-US', { \n        year: 'numeric', \n        month: '2-digit', \n        day: '2-digit'});\nflow.set(\"startday\",startday);\n\nvar startt = msg.payload.start_time;\nvar starttime = new Date(startt).toLocaleString('en-US', { \n        hour: '2-digit', \n        minute: '2-digit', \n        second: '2-digit'});\n\nflow.set(\"starttime\",starttime);\nreturn msg;",
+        "name": "MMDDYY",
+        "func": "var start = msg.payload.start_day;\nvar startday = new Date(start).toLocaleString('en-US', { \n        year: 'numeric', \n        month: '2-digit', \n        day: '2-digit'});\nflow.set(\"startday\",startday);\n\nvar startt = msg.payload.start_time;\nvar starttime = new Date(startt).toLocaleString('en-US', { \n        hour: '2-digit', \n        minute: '2-digit', \n        second: '2-digit'});\n\nflow.set(\"starttime\",starttime);\n\nvar finish = msg.payload.finish_day;\nvar finishday = new Date(finish).toLocaleString('en-US', { \n        year: 'numeric', \n        month: '2-digit', \n        day: '2-digit'});\nflow.set(\"finishday\",finishday);\n\nvar finisht = msg.payload.finish_time;\nvar finishtime = new Date(finisht).toLocaleString('en-US', { \n        hour: '2-digit', \n        minute: '2-digit', \n        second: '2-digit'});\n\nflow.set(\"finishtime\",finishtime);\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 350,
+        "x": 360,
         "y": 980,
         "wires": [
             [
-                "95c993db02c8d0e6"
+                "95c993db02c8d0e6",
+                "ec2f16fa28fe8da1"
             ]
         ]
     },
@@ -1860,7 +1861,6 @@
         "y": 980,
         "wires": [
             [
-                "ec2f16fa28fe8da1",
                 "18899c2688504e11"
             ]
         ]
