@@ -1883,8 +1883,8 @@
         "label": "Date and time filter",
         "group": "1fe72b217c0fd98c",
         "order": 3,
-        "width": 0,
-        "height": 0,
+        "width": "4",
+        "height": "4",
         "options": [
             {
                 "label": "Start day",
