@@ -7,6 +7,13 @@
         "info": ""
     },
     {
+        "id": "b283eef3.e91d1",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "f8d98a8bcd1abe89",
         "type": "group",
         "z": "8eab0a3c643bf6ac",
@@ -365,6 +372,24 @@
                 "py": 0
             }
         }
+    },
+    {
+        "id": "3ba37fd4.6558f",
+        "type": "ui_group",
+        "name": "Example Flow",
+        "tab": "72415252.b2cadc",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false
+    },
+    {
+        "id": "72415252.b2cadc",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "dd9a228b504e8ed4",
@@ -1685,5 +1710,87 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "4b6ac005.c6281",
+        "type": "inject",
+        "z": "b283eef3.e91d1",
+        "name": "",
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 180,
+        "wires": [
+            [
+                "ee27edae.2a9f",
+                "903b4cae.13137"
+            ]
+        ]
+    },
+    {
+        "id": "ee27edae.2a9f",
+        "type": "debug",
+        "z": "b283eef3.e91d1",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 370,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "28cd651b.d766ea",
+        "type": "ui_text",
+        "z": "b283eef3.e91d1",
+        "group": "3ba37fd4.6558f",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Date: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 510,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "903b4cae.13137",
+        "type": "function",
+        "z": "b283eef3.e91d1",
+        "name": "Format Time",
+        "func": "var d = new Date();\nvar options = { timeZone: 'UTC', timeZoneName: 'long', year: 'numeric', month: '2-digit', day: '2-digit', hour: `2-digit`, minute: `2-digit`, second: `2-digit`};\nvar _resultDate = d.toLocaleDateString('en-US', options);\nmsg.payload = _resultDate;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 220,
+        "wires": [
+            [
+                "28cd651b.d766ea"
+            ]
+        ]
+    },
+    {
+        "id": "b6bd7bc.6bc6d88",
+        "type": "comment",
+        "z": "b283eef3.e91d1",
+        "name": "Example Flow",
+        "info": "This is an example flow created by Mac and Huche.\nThis flow runs once every second because of the Inject \"timestamp\" node.\nThe timestamp is fed to the debug node and outputted in milliseconds since 1/1/1970.\nClick the debug tab to view these debug messages.\nThe function node is simple javascript to retrieve the time and date in a specific format.\nThis formatted date is given to the text dashboard node.\nTo view this dashboard, click the dashboard tab or go to\nhttp://localhost:1880/ui",
+        "x": 190,
+        "y": 120,
+        "wires": []
     }
 ]
