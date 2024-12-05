@@ -99,17 +99,14 @@
             "580e16b5abdd46d4",
             "b6487f60490505c9",
             "2f01a6f9a03ab032",
-            "989209ce67f134d8",
-            "68cca2aa339bb2b6",
             "ec2f16fa28fe8da1",
             "18899c2688504e11",
-            "94a10dd2153f93bd",
             "f26b6e1f0c4a5849"
         ],
         "x": 14,
         "y": 819,
         "w": 1332,
-        "h": 342
+        "h": 322
     },
     {
         "id": "0346d96b42bc27b1",
@@ -1764,55 +1761,7 @@
         "x": 55,
         "y": 860,
         "wires": [
-            [
-                "989209ce67f134d8"
-            ]
-        ]
-    },
-    {
-        "id": "989209ce67f134d8",
-        "type": "ui_date_picker",
-        "z": "8eab0a3c643bf6ac",
-        "g": "803e952a6482c9ec",
-        "name": "",
-        "label": "Start date",
-        "group": "1fe72b217c0fd98c",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 160,
-        "y": 980,
-        "wires": [
-            [
-                "18899c2688504e11"
-            ]
-        ]
-    },
-    {
-        "id": "68cca2aa339bb2b6",
-        "type": "ui_date_picker",
-        "z": "8eab0a3c643bf6ac",
-        "g": "803e952a6482c9ec",
-        "name": "",
-        "label": "Finish date",
-        "group": "1fe72b217c0fd98c",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 470,
-        "y": 980,
-        "wires": [
-            [
-                "94a10dd2153f93bd"
-            ]
+            []
         ]
     },
     {
@@ -1828,8 +1777,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 1060,
+        "x": 780,
+        "y": 1040,
         "wires": []
     },
     {
@@ -1838,35 +1787,14 @@
         "z": "8eab0a3c643bf6ac",
         "g": "803e952a6482c9ec",
         "name": "start",
-        "func": "var rawstart = msg.payload;\n\nvar start = new Date(rawstart).toLocaleString('en-US', { \n        year: 'numeric', \n        month: '2-digit', \n        day: '2-digit', \n        hour: '2-digit', \n        minute: '2-digit', \n        second: '2-digit'});\n\n\nflow.set(\"start\",start);\n\nreturn msg;",
+        "func": "var start = msg.payload.start_day;\nvar startday = new Date(start).toLocaleString('en-US', { \n        year: 'numeric', \n        month: '2-digit', \n        day: '2-digit'});\nflow.set(\"startday\",startday);\n\nvar startt = msg.payload.start_time;\nvar starttime = new Date(startt).toLocaleString('en-US', { \n        hour: '2-digit', \n        minute: '2-digit', \n        second: '2-digit'});\n\nflow.set(\"starttime\",starttime);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
-        "y": 980,
-        "wires": [
-            [
-                "68cca2aa339bb2b6"
-            ]
-        ]
-    },
-    {
-        "id": "94a10dd2153f93bd",
-        "type": "function",
-        "z": "8eab0a3c643bf6ac",
-        "g": "803e952a6482c9ec",
-        "name": "finish",
-        "func": "var rawfinish = msg.payload;\nvar finish = new Date(rawfinish).toLocaleString('en-US', { \n        year: 'numeric', \n        month: '2-digit', \n        day: '2-digit', \n        hour: '2-digit', \n        minute: '2-digit', \n        second: '2-digit'});\nflow.set(\"finish\",finish);\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 630,
+        "x": 350,
         "y": 980,
         "wires": [
             [
@@ -1888,7 +1816,7 @@
         "options": [
             {
                 "label": "Start day",
-                "value": "Start_day",
+                "value": "start_day",
                 "type": "date",
                 "required": true,
                 "rows": null
@@ -1902,7 +1830,7 @@
             },
             {
                 "label": "Finish day",
-                "value": "Finish_day",
+                "value": "finish_day",
                 "type": "date",
                 "required": true,
                 "rows": null
@@ -1916,9 +1844,9 @@
             }
         ],
         "formValue": {
-            "Start_day": "",
+            "start_day": "",
             "start_time": "",
-            "Finish_day": "",
+            "finish_day": "",
             "finish_time": ""
         },
         "payload": "",
@@ -1928,11 +1856,12 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 390,
-        "y": 1120,
+        "x": 150,
+        "y": 980,
         "wires": [
             [
-                "ec2f16fa28fe8da1"
+                "ec2f16fa28fe8da1",
+                "18899c2688504e11"
             ]
         ]
     }
