@@ -782,7 +782,7 @@
         "z": "8eab0a3c643bf6ac",
         "g": "803e952a6482c9ec",
         "name": "Prepare Table data",
-        "func": "var packstemp = msg.payload.map(function (el) {\n    function getDevice(device) {\n        return device ? device.name : null;\n    } \n\n    function getActualNetWeight(actualNetWeight) {\n        return actualNetWeight ? actualNetWeight.value : null;\n    }\n\n    function getError(error) {\n        return error ? error.flag : null;\n    }\n\n    // Format the timestamp\n    var formattedTimestamp = new Date(el.timestamp).toLocaleString('en-US', { \n        year: 'numeric', \n        month: '2-digit', \n        day: '2-digit', \n        hour: '2-digit', \n        minute: '2-digit', \n        second: '2-digit'\n    });\n\n    return {\n        timestamp: formattedTimestamp,\n        articleNumber: el.articleNumber,\n        articleName: el.articleName,\n        customerNumber: el.customerNumber,\n        device: getDevice(el.device),\n        actualNetWeight: getActualNetWeight(el.actualNetWeight),\n        error: getError(el.error)\n    };\n});\n\n// Sort the data by timestamp\npackstemp.sort((a, b) => a.timestamp - b.timestamp);\n\nmsg.payload = packstemp;\nreturn msg;",
+        "func": "var packstemp = msg.payload.map(function (el) {\n    function getDevice(device) {\n        return device ? device.name : null;\n    } \n\n    function getActualNetWeight(actualNetWeight) {\n        return actualNetWeight ? actualNetWeight.value : null;\n    }\n\n    function getError(error) {\n        return error ? error.flag : null;\n    }\n\n    // Use timestamp in milliseconds\n    var timestamp = new Date(el.timestamp).getTime();\n\n    return {\n        timestamp: timestamp,\n        articleNumber: el.articleNumber,\n        articleName: el.articleName,\n        customerNumber: el.customerNumber,\n        device: getDevice(el.device),\n        actualNetWeight: getActualNetWeight(el.actualNetWeight),\n        error: getError(el.error)\n    };\n});\n\n// Sort the data by timestamp\npackstemp.sort((a, b) => a.timestamp - b.timestamp);\n\n// Retrieve the existing chart data from the flow context\nvar chartData = flow.get(\"chartData\") || { labels: [], data: [[]] };\n\n// Append new data points to the chart data\npackstemp.forEach(function (el) {\n    chartData.labels.push(el.timestamp);\n    chartData.data[0].push(el.actualNetWeight);\n});\n\n// Store the updated chart data back to the flow context\nflow.set(\"chartData\", chartData);\n\n// Set the payload to the updated chart data\nmsg.payload = chartData;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1509,7 +1509,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "[\t{\"labels\": $$.payload.timestamp,\t\"data\":[[$$.payload.actualNetWeight]],\t\"series\":[\"weight lbs\"]\t}]",
+                "to": "/*[\t{\"labels\": $$.payload.timestamp,\t\"data\":[[$$.payload.actualNetWeight]],\t\"series\":[\"weight lbs\"]\t}] */\t\t[\t    {\t        \"labels\": $flowContext(\"chartData.labels\").concat([$$.payload.timestamp]),\t        \"data\": [\t            $flowContext(\"chartData.data[0]\").concat([$$.payload.actualNetWeight])\t        ],\t        \"series\": [\"weight lbs\"]\t    }\t]",
                 "tot": "jsonata"
             }
         ],
