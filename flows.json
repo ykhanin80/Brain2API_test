@@ -368,16 +368,6 @@
         }
     },
     {
-        "id": "3ba37fd4.6558f",
-        "type": "ui_group",
-        "name": "Example Flow",
-        "tab": "72415252.b2cadc",
-        "order": 1,
-        "disp": true,
-        "width": "8",
-        "collapse": false
-    },
-    {
         "id": "72415252.b2cadc",
         "type": "ui_tab",
         "name": "Home",
