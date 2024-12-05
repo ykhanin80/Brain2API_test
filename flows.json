@@ -1772,7 +1772,7 @@
         "type": "function",
         "z": "b283eef3.e91d1",
         "name": "Format Time",
-        "func": "var d = new Date();\nvar options = { \n    timeZone: 'America/New_York', // Use a valid IANA time zone identifier\n    timeZoneName: 'long', \n    year: 'numeric', \n    month: '2-digit', \n    day: '2-digit', \n    hour: '2-digit', \n    minute: '2-digit', \n    second: '2-digit'\n};\nvar _resultDate = d.toLocaleString('en-US', options); // Use toLocaleString to include both date and time\nmsg.payload = _resultDate;\nreturn msg;",
+        "func": "var options = {\n    timeZone: 'America/New_York',\n    timeZoneName: 'long',\n    year: 'numeric',\n    month: '2-digit',\n    day: '2-digit',\n    hour: '2-digit',\n    minute: '2-digit',\n    second: '2-digit'\n};\n\nvar d = new Date();\nvar _resultDate = d.toLocaleString('en-US', options);\nmsg.payload = _resultDate;\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 1,
