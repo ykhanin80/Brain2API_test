@@ -146,7 +146,6 @@
             "c6fcb661d08e1e5e",
             "855f9fc3669603b2",
             "65c99e9a7518480d",
-            "7564e457940a6fe9",
             "6cec62bdb3fe7331",
             "41d26d6d9c96aed8",
             "be30eb4e98508bb6",
@@ -1763,7 +1762,7 @@
         "wires": [
             [
                 "65c99e9a7518480d",
-                "7564e457940a6fe9"
+                "855f9fc3669603b2"
             ]
         ]
     },
@@ -1901,34 +1900,6 @@
         "x": 1030,
         "y": 1160,
         "wires": []
-    },
-    {
-        "id": "7564e457940a6fe9",
-        "type": "change",
-        "z": "8eab0a3c643bf6ac",
-        "g": "96d22616b20b6ec0",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "[\t    {\t        \"labels\": $$.payload.timestamp,\t        \"data\": [\t            $$.payload.map(payload.actualNetWeight),\t            $$.payload.map(payload.averageWeight)\t        ],\t        \"series\": [\"Actual Weight (lbs)\", \"Average Weight (lbs)\"]\t    }\t]\t/*\t[\t{\"labels\": $$.payload.timestamp,\t\"data\":[[$$.payload.actualNetWeight]],\t\"series\":[\"weight lbs\"]\t}] \t*/ ",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1000,
-        "y": 1220,
-        "wires": [
-            [
-                "855f9fc3669603b2"
-            ]
-        ]
     },
     {
         "id": "6cec62bdb3fe7331",
