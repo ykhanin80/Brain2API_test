@@ -1435,7 +1435,7 @@
         "chartType": "line",
         "legend": "true",
         "xformat": "auto",
-        "interpolate": "linear",
+        "interpolate": "monotone",
         "nodata": "Waiting for transaction from server",
         "dot": false,
         "ymin": "",
