@@ -165,7 +165,8 @@
             "6562c9f1b47e5be6",
             "a0a7cdf1ee901aa2",
             "4ea9623ba981589f",
-            "7b2e862228c8e569"
+            "7b2e862228c8e569",
+            "31bf84f125a272ef"
         ],
         "x": 14,
         "y": 1059,
@@ -2366,7 +2367,8 @@
                 "7564e457940a6fe9"
             ],
             [
-                "7b2e862228c8e569"
+                "7b2e862228c8e569",
+                "31bf84f125a272ef"
             ]
         ]
     },
@@ -2384,6 +2386,19 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 860,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "31bf84f125a272ef",
+        "type": "ui_audio",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "",
+        "group": "6794d2e26b7f5c97",
+        "voice": "Microsoft Zira - English (United States)",
+        "always": "",
+        "x": 680,
         "y": 1280,
         "wires": []
     }
