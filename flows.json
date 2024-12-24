@@ -167,7 +167,8 @@
             "3cc61dbee9210ef5",
             "89c4471480a70fcd",
             "1dce4b97189c0bba",
-            "a0a7cdf1ee901aa2"
+            "a0a7cdf1ee901aa2",
+            "dbe3a18fe10ad07a"
         ],
         "x": 14,
         "y": 1039,
@@ -2453,7 +2454,9 @@
         "x": 210,
         "y": 1460,
         "wires": [
-            []
+            [
+                "dbe3a18fe10ad07a"
+            ]
         ]
     },
     {
@@ -2475,6 +2478,25 @@
             [
                 "6c8c9c726eae0d3c"
             ]
+        ]
+    },
+    {
+        "id": "dbe3a18fe10ad07a",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "set block",
+        "func": "var block=msg.payload;\nflow.set('block',block);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 1460,
+        "wires": [
+            []
         ]
     }
 ]
