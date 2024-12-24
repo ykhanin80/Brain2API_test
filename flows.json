@@ -163,7 +163,9 @@
             "0908448ce6b52139",
             "e9331c3e628b73e6",
             "6562c9f1b47e5be6",
-            "a0a7cdf1ee901aa2"
+            "a0a7cdf1ee901aa2",
+            "4ea9623ba981589f",
+            "7b2e862228c8e569"
         ],
         "x": 14,
         "y": 1059,
@@ -1763,7 +1765,7 @@
         "wires": [
             [
                 "65c99e9a7518480d",
-                "7564e457940a6fe9"
+                "4ea9623ba981589f"
             ]
         ]
     },
@@ -2332,5 +2334,56 @@
                 "6c8c9c726eae0d3c"
             ]
         ]
+    },
+    {
+        "id": "4ea9623ba981589f",
+        "type": "switch",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "new data",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 800,
+        "y": 1220,
+        "wires": [
+            [
+                "7564e457940a6fe9"
+            ],
+            [
+                "7b2e862228c8e569"
+            ]
+        ]
+    },
+    {
+        "id": "7b2e862228c8e569",
+        "type": "debug",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 1280,
+        "wires": []
     }
 ]
