@@ -1913,7 +1913,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "[\t{\"labels\": $$.payload.timestamp,\t\"data\":[[$$.payload.actualNetWeight]],\t\"series\":[\"weight lbs\"]\t}] ",
+                "to": "[\t    {\t        \"labels\": $$.payload.timestamp,\t        \"data\": [\t            $$.payload.map(payload.actualNetWeight),\t            $$.payload.map(payload.averageWeight)\t        ],\t        \"series\": [\"Actual Weight (lbs)\", \"Average Weight (lbs)\"]\t    }\t]\t/*\t[\t{\"labels\": $$.payload.timestamp,\t\"data\":[[$$.payload.actualNetWeight]],\t\"series\":[\"weight lbs\"]\t}] \t*/ ",
                 "tot": "jsonata"
             }
         ],
