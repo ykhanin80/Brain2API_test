@@ -166,7 +166,7 @@
             "a0a7cdf1ee901aa2",
             "4ea9623ba981589f",
             "7b2e862228c8e569",
-            "31bf84f125a272ef"
+            "7ea6931c9a540f54"
         ],
         "x": 14,
         "y": 1059,
@@ -2364,11 +2364,12 @@
         "y": 1220,
         "wires": [
             [
-                "7564e457940a6fe9"
+                "7564e457940a6fe9",
+                "7ea6931c9a540f54"
             ],
             [
                 "7b2e862228c8e569",
-                "31bf84f125a272ef"
+                "7ea6931c9a540f54"
             ]
         ]
     },
@@ -2390,16 +2391,25 @@
         "wires": []
     },
     {
-        "id": "31bf84f125a272ef",
-        "type": "ui_audio",
+        "id": "7ea6931c9a540f54",
+        "type": "ui_text",
         "z": "8eab0a3c643bf6ac",
         "g": "96d22616b20b6ec0",
-        "name": "",
         "group": "6794d2e26b7f5c97",
-        "voice": "Microsoft Zira - English (United States)",
-        "always": "",
-        "x": 680,
-        "y": 1280,
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "payload",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 700,
+        "y": 1320,
         "wires": []
     }
 ]
