@@ -163,15 +163,17 @@
             "0908448ce6b52139",
             "e9331c3e628b73e6",
             "6562c9f1b47e5be6",
-            "a0a7cdf1ee901aa2",
             "8f37f2f68e6c0bc8",
             "3cc61dbee9210ef5",
-            "89c4471480a70fcd"
+            "89c4471480a70fcd",
+            "1dce4b97189c0bba",
+            "9162c822108e3f62",
+            "7e03ce4951e4e39c"
         ],
         "x": 14,
         "y": 1039,
         "w": 1352,
-        "h": 422
+        "h": 462
     },
     {
         "id": "b35b991b388efa02",
@@ -2140,8 +2142,8 @@
         "y": 1400,
         "wires": [
             [
-                "964926b51a0818a1",
-                "b32fd34dc6ed11e3"
+                "b32fd34dc6ed11e3",
+                "9162c822108e3f62"
             ]
         ]
     },
@@ -2260,8 +2262,8 @@
         "tooltip": "minutes",
         "group": "6794d2e26b7f5c97",
         "order": 9,
-        "width": 0,
-        "height": 0,
+        "width": "20",
+        "height": "1",
         "passthru": true,
         "outs": "end",
         "topic": "topic",
@@ -2274,7 +2276,7 @@
         "y": 1340,
         "wires": [
             [
-                "a0a7cdf1ee901aa2"
+                "9162c822108e3f62"
             ]
         ]
     },
@@ -2335,27 +2337,6 @@
             [
                 "e9331c3e628b73e6",
                 "351038b48d5cd366"
-            ]
-        ]
-    },
-    {
-        "id": "a0a7cdf1ee901aa2",
-        "type": "function",
-        "z": "8eab0a3c643bf6ac",
-        "g": "96d22616b20b6ec0",
-        "name": "set range",
-        "func": "// Get the daterangemin from msg.payload and convert it to milliseconds\nvar daterangemin = msg.payload * 60 * 1000;\nflow.set('range', daterangemin);\nmsg.payload = flow.get('range');\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 460,
-        "y": 1340,
-        "wires": [
-            [
-                "6c8c9c726eae0d3c"
             ]
         ]
     },
@@ -2446,6 +2427,74 @@
         "payloadType": "date",
         "x": 1200,
         "y": 1420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1dce4b97189c0bba",
+        "type": "ui_slider",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "",
+        "label": "block size for average weight calc, %",
+        "tooltip": "",
+        "group": "6794d2e26b7f5c97",
+        "order": 8,
+        "width": "16",
+        "height": "1",
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "1",
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 210,
+        "y": 1460,
+        "wires": [
+            [
+                "7e03ce4951e4e39c"
+            ]
+        ]
+    },
+    {
+        "id": "9162c822108e3f62",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "set range",
+        "func": "// Get the daterangemin from msg.payload and convert it to milliseconds\nvar daterangemin = msg.payload * 60 * 1000;\nflow.set('range', daterangemin);\nmsg.payload = flow.get('range');\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 1340,
+        "wires": [
+            [
+                "964926b51a0818a1"
+            ]
+        ]
+    },
+    {
+        "id": "7e03ce4951e4e39c",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "set avg block",
+        "func": "// Get the blobk size from msg.payload \nvar block = msg.payload;\nflow.set('block', block);\nmsg.payload = flow.get('block');\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1460,
         "wires": [
             []
         ]
