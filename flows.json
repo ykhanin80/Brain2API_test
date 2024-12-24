@@ -1880,6 +1880,16 @@
                 }
             },
             {
+                "field": "averageWeight",
+                "title": "Avg Wt",
+                "width": "20%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
                 "field": "actualNetWeight",
                 "title": "Weight",
                 "width": "15%",
