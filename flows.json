@@ -1882,7 +1882,7 @@
             {
                 "field": "averageWeight",
                 "title": "Avg Wt",
-                "width": "20%",
+                "width": "15%",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
