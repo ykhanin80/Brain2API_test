@@ -2347,14 +2347,10 @@
         "propertyType": "msg",
         "rules": [
             {
-                "t": "gt",
-                "v": "0",
-                "vt": "num"
+                "t": "nempty"
             },
             {
-                "t": "eq",
-                "v": "0",
-                "vt": "num"
+                "t": "empty"
             }
         ],
         "checkall": "true",
