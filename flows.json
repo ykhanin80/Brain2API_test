@@ -75,14 +75,14 @@
         ],
         "x": 14,
         "y": 19,
-        "w": 652,
+        "w": 672,
         "h": 102
     },
     {
         "id": "803e952a6482c9ec",
         "type": "group",
         "z": "8eab0a3c643bf6ac",
-        "name": "Package Records",
+        "name": "Package Records for time range",
         "style": {
             "label": true
         },
@@ -91,23 +91,17 @@
             "fabb81e58f33c43b",
             "a6fef996028b87fa",
             "e772d3ec933e33ea",
-            "e817333c9076e8dc",
             "633374ecd4636c54",
             "ddcc55230b0734d7",
             "543843c227a08779",
-            "438a1ef390ea88d8",
-            "580e16b5abdd46d4",
-            "b6487f60490505c9",
             "2f01a6f9a03ab032",
             "18899c2688504e11",
-            "f26b6e1f0c4a5849",
-            "6a8e84c3b461e8a1",
-            "cd9854e511e2da51"
+            "f26b6e1f0c4a5849"
         ],
         "x": 14,
         "y": 819,
         "w": 1332,
-        "h": 322
+        "h": 202
     },
     {
         "id": "0346d96b42bc27b1",
@@ -138,24 +132,43 @@
         "h": 202
     },
     {
-        "id": "d2df3ee586784503",
-        "type": "ui_spacer",
+        "id": "96d22616b20b6ec0",
+        "type": "group",
         "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "f2f686aa2b9f097c",
-        "order": 3,
-        "width": 12,
-        "height": 1
-    },
-    {
-        "id": "b6ae1172792ff4d5",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "f2f686aa2b9f097c",
-        "order": 4,
-        "width": 7,
-        "height": 1
+        "name": "Package Records for an interval",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "156a1f6a76f6999a",
+            "32a1b02f054958ee",
+            "029ef244aebf0100",
+            "c6fcb661d08e1e5e",
+            "855f9fc3669603b2",
+            "65c99e9a7518480d",
+            "7564e457940a6fe9",
+            "6cec62bdb3fe7331",
+            "41d26d6d9c96aed8",
+            "be30eb4e98508bb6",
+            "6c8c9c726eae0d3c",
+            "66b730256f79af1d",
+            "b32fd34dc6ed11e3",
+            "351038b48d5cd366",
+            "bb819c13b2e71912",
+            "4b929a17e96e0c2a",
+            "964926b51a0818a1",
+            "9cf2c353ad2f24fe",
+            "8748b520fc17458a",
+            "b812d32eb48eaca9",
+            "0908448ce6b52139",
+            "e9331c3e628b73e6",
+            "6562c9f1b47e5be6",
+            "a0a7cdf1ee901aa2"
+        ],
+        "x": 14,
+        "y": 1059,
+        "w": 1352,
+        "h": 382
     },
     {
         "id": "b35b991b388efa02",
@@ -170,105 +183,6 @@
         "servername": "",
         "verifyservercert": false,
         "alpnprotocol": ""
-    },
-    {
-        "id": "f2f686aa2b9f097c",
-        "type": "ui_group",
-        "name": "Devices",
-        "tab": "65c5f36ea34fe529",
-        "order": 1,
-        "disp": true,
-        "width": "12",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "7c885960ff9c5601",
-        "type": "ui_group",
-        "name": "Production Lines",
-        "tab": "1760e0edd51dbc3b",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "aad64061aabbae8c",
-        "type": "ui_group",
-        "name": "Login",
-        "tab": "395325b70f97b6f7",
-        "order": 2,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "8821f8eafdf5cf1e",
-        "type": "ui_group",
-        "name": "Select Application",
-        "tab": "83728c03327c5a04",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "1fe72b217c0fd98c",
-        "type": "ui_group",
-        "name": "Package records",
-        "tab": "6464622b81bffdfb",
-        "order": 1,
-        "disp": true,
-        "width": 31,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "65c5f36ea34fe529",
-        "type": "ui_tab",
-        "name": "Gx Devices",
-        "icon": "dashboard",
-        "order": 4,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "1760e0edd51dbc3b",
-        "type": "ui_tab",
-        "name": "Production Lines",
-        "icon": "dashboard",
-        "order": 7,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "395325b70f97b6f7",
-        "type": "ui_tab",
-        "name": "Authenticate",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "83728c03327c5a04",
-        "type": "ui_tab",
-        "name": "Selection Page",
-        "icon": "dashboard",
-        "order": 2,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "6464622b81bffdfb",
-        "type": "ui_tab",
-        "name": "Package Records",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "6b2a3190c2503b6e",
@@ -353,7 +267,7 @@
             "name": "Node-RED Dashboard",
             "hideToolbar": "false",
             "allowSwipe": "false",
-            "lockMenu": "false",
+            "lockMenu": "true",
             "allowTempTheme": "true",
             "dateFormat": "MM/DD/YY h:mm a",
             "sizes": {
@@ -369,124 +283,144 @@
         }
     },
     {
-        "id": "7e4df793a2837b17",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "1fe72b217c0fd98c",
-        "order": 4,
-        "width": 31,
-        "height": 1
-    },
-    {
-        "id": "ba2f85d61792c639",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "1fe72b217c0fd98c",
+        "id": "65c5f36ea34fe529",
+        "type": "ui_tab",
+        "name": "Gx Devices",
+        "icon": "dashboard",
         "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1760e0edd51dbc3b",
+        "type": "ui_tab",
+        "name": "Production Lines",
+        "icon": "dashboard",
+        "order": 6,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "395325b70f97b6f7",
+        "type": "ui_tab",
+        "name": "Authenticate",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "83728c03327c5a04",
+        "type": "ui_tab",
+        "name": "Selection Page",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6464622b81bffdfb",
+        "type": "ui_tab",
+        "name": "Package Records",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f2f686aa2b9f097c",
+        "type": "ui_group",
+        "name": "Devices",
+        "tab": "65c5f36ea34fe529",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7c885960ff9c5601",
+        "type": "ui_group",
+        "name": "Production Lines",
+        "tab": "1760e0edd51dbc3b",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "aad64061aabbae8c",
+        "type": "ui_group",
+        "name": "Login",
+        "tab": "395325b70f97b6f7",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8821f8eafdf5cf1e",
+        "type": "ui_group",
+        "name": "Select Application",
+        "tab": "83728c03327c5a04",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1fe72b217c0fd98c",
+        "type": "ui_group",
+        "name": "Package records",
+        "tab": "6464622b81bffdfb",
+        "order": 1,
+        "disp": true,
         "width": 31,
-        "height": 1
+        "collapse": false,
+        "className": ""
     },
     {
-        "id": "4563ef1578f42335",
+        "id": "d2df3ee586784503",
         "type": "ui_spacer",
         "z": "8eab0a3c643bf6ac",
         "name": "spacer",
-        "group": "1fe72b217c0fd98c",
-        "order": 8,
-        "width": 4,
+        "group": "f2f686aa2b9f097c",
+        "order": 3,
+        "width": 12,
         "height": 1
     },
     {
-        "id": "6828095aed583015",
+        "id": "b6ae1172792ff4d5",
         "type": "ui_spacer",
         "z": "8eab0a3c643bf6ac",
         "name": "spacer",
-        "group": "1fe72b217c0fd98c",
-        "order": 9,
-        "width": 4,
+        "group": "f2f686aa2b9f097c",
+        "order": 4,
+        "width": 7,
         "height": 1
     },
     {
-        "id": "31dc8fe6bb7dddf9",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "1fe72b217c0fd98c",
-        "order": 10,
-        "width": 4,
-        "height": 1
+        "id": "ccb9601a8ca4abd5",
+        "type": "ui_tab",
+        "name": "Time interval capture",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
     },
     {
-        "id": "4131e5fa159908d0",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "1fe72b217c0fd98c",
-        "order": 11,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "bc434ac741f62f56",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "1fe72b217c0fd98c",
-        "order": 12,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "0742000c63559454",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "1fe72b217c0fd98c",
-        "order": 15,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "4280d6b21917e184",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "1fe72b217c0fd98c",
-        "order": 16,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "373e248e2fdf80ca",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "1fe72b217c0fd98c",
-        "order": 17,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "62e425c1185910db",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "1fe72b217c0fd98c",
-        "order": 18,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "788b52c367c4071f",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "1fe72b217c0fd98c",
-        "order": 19,
-        "width": 4,
-        "height": 1
+        "id": "6794d2e26b7f5c97",
+        "type": "ui_group",
+        "name": "Package records time interval",
+        "tab": "ccb9601a8ca4abd5",
+        "order": 1,
+        "disp": true,
+        "width": "31",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "dd9a228b504e8ed4",
@@ -717,7 +651,7 @@
         "z": "8eab0a3c643bf6ac",
         "g": "803e952a6482c9ec",
         "name": "Query",
-        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.post = \"deviceName=\" + flow.get(\"device\") + \"&startDate=\" \n+ flow.get(\"startday\") +\"T\"+ flow.get(\"starttime\")+\n\"&endDate=\" \n+ flow.get(\"finishday\") +\"T\"+ flow.get(\"finishtime\") + \n\"&packageType=singlePackage&take=10000&sort=Identity-\";\n\nmsg.url = \"https://\" + flow.get(\"ServerIP\") \n+ \":9998/api/v1/package-records/?\" + msg.post;\n\n\nreturn msg;",
+        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.post = \"deviceName=\" + flow.get(\"device\") + \"&startDate=\" \n+ flow.get(\"startday\") +\"T\"+ flow.get(\"starttime\") +\n\"&endDate=\" \n+ flow.get(\"finishday\") +\"T\"+ flow.get(\"finishtime\") + \n\"&packageType=singlePackage&take=10000&sort=Identity-\";\n\nmsg.url = \"https://\" + flow.get(\"ServerIP\") \n+ \":9998/api/v1/package-records/?\" + msg.post;\n\nmsg.payload = \"start: \"+ flow.get(\"starttime\") + \" end: \" + flow.get(\"finishtime\");\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -728,8 +662,7 @@
         "y": 920,
         "wires": [
             [
-                "fabb81e58f33c43b",
-                "e817333c9076e8dc"
+                "fabb81e58f33c43b"
             ]
         ]
     },
@@ -754,8 +687,7 @@
         "y": 920,
         "wires": [
             [
-                "a6fef996028b87fa",
-                "e817333c9076e8dc"
+                "a6fef996028b87fa"
             ]
         ]
     },
@@ -797,24 +729,6 @@
                 "543843c227a08779"
             ]
         ]
-    },
-    {
-        "id": "e817333c9076e8dc",
-        "type": "debug",
-        "z": "8eab0a3c643bf6ac",
-        "g": "803e952a6482c9ec",
-        "name": "Query",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 610,
-        "y": 860,
-        "wires": []
     },
     {
         "id": "be145a87d0f9ed31",
@@ -866,40 +780,6 @@
         ]
     },
     {
-        "id": "286452fbf2bb89a8",
-        "type": "ui_dropdown",
-        "z": "8eab0a3c643bf6ac",
-        "g": "f8d98a8bcd1abe89",
-        "name": "",
-        "label": "Devices",
-        "tooltip": "",
-        "place": "Select device",
-        "group": "f2f686aa2b9f097c",
-        "order": 1,
-        "width": 6,
-        "height": 2,
-        "passthru": false,
-        "multiple": false,
-        "options": [
-            {
-                "label": "",
-                "value": "",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "",
-        "topicType": "str",
-        "className": "",
-        "x": 1100,
-        "y": 460,
-        "wires": [
-            [
-                "c0913ae221e0aae6"
-            ]
-        ]
-    },
-    {
         "id": "9eff3d8207985c45",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
@@ -947,40 +827,6 @@
         "wires": [
             [
                 "9eff3d8207985c45"
-            ]
-        ]
-    },
-    {
-        "id": "8d95fa5d680ca63e",
-        "type": "ui_dropdown",
-        "z": "8eab0a3c643bf6ac",
-        "g": "0346d96b42bc27b1",
-        "name": "",
-        "label": "Production Lines",
-        "tooltip": "",
-        "place": "Select Line",
-        "group": "7c885960ff9c5601",
-        "order": 2,
-        "width": 6,
-        "height": 2,
-        "passthru": true,
-        "multiple": false,
-        "options": [
-            {
-                "label": "",
-                "value": "",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 1230,
-        "y": 700,
-        "wires": [
-            [
-                "2fa1b034c0bfeb84"
             ]
         ]
     },
@@ -1085,139 +931,6 @@
         ]
     },
     {
-        "id": "3b6fc4cac4e00324",
-        "type": "ui_form",
-        "z": "8eab0a3c643bf6ac",
-        "g": "85f0a8ccb2e137f9",
-        "name": "",
-        "label": "Enter 172.28.184.36",
-        "group": "aad64061aabbae8c",
-        "order": 1,
-        "width": 6,
-        "height": 1,
-        "options": [
-            {
-                "label": "Brain2 server",
-                "value": "host",
-                "type": "text",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "Brain2 User",
-                "value": "userName",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "Password",
-                "value": "password",
-                "type": "password",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "host": "",
-            "userName": "",
-            "password": ""
-        },
-        "payload": "",
-        "submit": "Send",
-        "cancel": "cancel",
-        "topic": "",
-        "topicType": "str",
-        "splitLayout": "",
-        "className": "",
-        "x": 140,
-        "y": 200,
-        "wires": [
-            [
-                "cee5170381dbcfea"
-            ]
-        ]
-    },
-    {
-        "id": "fea9c305df03f20b",
-        "type": "ui_toast",
-        "z": "8eab0a3c643bf6ac",
-        "g": "85f0a8ccb2e137f9",
-        "position": "dialog",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 1,
-        "ok": "OK",
-        "cancel": "Cancel",
-        "raw": false,
-        "className": "",
-        "topic": "Status",
-        "name": "",
-        "x": 590,
-        "y": 280,
-        "wires": [
-            [
-                "655e6c90f6c56fdf"
-            ]
-        ]
-    },
-    {
-        "id": "4452ea626de03264",
-        "type": "ui_ui_control",
-        "z": "8eab0a3c643bf6ac",
-        "g": "85f0a8ccb2e137f9",
-        "name": "to Selection Page",
-        "events": "change",
-        "x": 1210,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e4efae5a0416559b",
-        "type": "ui_button",
-        "z": "8eab0a3c643bf6ac",
-        "g": "f8d98a8bcd1abe89",
-        "name": "",
-        "group": "f2f686aa2b9f097c",
-        "order": 5,
-        "width": 5,
-        "height": 1,
-        "passthru": false,
-        "label": "Back",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "Selection Page",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "x": 730,
-        "y": 400,
-        "wires": [
-            [
-                "0b59b5147c36e8e3"
-            ]
-        ]
-    },
-    {
-        "id": "0b59b5147c36e8e3",
-        "type": "ui_ui_control",
-        "z": "8eab0a3c643bf6ac",
-        "g": "f8d98a8bcd1abe89",
-        "name": "",
-        "events": "all",
-        "x": 1000,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "655e6c90f6c56fdf",
         "type": "switch",
         "z": "8eab0a3c643bf6ac",
@@ -1274,6 +987,171 @@
         "wires": [
             [
                 "4452ea626de03264"
+            ]
+        ]
+    },
+    {
+        "id": "543843c227a08779",
+        "type": "change",
+        "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[\t{\"labels\": $$.payload.timestamp,\t\"data\":[[$$.payload.actualNetWeight]],\t\"series\":[\"weight lbs\"]\t}] ",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 980,
+        "wires": [
+            [
+                "633374ecd4636c54"
+            ]
+        ]
+    },
+    {
+        "id": "cee5170381dbcfea",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "85f0a8ccb2e137f9",
+        "name": "build url",
+        "func": "var ServerIP = 'localhost';\nflow.set (\"ServerIP\",ServerIP);\n\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/token\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 200,
+        "wires": [
+            [
+                "e9af013e299f3822"
+            ]
+        ]
+    },
+    {
+        "id": "2fa1b034c0bfeb84",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "0346d96b42bc27b1",
+        "name": "var device",
+        "func": "var line = msg.payload;\nflow.set(\"line\",line);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c0913ae221e0aae6",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
+        "name": "var device",
+        "func": "var device = msg.payload;\nflow.set(\"device\",device);\n\nmsg.payload =\"Time interval capture\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 460,
+        "wires": [
+            [
+                "c0e14ed5320e33b2"
+            ]
+        ]
+    },
+    {
+        "id": "08864386c2adbc87",
+        "type": "link out",
+        "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [],
+        "x": 1325,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "2f01a6f9a03ab032",
+        "type": "link in",
+        "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
+        "name": "link in 1",
+        "links": [],
+        "x": 55,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "18899c2688504e11",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
+        "name": "MMDDYY",
+        "func": "var start = msg.payload.start_day;\nvar startday = new Date(start);\nvar formattedDate = startday.getFullYear() + '-' + \n    ('0' + (startday.getMonth() + 1)).slice(-2) + '-' + \n    ('0' + startday.getDate()).slice(-2);\nflow.set(\"startday\", formattedDate);\n\nvar startt = msg.payload.start_time;\nvar starttime = new Date(startt).toLocaleString('en-US', { \n        hour: '2-digit', \n        minute: '2-digit', \n        second: '2-digit',\n        hour12: false});\n\nflow.set(\"starttime\",starttime);\n\nvar finish = msg.payload.finish_day;\nvar finishday = new Date(finish);\nvar formattedFinishDate = finishday.getFullYear() + '-' +\n        ('0' + (finishday.getMonth() + 1)).slice(-2) + '-' +\n        ('0' + finishday.getDate()).slice(-2);\nflow.set(\"finishday\", formattedFinishDate);\n\nvar finisht = msg.payload.finish_time;\nvar finishtime = new Date(finisht).toLocaleString('en-US', { \n        hour: '2-digit', \n        minute: '2-digit', \n        second: '2-digit',\n        hour12: false});\n\nflow.set(\"finishtime\",finishtime);\n\n// Store the form data in flow context\nflow.set(\"formData\", msg.payload);\n// Pass the form data back to the form\nmsg.payload = flow.get(\"formData\");\nflow.set('interval',10000);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 860,
+        "wires": [
+            [
+                "95c993db02c8d0e6",
+                "f26b6e1f0c4a5849"
+            ]
+        ]
+    },
+    {
+        "id": "e4efae5a0416559b",
+        "type": "ui_button",
+        "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
+        "name": "",
+        "group": "f2f686aa2b9f097c",
+        "order": 5,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "Back",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "Selection Page",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 730,
+        "y": 400,
+        "wires": [
+            [
+                "0b59b5147c36e8e3"
             ]
         ]
     },
@@ -1336,32 +1214,207 @@
         ]
     },
     {
-        "id": "ab559ee6616650e4",
-        "type": "ui_ui_control",
+        "id": "d1eb5d49eeb349ec",
+        "type": "ui_button",
         "z": "8eab0a3c643bf6ac",
-        "g": "f8d98a8bcd1abe89",
-        "name": "Display Devices",
-        "events": "change",
-        "x": 200,
-        "y": 460,
+        "g": "0346d96b42bc27b1",
+        "name": "",
+        "group": "7c885960ff9c5601",
+        "order": 5,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "Back",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "Selection Page",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 730,
+        "y": 640,
         "wires": [
             [
-                "53582853cf894365"
+                "8e4d716089c72964"
             ]
         ]
     },
     {
-        "id": "380f85e9d66eb3bf",
-        "type": "ui_ui_control",
+        "id": "286452fbf2bb89a8",
+        "type": "ui_dropdown",
+        "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
+        "name": "",
+        "label": "Devices",
+        "tooltip": "",
+        "place": "Select device",
+        "group": "f2f686aa2b9f097c",
+        "order": 1,
+        "width": 6,
+        "height": 2,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "topicType": "str",
+        "className": "",
+        "x": 1100,
+        "y": 460,
+        "wires": [
+            [
+                "c0913ae221e0aae6"
+            ]
+        ]
+    },
+    {
+        "id": "8d95fa5d680ca63e",
+        "type": "ui_dropdown",
         "z": "8eab0a3c643bf6ac",
         "g": "0346d96b42bc27b1",
-        "name": "to Prod Lines",
-        "events": "change",
-        "x": 190,
+        "name": "",
+        "label": "Production Lines",
+        "tooltip": "",
+        "place": "Select Line",
+        "group": "7c885960ff9c5601",
+        "order": 2,
+        "width": 6,
+        "height": 2,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1230,
         "y": 700,
         "wires": [
             [
-                "74eea60081e77078"
+                "2fa1b034c0bfeb84"
+            ]
+        ]
+    },
+    {
+        "id": "3b6fc4cac4e00324",
+        "type": "ui_form",
+        "z": "8eab0a3c643bf6ac",
+        "g": "85f0a8ccb2e137f9",
+        "name": "",
+        "label": "Enter Brain2 credentials",
+        "group": "aad64061aabbae8c",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "options": [
+            {
+                "label": "User",
+                "value": "userName",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Password",
+                "value": "password",
+                "type": "password",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "userName": "",
+            "password": ""
+        },
+        "payload": "",
+        "submit": "Send",
+        "cancel": "cancel",
+        "topic": "",
+        "topicType": "str",
+        "splitLayout": "",
+        "className": "",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "cee5170381dbcfea"
+            ]
+        ]
+    },
+    {
+        "id": "f26b6e1f0c4a5849",
+        "type": "ui_form",
+        "z": "8eab0a3c643bf6ac",
+        "g": "803e952a6482c9ec",
+        "name": "",
+        "label": "Date and time filter",
+        "group": "1fe72b217c0fd98c",
+        "order": 3,
+        "width": "4",
+        "height": "4",
+        "options": [
+            {
+                "label": "Start day",
+                "value": "start_day",
+                "type": "date",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Start time",
+                "value": "start_time",
+                "type": "time",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Finish day",
+                "value": "finish_day",
+                "type": "date",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Finish time",
+                "value": "finish_time",
+                "type": "time",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "start_day": "",
+            "start_time": "",
+            "finish_day": "",
+            "finish_time": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 190,
+        "y": 860,
+        "wires": [
+            [
+                "18899c2688504e11"
             ]
         ]
     },
@@ -1374,7 +1427,7 @@
         "group": "1fe72b217c0fd98c",
         "order": 7,
         "width": "22",
-        "height": "4",
+        "height": "5",
         "label": "Package records",
         "chartType": "line",
         "legend": "true",
@@ -1411,6 +1464,136 @@
         ]
     },
     {
+        "id": "fea9c305df03f20b",
+        "type": "ui_toast",
+        "z": "8eab0a3c643bf6ac",
+        "g": "85f0a8ccb2e137f9",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "Cancel",
+        "raw": false,
+        "className": "",
+        "topic": "Status",
+        "name": "",
+        "x": 590,
+        "y": 280,
+        "wires": [
+            [
+                "655e6c90f6c56fdf"
+            ]
+        ]
+    },
+    {
+        "id": "0e8196d8614cac87",
+        "type": "ui_toast",
+        "z": "8eab0a3c643bf6ac",
+        "g": "bec69e86cd0143f6",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "Cancel",
+        "raw": false,
+        "className": "",
+        "topic": "Status",
+        "name": "",
+        "x": 590,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4452ea626de03264",
+        "type": "ui_ui_control",
+        "z": "8eab0a3c643bf6ac",
+        "g": "85f0a8ccb2e137f9",
+        "name": "to Selection Page",
+        "events": "change",
+        "x": 1210,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0b59b5147c36e8e3",
+        "type": "ui_ui_control",
+        "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
+        "name": "",
+        "events": "all",
+        "x": 1000,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ab559ee6616650e4",
+        "type": "ui_ui_control",
+        "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
+        "name": "Display Devices",
+        "events": "change",
+        "x": 200,
+        "y": 460,
+        "wires": [
+            [
+                "53582853cf894365"
+            ]
+        ]
+    },
+    {
+        "id": "380f85e9d66eb3bf",
+        "type": "ui_ui_control",
+        "z": "8eab0a3c643bf6ac",
+        "g": "0346d96b42bc27b1",
+        "name": "to Prod Lines",
+        "events": "change",
+        "x": 190,
+        "y": 700,
+        "wires": [
+            [
+                "74eea60081e77078"
+            ]
+        ]
+    },
+    {
+        "id": "8e4d716089c72964",
+        "type": "ui_ui_control",
+        "z": "8eab0a3c643bf6ac",
+        "g": "0346d96b42bc27b1",
+        "name": "",
+        "events": "all",
+        "x": 1000,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c0e14ed5320e33b2",
+        "type": "ui_ui_control",
+        "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
+        "name": "",
+        "events": "all",
+        "x": 1200,
+        "y": 520,
+        "wires": [
+            [
+                "08864386c2adbc87"
+            ]
+        ]
+    },
+    {
         "id": "ddcc55230b0734d7",
         "type": "ui_table",
         "z": "8eab0a3c643bf6ac",
@@ -1419,7 +1602,7 @@
         "name": "",
         "order": 14,
         "width": "22",
-        "height": "4",
+        "height": "5",
         "columns": [
             {
                 "field": "timestamp",
@@ -1499,10 +1682,231 @@
         "wires": []
     },
     {
-        "id": "543843c227a08779",
+        "id": "156a1f6a76f6999a",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "Query",
+        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.post = \"deviceName=\" + flow.get(\"device\") + \"&startDate=\" \n+ flow.get(\"startday\") +\"T\"+ flow.get(\"starttime\") +\n\"&endDate=\" \n+ flow.get(\"finishday\") +\"T\"+ flow.get(\"finishtime\") + \n\"&packageType=singlePackage&take=10000&sort=Identity-\";\n\nmsg.url = \"https://\" + flow.get(\"ServerIP\") \n+ \":9998/api/v1/package-records/?\" + msg.post;\n\nmsg.payload = \"start: \"+ flow.get(\"starttime\") + \" end: \" + flow.get(\"finishtime\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 1100,
+        "wires": [
+            [
+                "32a1b02f054958ee",
+                "66b730256f79af1d"
+            ]
+        ]
+    },
+    {
+        "id": "32a1b02f054958ee",
+        "type": "http request",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "/api/v1/package-records",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "b35b991b388efa02",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 370,
+        "y": 1160,
+        "wires": [
+            [
+                "029ef244aebf0100"
+            ]
+        ]
+    },
+    {
+        "id": "029ef244aebf0100",
+        "type": "json",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 590,
+        "y": 1160,
+        "wires": [
+            [
+                "c6fcb661d08e1e5e"
+            ]
+        ]
+    },
+    {
+        "id": "c6fcb661d08e1e5e",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "Prepare Table data",
+        "func": "var packstemp = msg.payload.map(function (el) {\n    function getDevice(device) {\n        return device ? device.name : null;\n    } \n\n    function getActualNetWeight(actualNetWeight) {\n        return actualNetWeight ? actualNetWeight.value : null;\n    }\n\n    function getError(error) {\n        return error ? error.flag : null;\n    }\n\n    // Format the timestamp\n    var formattedTimestamp = new Date(el.timestamp).toLocaleString('en-US', { \n        year: 'numeric', \n        month: '2-digit', \n        day: '2-digit', \n        hour: '2-digit', \n        minute: '2-digit', \n        second: '2-digit'\n    });\n\n    return {\n        timestamp: formattedTimestamp,\n        articleNumber: el.articleNumber,\n        articleName: el.articleName,\n        customerNumber: el.customerNumber,\n        device: getDevice(el.device),\n        actualNetWeight: getActualNetWeight(el.actualNetWeight),\n        error: getError(el.error)\n    };\n});\n\n// Sort the data by timestamp\npackstemp.sort((a, b) => a.timestamp - b.timestamp);\n\nmsg.payload = packstemp;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1160,
+        "wires": [
+            [
+                "65c99e9a7518480d",
+                "7564e457940a6fe9"
+            ]
+        ]
+    },
+    {
+        "id": "855f9fc3669603b2",
+        "type": "ui_chart",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "",
+        "group": "6794d2e26b7f5c97",
+        "order": 7,
+        "width": "22",
+        "height": "5",
+        "label": "Package records",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "Waiting for transaction from server",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1230,
+        "y": 1220,
+        "wires": [
+            [
+                "9cf2c353ad2f24fe"
+            ]
+        ]
+    },
+    {
+        "id": "65c99e9a7518480d",
+        "type": "ui_table",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "group": "6794d2e26b7f5c97",
+        "name": "",
+        "order": 14,
+        "width": "22",
+        "height": "5",
+        "columns": [
+            {
+                "field": "timestamp",
+                "title": "Timestamp",
+                "width": "15%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "articleNumber",
+                "title": "PLU#",
+                "width": "10%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "customerNumber",
+                "title": "Customer#",
+                "width": "10%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "articleName",
+                "title": "Description",
+                "width": "20%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "device",
+                "title": "Device",
+                "width": "20%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "actualNetWeight",
+                "title": "Weight",
+                "width": "15%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "error",
+                "title": "Error Flag",
+                "width": "10%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 1030,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "7564e457940a6fe9",
         "type": "change",
         "z": "8eab0a3c643bf6ac",
-        "g": "803e952a6482c9ec",
+        "g": "96d22616b20b6ec0",
         "name": "",
         "rules": [
             {
@@ -1519,63 +1923,20 @@
         "to": "",
         "reg": false,
         "x": 1000,
-        "y": 980,
+        "y": 1220,
         "wires": [
             [
-                "633374ecd4636c54"
+                "855f9fc3669603b2"
             ]
         ]
     },
     {
-        "id": "cee5170381dbcfea",
-        "type": "function",
-        "z": "8eab0a3c643bf6ac",
-        "g": "85f0a8ccb2e137f9",
-        "name": "build url",
-        "func": "var ServerIP = msg.payload.host;\nflow.set (\"ServerIP\",ServerIP);\n\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/token\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 400,
-        "y": 200,
-        "wires": [
-            [
-                "e9af013e299f3822"
-            ]
-        ]
-    },
-    {
-        "id": "0e8196d8614cac87",
-        "type": "ui_toast",
-        "z": "8eab0a3c643bf6ac",
-        "g": "bec69e86cd0143f6",
-        "position": "dialog",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 1,
-        "ok": "OK",
-        "cancel": "Cancel",
-        "raw": false,
-        "className": "",
-        "topic": "Status",
-        "name": "",
-        "x": 570,
-        "y": 60,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "438a1ef390ea88d8",
+        "id": "6cec62bdb3fe7331",
         "type": "ui_button",
         "z": "8eab0a3c643bf6ac",
-        "g": "803e952a6482c9ec",
+        "g": "96d22616b20b6ec0",
         "name": "",
-        "group": "1fe72b217c0fd98c",
+        "group": "6794d2e26b7f5c97",
         "order": 13,
         "width": 0,
         "height": 0,
@@ -1590,311 +1951,385 @@
         "payloadType": "str",
         "topic": "",
         "topicType": "str",
-        "x": 90,
-        "y": 1060,
-        "wires": [
-            [
-                "580e16b5abdd46d4"
-            ]
-        ]
-    },
-    {
-        "id": "580e16b5abdd46d4",
-        "type": "ui_ui_control",
-        "z": "8eab0a3c643bf6ac",
-        "g": "803e952a6482c9ec",
-        "name": "",
-        "events": "all",
-        "x": 220,
-        "y": 1060,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d1eb5d49eeb349ec",
-        "type": "ui_button",
-        "z": "8eab0a3c643bf6ac",
-        "g": "0346d96b42bc27b1",
-        "name": "",
-        "group": "7c885960ff9c5601",
-        "order": 5,
-        "width": 5,
-        "height": 1,
-        "passthru": false,
-        "label": "Back",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "Selection Page",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "x": 730,
-        "y": 640,
-        "wires": [
-            [
-                "8e4d716089c72964"
-            ]
-        ]
-    },
-    {
-        "id": "8e4d716089c72964",
-        "type": "ui_ui_control",
-        "z": "8eab0a3c643bf6ac",
-        "g": "0346d96b42bc27b1",
-        "name": "",
-        "events": "all",
-        "x": 1000,
-        "y": 640,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2fa1b034c0bfeb84",
-        "type": "function",
-        "z": "8eab0a3c643bf6ac",
-        "g": "0346d96b42bc27b1",
-        "name": "var device",
-        "func": "var line = msg.payload;\nflow.set(\"line\",line);\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1230,
-        "y": 760,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c0913ae221e0aae6",
-        "type": "function",
-        "z": "8eab0a3c643bf6ac",
-        "g": "f8d98a8bcd1abe89",
-        "name": "var device",
-        "func": "var device = msg.payload;\nflow.set(\"device\",device);\n\nmsg.payload =\"Package Records\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1270,
-        "y": 460,
-        "wires": [
-            [
-                "c0e14ed5320e33b2"
-            ]
-        ]
-    },
-    {
-        "id": "c0e14ed5320e33b2",
-        "type": "ui_ui_control",
-        "z": "8eab0a3c643bf6ac",
-        "g": "f8d98a8bcd1abe89",
-        "name": "",
-        "events": "all",
-        "x": 1200,
-        "y": 520,
-        "wires": [
-            [
-                "08864386c2adbc87"
-            ]
-        ]
-    },
-    {
-        "id": "b6487f60490505c9",
-        "type": "ui_button",
-        "z": "8eab0a3c643bf6ac",
-        "g": "803e952a6482c9ec",
-        "name": "",
-        "group": "1fe72b217c0fd98c",
-        "order": 6,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "Refresh",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 100,
+        "x": 1130,
         "y": 1100,
         "wires": [
             [
-                "cd9854e511e2da51"
+                "41d26d6d9c96aed8"
             ]
         ]
     },
     {
-        "id": "08864386c2adbc87",
-        "type": "link out",
+        "id": "41d26d6d9c96aed8",
+        "type": "ui_ui_control",
         "z": "8eab0a3c643bf6ac",
-        "g": "f8d98a8bcd1abe89",
-        "name": "link out 1",
-        "mode": "link",
-        "links": [
-            "2f01a6f9a03ab032"
-        ],
-        "x": 1325,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "2f01a6f9a03ab032",
-        "type": "link in",
-        "z": "8eab0a3c643bf6ac",
-        "g": "803e952a6482c9ec",
-        "name": "link in 1",
-        "links": [
-            "08864386c2adbc87"
-        ],
-        "x": 55,
-        "y": 860,
+        "g": "96d22616b20b6ec0",
+        "name": "",
+        "events": "all",
+        "x": 1260,
+        "y": 1100,
         "wires": [
             []
         ]
     },
     {
-        "id": "18899c2688504e11",
+        "id": "be30eb4e98508bb6",
+        "type": "link in",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "link in 2",
+        "links": [],
+        "x": 55,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6c8c9c726eae0d3c",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
-        "g": "803e952a6482c9ec",
-        "name": "MMDDYY",
-        "func": "var start = msg.payload.start_day;\nvar startday = new Date(start);\nvar formattedDate = startday.getFullYear() + '-' + \n    ('0' + (startday.getMonth() + 1)).slice(-2) + '-' + \n    ('0' + startday.getDate()).slice(-2);\nflow.set(\"startday\", formattedDate);\n\nvar startt = msg.payload.start_time;\nvar starttime = new Date(startt).toLocaleString('en-US', { \n        hour: '2-digit', \n        minute: '2-digit', \n        second: '2-digit',\n        hour12: false});\n\nflow.set(\"starttime\",starttime);\n\nvar finish = msg.payload.finish_day;\nvar finishday = new Date(finish);\nvar formattedFinishDate = finishday.getFullYear() + '-' +\n        ('0' + (finishday.getMonth() + 1)).slice(-2) + '-' +\n        ('0' + finishday.getDate()).slice(-2);\nflow.set(\"finishday\", formattedFinishDate);\n\nvar finisht = msg.payload.finish_time;\nvar finishtime = new Date(finisht).toLocaleString('en-US', { \n        hour: '2-digit', \n        minute: '2-digit', \n        second: '2-digit',\n        hour12: false});\n\nflow.set(\"finishtime\",finishtime);\n\nreturn msg;",
+        "g": "96d22616b20b6ec0",
+        "name": "MMDDYY_start-end",
+        "func": "var now = new Date();\nvar finisht = now.toLocaleTimeString('en-US', {\n        hour: '2-digit',\n        minute: '2-digit',\n        second: '2-digit',\n        hour12: false // This ensures the time is in 24-hour format\n});\nflow.set(\"finishtime\", finisht);\n\n\n// Calculate the start time by subtracting daterangemin from the current time\nvar startday = new Date(now.getTime() - flow.get('range'));\nvar formattedDate = startday.getFullYear() + '-' + \n    ('0' + (startday.getMonth() + 1)).slice(-2) + '-' + \n    ('0' + startday.getDate()).slice(-2);\nflow.set(\"startday\", formattedDate);\n\nvar starttime = new Date(now.getTime() - flow.get('range')).toLocaleString('en-US', { \n        hour: '2-digit', \n        minute: '2-digit', \n        second: '2-digit',\n        hour12: false});\n\nflow.set(\"starttime\",starttime);\n\nvar formattedFinishDate = now.getFullYear() + '-' +\n        ('0' + (now.getMonth() + 1)).slice(-2) + '-' +\n        ('0' + now.getDate()).slice(-2);\nflow.set(\"finishday\", formattedFinishDate);\n//flow.set('interval',100);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
-        "y": 980,
+        "x": 220,
+        "y": 1100,
         "wires": [
             [
-                "95c993db02c8d0e6"
+                "156a1f6a76f6999a"
             ]
         ]
     },
     {
-        "id": "f26b6e1f0c4a5849",
+        "id": "66b730256f79af1d",
+        "type": "ui_text",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "group": "6794d2e26b7f5c97",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Time interval ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 630,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "b32fd34dc6ed11e3",
+        "type": "delay",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "rate 1s",
+        "pauseType": "rate",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": true,
+        "outputs": 1,
+        "x": 830,
+        "y": 1400,
+        "wires": [
+            [
+                "4b929a17e96e0c2a"
+            ]
+        ]
+    },
+    {
+        "id": "351038b48d5cd366",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "Initialize Countdown",
+        "func": "flow.set('countdown2', flow.get('interval') );\n\nmsg.payload = flow.get('countdown2');\nmsg.rate =1000;\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 1400,
+        "wires": [
+            [
+                "b32fd34dc6ed11e3"
+            ]
+        ]
+    },
+    {
+        "id": "bb819c13b2e71912",
+        "type": "ui_text",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "group": "6794d2e26b7f5c97",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Refresh in:",
+        "label": "Refresh in:  ",
+        "format": "{{msg.payload}} seconds",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 410,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "4b929a17e96e0c2a",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "countdown",
+        "func": "let countdown2 = flow.get('countdown2');\n\nif (countdown2 > 0) {\n    countdown2--;\n    flow.set('countdown2', countdown2);\n    msg.payload = countdown2;\n    \n    return [msg, null];\n} else {\n    msg.payload = 0;\n    flow.set('countdown2', 0);\n    return [null, msg];\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 1400,
+        "wires": [
+            [
+                "964926b51a0818a1",
+                "b32fd34dc6ed11e3"
+            ]
+        ]
+    },
+    {
+        "id": "964926b51a0818a1",
+        "type": "switch",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "1 counter | 2 Refresh",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 180,
+        "y": 1280,
+        "wires": [
+            [
+                "bb819c13b2e71912"
+            ],
+            [
+                "6c8c9c726eae0d3c"
+            ]
+        ]
+    },
+    {
+        "id": "9cf2c353ad2f24fe",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "get interval",
+        "func": "var interval = flow.get('interval');\nflow.set('countdown2', interval );\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 1300,
+        "wires": [
+            [
+                "b32fd34dc6ed11e3"
+            ]
+        ]
+    },
+    {
+        "id": "8748b520fc17458a",
+        "type": "ui_button",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "",
+        "group": "6794d2e26b7f5c97",
+        "order": 8,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Stop",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "null",
+        "payloadType": "flow",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1150,
+        "y": 1160,
+        "wires": [
+            [
+                "b812d32eb48eaca9"
+            ]
+        ]
+    },
+    {
+        "id": "b812d32eb48eaca9",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "stop",
+        "func": "msg.rate = 999000;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1290,
+        "y": 1160,
+        "wires": [
+            [
+                "b32fd34dc6ed11e3"
+            ]
+        ]
+    },
+    {
+        "id": "0908448ce6b52139",
+        "type": "ui_slider",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "",
+        "label": "Pack records within last minutes",
+        "tooltip": "minutes",
+        "group": "6794d2e26b7f5c97",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "1440",
+        "step": 1,
+        "className": "",
+        "x": 190,
+        "y": 1340,
+        "wires": [
+            [
+                "a0a7cdf1ee901aa2"
+            ]
+        ]
+    },
+    {
+        "id": "e9331c3e628b73e6",
         "type": "ui_form",
         "z": "8eab0a3c643bf6ac",
-        "g": "803e952a6482c9ec",
+        "g": "96d22616b20b6ec0",
         "name": "",
-        "label": "Date and time filter",
-        "group": "1fe72b217c0fd98c",
-        "order": 3,
-        "width": "4",
-        "height": "4",
+        "label": "Refresh interval",
+        "group": "6794d2e26b7f5c97",
+        "order": 5,
+        "width": "3",
+        "height": "2",
         "options": [
             {
-                "label": "Start day",
-                "value": "start_day",
-                "type": "date",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "Start time",
-                "value": "start_time",
-                "type": "time",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "Finish day",
-                "value": "finish_day",
-                "type": "date",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "Finish time",
-                "value": "finish_time",
-                "type": "time",
+                "label": "Interval, seconds",
+                "value": "interval",
+                "type": "number",
                 "required": true,
                 "rows": null
             }
         ],
         "formValue": {
-            "start_day": "",
-            "start_time": "",
-            "finish_day": "",
-            "finish_time": ""
+            "interval": ""
         },
         "payload": "",
-        "submit": "submit",
-        "cancel": "cancel",
+        "submit": "ok",
+        "cancel": "",
         "topic": "topic",
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 150,
-        "y": 980,
+        "x": 140,
+        "y": 1400,
         "wires": [
             [
-                "18899c2688504e11"
+                "6562c9f1b47e5be6"
             ]
         ]
     },
     {
-        "id": "6a8e84c3b461e8a1",
-        "type": "inject",
-        "z": "8eab0a3c643bf6ac",
-        "g": "803e952a6482c9ec",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 190,
-        "y": 860,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "cd9854e511e2da51",
+        "id": "6562c9f1b47e5be6",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
-        "g": "803e952a6482c9ec",
-        "name": "now",
-        "func": "var now = new Date();\nvar finisht = now.toLocaleTimeString('en-US', {\n        hour: '2-digit',\n        minute: '2-digit',\n        second: '2-digit',\n        hour12: false // This ensures the time is in 24-hour format\n});\nflow.set(\"finishtime\", finisht);\n/*\nvar finishday = new Date(finish);\nvar formattedFinishDate = finishday.getFullYear() + '-' +\n        ('0' + (finishday.getMonth() + 1)).slice(-2) + '-' +\n        ('0' + finishday.getDate()).slice(-2);\nflow.set(\"finishday\", formattedFinishDate);\n\nvar finisht = msg.payload.finish_time;\nvar finishtime = new Date(finisht).toLocaleString('en-US', { \n        hour: '2-digit', \n        minute: '2-digit', \n        second: '2-digit',\n        hour12: false});\n\nflow.set(\"finishtime\",finishtime);\n*/\nreturn msg;",
+        "g": "96d22616b20b6ec0",
+        "name": "keep the number",
+        "func": "flow.set('interval', msg.payload.interval);\n// Store the form data in flow context\nflow.set(\"formData\", msg.payload);\n// Pass the form data back to the form\nmsg.payload = flow.get(\"formData\");\n\nreturn msg;",
         "outputs": 1,
-        "timeout": "",
+        "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 270,
-        "y": 1100,
+        "x": 370,
+        "y": 1400,
         "wires": [
             [
-                "95c993db02c8d0e6"
+                "e9331c3e628b73e6",
+                "351038b48d5cd366"
+            ]
+        ]
+    },
+    {
+        "id": "a0a7cdf1ee901aa2",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "set range",
+        "func": "// Get the daterangemin from msg.payload and convert it to milliseconds\nvar daterangemin = msg.payload * 60 * 1000;\nflow.set('range', daterangemin);\nmsg.payload = flow.get('range');\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 1340,
+        "wires": [
+            [
+                "6c8c9c726eae0d3c"
             ]
         ]
     }
