@@ -1852,7 +1852,7 @@
             {
                 "field": "customerNumber",
                 "title": "Customer#",
-                "width": "10%",
+                "width": "5%",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
@@ -1872,7 +1872,7 @@
             {
                 "field": "device",
                 "title": "Device",
-                "width": "20%",
+                "width": "10%",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
