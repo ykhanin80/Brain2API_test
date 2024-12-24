@@ -2354,7 +2354,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "[\t{\"labels\": $$.payload.timestamp,\t\"data\":[[$$.payload.actualNetWeight, \t$$.payload.averageWeight]],\t\"series\":[\"weight lbs\"]\t}] ",
+                "to": "[\t{\"labels\": $$.payload.timestamp,\t\"data\":[[$$.payload.actualNetWeight, \t$$.payload.averageWeight]],\t\"series\":[\"Net weight lbs\", \"Average weight lbs\"]\t}] ",
                 "tot": "jsonata"
             }
         ],
