@@ -166,8 +166,6 @@
             "a0a7cdf1ee901aa2",
             "8f37f2f68e6c0bc8",
             "3cc61dbee9210ef5",
-            "283ab4bf315f2b05",
-            "629b5aa9656f7e10",
             "89c4471480a70fcd"
         ],
         "x": 14,
@@ -1797,7 +1795,7 @@
         "z": "8eab0a3c643bf6ac",
         "g": "96d22616b20b6ec0",
         "name": "Prepare Table data",
-        "func": "var packstemp = msg.payload.map(function (el) {\n    function getDevice(device) {\n        return device ? device.name : null;\n    } \n\n    function getActualNetWeight(actualNetWeight) {\n        return actualNetWeight ? actualNetWeight.value : null;\n    }\n\n    function getError(error) {\n        return error ? error.flag : null;\n    }\n\n    // Format the timestamp\n    var formattedTimestamp = new Date(el.timestamp).toLocaleString('en-US', { \n        year: 'numeric', \n        month: '2-digit', \n        day: '2-digit', \n        hour: '2-digit', \n        minute: '2-digit', \n        second: '2-digit'\n    });\n\n    return {\n        timestamp: formattedTimestamp,\n        articleNumber: el.articleNumber,\n        articleName: el.articleName,\n        customerNumber: el.customerNumber,\n        device: getDevice(el.device),\n        actualNetWeight: getActualNetWeight(el.actualNetWeight),\n        error: getError(el.error)\n    };\n});\n\n// Sort the data by timestamp\npackstemp.sort((a, b) => a.timestamp - b.timestamp);\n\n// Calculate the average actualNetWeight\nlet totalWeight = 0;\nlet count = 0;\npackstemp.forEach(el => {\n    if (el.actualNetWeight !== null) {\n        totalWeight += el.actualNetWeight;\n        count++;\n    }\n});\nlet averageWeight = count > 0 ? parseFloat((totalWeight / count).toFixed(2)) : 0;\n\n// Add the average weight to each data point\npackstemp.forEach(el => {\n    el.averageWeight = averageWeight;\n});\n\n// Check if there is new data\nif (packstemp.length === 0) {\n    // No new data, use the average value for the current timestamp\n    let now = new Date();\n    let formattedTimestamp = now.toLocaleString('en-US', { \n        year: 'numeric', \n        month: '2-digit', \n        day: '2-digit', \n        hour: '2-digit', \n        minute: '2-digit', \n        second: '2-digit'\n    });\n\n    packstemp.push({\n        timestamp: formattedTimestamp,\n        articleNumber: null,\n        articleName: null,\n        customerNumber: null,\n        device: null,\n        actualNetWeight: averageWeight,\n        averageWeight: averageWeight,\n        error: null\n    });\n}\n\n// Prepare the data for the chart\nmsg.payload = packstemp;\n    \n\nreturn msg;",
+        "func": "var packstemp = msg.payload.map(function (el) {\n    function getDevice(device) {\n        return device ? device.name : null;\n    } \n\n    function getActualNetWeight(actualNetWeight) {\n        return actualNetWeight ? actualNetWeight.value : null;\n    }\n\n    function getError(error) {\n        return error ? error.flag : null;\n    }\n\n    // Format the timestamp\n    var formattedTimestamp = new Date(el.timestamp).toLocaleString('en-US', { \n        year: 'numeric', \n        month: '2-digit', \n        day: '2-digit', \n        hour: '2-digit', \n        minute: '2-digit', \n        second: '2-digit'\n    });\n\n    return {\n        timestamp: formattedTimestamp,\n        articleNumber: el.articleNumber,\n        articleName: el.articleName,\n        customerNumber: el.customerNumber,\n        device: getDevice(el.device),\n        actualNetWeight: getActualNetWeight(el.actualNetWeight),\n        error: getError(el.error)\n    };\n});\n\n// Sort the data by timestamp\npackstemp.sort((a, b) => a.timestamp - b.timestamp);\n\n// Calculate the average actualNetWeight\nlet totalWeight = 0;\nlet count = 0;\npackstemp.forEach(el => {\n    if (el.actualNetWeight !== null) {\n        totalWeight += el.actualNetWeight;\n        count++;\n    }\n});\nlet averageWeight = count > 0 ? parseFloat((totalWeight / count).toFixed(2)) : 0;\n\n// Add the average weight to each data point\npackstemp.forEach(el => {\n    el.averageWeight = averageWeight;\n});\n\n// Check if there is new data\nif (packstemp.length === 0) {\n    // No new data, use the average value for the current timestamp\n    // Format the timestamp\n    let now = new Date();\n    let formattedTimestamp = now.toISOString();\n\n\n    packstemp.push({\n        timestamp: formattedTimestamp,\n        articleNumber: null,\n        articleName: null,\n        customerNumber: null,\n        device: null,\n        //actualNetWeight: averageWeight,\n        averageWeight: averageWeight,\n        error: null\n    });\n}\n\n// Prepare the data for the chart\nmsg.payload = packstemp;\n    \n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2194,7 +2192,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1050,
+        "x": 1230,
         "y": 1300,
         "wires": [
             [
@@ -2425,73 +2423,6 @@
         ]
     },
     {
-        "id": "283ab4bf315f2b05",
-        "type": "function",
-        "z": "8eab0a3c643bf6ac",
-        "g": "96d22616b20b6ec0",
-        "name": "static",
-        "func": "// Create the payload for the chart node\nmsg.payload = \n[{\n\"series\": [\"A\", \"B\", \"C\"],\n\"data\": [\n    [{ \"x\": 1504029632890, \"y\": 5 },\n     { \"x\": 1504029636001, \"y\": 4 },\n     { \"x\": 1504029638656, \"y\": 2 }\n    ],\n    [{ \"x\": 1504029633514, \"y\": 6 },\n     { \"x\": 1504029636622, \"y\": 7 },\n     { \"x\": 1504029639539, \"y\": 6 }\n    ],\n    [{ \"x\": 1504029634400, \"y\": 7 },\n     { \"x\": 1504029637959, \"y\": 7 },\n     { \"x\": 1504029640317, \"y\": 7 }\n    ]\n] \n//,\"labels\": [\"\"]\n}]\n\n// Return the message object\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1250,
-        "y": 1300,
-        "wires": [
-            [
-                "629b5aa9656f7e10",
-                "8f37f2f68e6c0bc8"
-            ]
-        ]
-    },
-    {
-        "id": "629b5aa9656f7e10",
-        "type": "ui_chart",
-        "z": "8eab0a3c643bf6ac",
-        "g": "96d22616b20b6ec0",
-        "name": "",
-        "group": "8821f8eafdf5cf1e",
-        "order": 3,
-        "width": "14",
-        "height": "6",
-        "label": "chart",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "HH:mm:ss",
-        "interpolate": "monotone",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 1270,
-        "y": 1380,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "89c4471480a70fcd",
         "type": "inject",
         "z": "8eab0a3c643bf6ac",
@@ -2516,9 +2447,7 @@
         "x": 1200,
         "y": 1420,
         "wires": [
-            [
-                "283ab4bf315f2b05"
-            ]
+            []
         ]
     }
 ]
