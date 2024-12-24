@@ -1785,7 +1785,7 @@
         "chartType": "line",
         "legend": "true",
         "xformat": "auto",
-        "interpolate": "step",
+        "interpolate": "bezier",
         "nodata": "Waiting for transaction from server",
         "dot": false,
         "ymin": "",
