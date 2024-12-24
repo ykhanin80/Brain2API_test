@@ -167,8 +167,7 @@
             "3cc61dbee9210ef5",
             "89c4471480a70fcd",
             "1dce4b97189c0bba",
-            "9162c822108e3f62",
-            "7e03ce4951e4e39c"
+            "a0a7cdf1ee901aa2"
         ],
         "x": 14,
         "y": 1039,
@@ -2143,7 +2142,7 @@
         "wires": [
             [
                 "b32fd34dc6ed11e3",
-                "9162c822108e3f62"
+                "964926b51a0818a1"
             ]
         ]
     },
@@ -2276,7 +2275,7 @@
         "y": 1340,
         "wires": [
             [
-                "9162c822108e3f62"
+                "a0a7cdf1ee901aa2"
             ]
         ]
     },
@@ -2454,13 +2453,11 @@
         "x": 210,
         "y": 1460,
         "wires": [
-            [
-                "7e03ce4951e4e39c"
-            ]
+            []
         ]
     },
     {
-        "id": "9162c822108e3f62",
+        "id": "a0a7cdf1ee901aa2",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
         "g": "96d22616b20b6ec0",
@@ -2472,31 +2469,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
+        "x": 460,
         "y": 1340,
         "wires": [
             [
-                "964926b51a0818a1"
+                "6c8c9c726eae0d3c"
             ]
-        ]
-    },
-    {
-        "id": "7e03ce4951e4e39c",
-        "type": "function",
-        "z": "8eab0a3c643bf6ac",
-        "g": "96d22616b20b6ec0",
-        "name": "set avg block",
-        "func": "// Get the blobk size from msg.payload \nvar block = msg.payload;\nflow.set('block', block);\nmsg.payload = flow.get('block');\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 470,
-        "y": 1460,
-        "wires": [
-            []
         ]
     }
 ]
