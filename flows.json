@@ -2378,7 +2378,7 @@
         "z": "8eab0a3c643bf6ac",
         "g": "96d22616b20b6ec0",
         "name": "avg",
-        "func": "msg.payload = \"new packs \" + flow.get('newRecords') + \"\\n\" + \" record \" + flow.get('recordTimestamp') + \n     \"last processed \" +   flow.get('lastProcessedTimestamp');\nmsg.value = flow.get('averageWeight');\nreturn msg;",
+        "func": "msg.payload = \"new packs \" + flow.get('newRecords') + \"@0A\" + \" record \" + flow.get('recordTimestamp') + \n     \"last processed \" +   flow.get('lastProcessedTimestamp');\nmsg.value = flow.get('averageWeight');\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
