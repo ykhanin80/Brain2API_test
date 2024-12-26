@@ -2384,14 +2384,14 @@
         "order": 6,
         "width": "3",
         "height": "3",
-        "format": "<div style=\"font-size: 20px; font-weight: bold; color: green;\" ng-bind=\"flow.get('averageWeight')\"></div>\n",
+        "format": "<div ng-bind=\"flow.get('averageWeight')\"></div>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 960,
-        "y": 1280,
+        "x": 980,
+        "y": 1260,
         "wires": [
             []
         ]
@@ -2443,7 +2443,7 @@
         "seg2": "5.2",
         "diff": false,
         "className": "",
-        "x": 830,
+        "x": 810,
         "y": 1300,
         "wires": []
     },
