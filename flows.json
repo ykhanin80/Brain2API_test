@@ -147,8 +147,6 @@
             "c6fcb661d08e1e5e",
             "855f9fc3669603b2",
             "65c99e9a7518480d",
-            "6cec62bdb3fe7331",
-            "41d26d6d9c96aed8",
             "be30eb4e98508bb6",
             "6c8c9c726eae0d3c",
             "66b730256f79af1d",
@@ -465,6 +463,16 @@
         "group": "8821f8eafdf5cf1e",
         "order": 7,
         "width": 8,
+        "height": 1
+    },
+    {
+        "id": "fe64b5787fba3872",
+        "type": "ui_spacer",
+        "z": "8eab0a3c643bf6ac",
+        "name": "spacer",
+        "group": "6794d2e26b7f5c97",
+        "order": 9,
+        "width": 1,
         "height": 1
     },
     {
@@ -1822,7 +1830,7 @@
         "g": "96d22616b20b6ec0",
         "name": "",
         "group": "6794d2e26b7f5c97",
-        "order": 7,
+        "order": 3,
         "width": "22",
         "height": "5",
         "label": "Package records",
@@ -1869,7 +1877,7 @@
         "g": "96d22616b20b6ec0",
         "group": "6794d2e26b7f5c97",
         "name": "",
-        "order": 14,
+        "order": 12,
         "width": "22",
         "height": "5",
         "columns": [
@@ -1961,48 +1969,6 @@
         "wires": []
     },
     {
-        "id": "6cec62bdb3fe7331",
-        "type": "ui_button",
-        "z": "8eab0a3c643bf6ac",
-        "g": "96d22616b20b6ec0",
-        "name": "",
-        "group": "6794d2e26b7f5c97",
-        "order": 13,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Back",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "Selection Page",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "x": 1130,
-        "y": 1100,
-        "wires": [
-            [
-                "41d26d6d9c96aed8"
-            ]
-        ]
-    },
-    {
-        "id": "41d26d6d9c96aed8",
-        "type": "ui_ui_control",
-        "z": "8eab0a3c643bf6ac",
-        "g": "96d22616b20b6ec0",
-        "name": "",
-        "events": "all",
-        "x": 1260,
-        "y": 1100,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "be30eb4e98508bb6",
         "type": "link in",
         "z": "8eab0a3c643bf6ac",
@@ -2042,7 +2008,7 @@
         "z": "8eab0a3c643bf6ac",
         "g": "96d22616b20b6ec0",
         "group": "6794d2e26b7f5c97",
-        "order": 7,
+        "order": 4,
         "width": 0,
         "height": 0,
         "name": "",
@@ -2211,7 +2177,7 @@
         "g": "96d22616b20b6ec0",
         "name": "",
         "group": "6794d2e26b7f5c97",
-        "order": 8,
+        "order": 5,
         "width": "2",
         "height": "1",
         "passthru": false,
@@ -2263,7 +2229,7 @@
         "label": "Pack records within last minutes",
         "tooltip": "minutes",
         "group": "6794d2e26b7f5c97",
-        "order": 9,
+        "order": 7,
         "width": "18",
         "height": "1",
         "passthru": true,
@@ -2290,7 +2256,7 @@
         "name": "",
         "label": "Refresh interval",
         "group": "6794d2e26b7f5c97",
-        "order": 5,
+        "order": 2,
         "width": "3",
         "height": "2",
         "options": [
@@ -2415,7 +2381,7 @@
         "g": "96d22616b20b6ec0",
         "group": "6794d2e26b7f5c97",
         "name": "Avg Wt",
-        "order": 8,
+        "order": 6,
         "width": "3",
         "height": "3",
         "format": "<div style=\"font-size: 20px; font-weight: bold; color: green;\" ng-bind=\"flow.get('averageWeight')\"></div>\n",
@@ -2487,7 +2453,7 @@
         "z": "8eab0a3c643bf6ac",
         "g": "96d22616b20b6ec0",
         "group": "6794d2e26b7f5c97",
-        "order": 9,
+        "order": 8,
         "width": "6",
         "height": "1",
         "name": "",
