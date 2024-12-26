@@ -2128,7 +2128,7 @@
         "z": "8eab0a3c643bf6ac",
         "g": "96d22616b20b6ec0",
         "name": "countdown",
-        "func": "let countdown2 = flow.get('countdown2');\n\nif (countdown2 > 0) {\n    countdown2--;\n    flow.set('countdown2', countdown2);\n    msg.payload = countdown2;\n    \n    return [msg, null];\n} else {\n    msg.payload = 0;\n    flow.set('countdown2', 0);\n    return [null, msg];\n}",
+        "func": "let countdown2 = flow.get('countdown2');\n\nif (countdown2 > 0) {\n    countdown2--;\n    flow.set('countdown2', countdown2);\n    msg.payload = countdown2;\n    \n    return [msg, null];\n} else {\n    msg.payload = 0;\n    flow.set('countdown2', 0);\n    //return [null, msg];\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
