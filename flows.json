@@ -2428,7 +2428,7 @@
         "order": 11,
         "width": "7",
         "height": "7",
-        "gtype": "gage",
+        "gtype": "wave",
         "title": "avgWt",
         "label": "lbs",
         "format": "{{value}}",
