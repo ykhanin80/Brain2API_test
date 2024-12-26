@@ -2296,10 +2296,18 @@
                 "type": "number",
                 "required": true,
                 "rows": null
+            },
+            {
+                "label": "Block avg calc",
+                "value": "block",
+                "type": "number",
+                "required": false,
+                "rows": null
             }
         ],
         "formValue": {
-            "interval": ""
+            "interval": "",
+            "block": ""
         },
         "payload": "",
         "submit": "ok",
