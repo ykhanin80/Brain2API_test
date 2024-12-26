@@ -163,7 +163,6 @@
             "6562c9f1b47e5be6",
             "3cc61dbee9210ef5",
             "a0a7cdf1ee901aa2",
-            "8562755038a62abf",
             "09a1a95dc2605039",
             "2b098c3efa415110",
             "211dfd6a3b4e0835"
@@ -1818,7 +1817,6 @@
             [
                 "65c99e9a7518480d",
                 "3cc61dbee9210ef5",
-                "8562755038a62abf",
                 "09a1a95dc2605039"
             ]
         ]
@@ -2372,28 +2370,6 @@
             [
                 "6c8c9c726eae0d3c"
             ]
-        ]
-    },
-    {
-        "id": "8562755038a62abf",
-        "type": "ui_template",
-        "z": "8eab0a3c643bf6ac",
-        "g": "96d22616b20b6ec0",
-        "group": "6794d2e26b7f5c97",
-        "name": "Avg Wt",
-        "order": 2,
-        "width": "3",
-        "height": "3",
-        "format": "<div ng-bind=\"flow.get('averageWeight')\"></div>\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 980,
-        "y": 1260,
-        "wires": [
-            []
         ]
     },
     {
