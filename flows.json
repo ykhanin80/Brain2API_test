@@ -2429,7 +2429,7 @@
         "width": "5",
         "height": "5",
         "gtype": "donut",
-        "title": "avgWt 0-5|5-5.2|5.21->",
+        "title": "target Wt 5-5.2lb",
         "label": "lbs",
         "format": "{{value}}",
         "min": 0,
@@ -2443,7 +2443,7 @@
         "seg2": "5.2",
         "diff": false,
         "className": "",
-        "x": 840,
+        "x": 830,
         "y": 1300,
         "wires": []
     },
