@@ -163,7 +163,6 @@
             "6562c9f1b47e5be6",
             "3cc61dbee9210ef5",
             "a0a7cdf1ee901aa2",
-            "09a1a95dc2605039",
             "2b098c3efa415110",
             "70344c1962290601"
         ],
@@ -1804,7 +1803,7 @@
         "z": "8eab0a3c643bf6ac",
         "g": "96d22616b20b6ec0",
         "name": "Prepare Table data",
-        "func": "// Retrieve the existing average weight data array from the flow context\nvar averageWeightData = flow.get('averageWeightData') || [];\n\n// Map the incoming payload to the desired format\nvar packstemp = msg.payload.map(function (el) {\n    function getDevice(device) {\n        return device ? device.name : null;\n    } \n\n    function getActualNetWeight(actualNetWeight) {\n        return actualNetWeight ? actualNetWeight.value : null;\n    }\n\n    function getError(error) {\n        return error ? error.flag : null;\n    }\n\n    // Format the timestamp\n    var formattedTimestamp = new Date(el.timestamp).toLocaleString('en-US', { \n        year: 'numeric', \n        month: '2-digit', \n        day: '2-digit', \n        hour: '2-digit', \n        minute: '2-digit', \n        second: '2-digit'\n    });\n\n    return {\n        timestamp: formattedTimestamp,\n        articleNumber: el.articleNumber,\n        articleName: el.articleName,\n        customerNumber: el.customerNumber,\n        device: getDevice(el.device),\n        actualNetWeight: getActualNetWeight(el.actualNetWeight),\n        error: getError(el.error)\n    };\n});\n\n// Sort the data by timestamp\n//packstemp.sort((a, b) => a.timestamp - b.timestamp);\npackstemp.sort((a, b) => new Date(a.timestamp - b.timestamp));\n\n// Calculate the average actualNetWeight dynamically for the last 'numRecords' records\nlet totalWeight = 0;\nlet count = 0;\n\n\nfor (let i = 0  ; i < packstemp.length; i++) {\n    let el = packstemp[i];\n    if (el.actualNetWeight !== null) {\n        totalWeight += el.actualNetWeight;\n        count++;\n    }\n}\n \n\n// Calculate the average weight\nlet averageWeight = count > 0 ? parseFloat((totalWeight / count).toFixed(2)) : 0;\n\n// Get the current timestamp\nlet currentTimestamp = new Date().toLocaleString('en-US', { \n    year: 'numeric', \n    month: '2-digit', \n    day: '2-digit', \n    hour: '2-digit', \n    minute: '2-digit', \n    second: '2-digit'\n});\n\n// Add the current average weight and timestamp to the average weight data array\naverageWeightData.push({\n    timestamp: currentTimestamp,\n    averageWeight: averageWeight\n});\n/*\n// save to array\npackstemp.forEach((el, index) => {\n    if (index < packstemp.length ) { \n        el.averageWeight = averageWeight; // Or any other default value you prefer\n    }\n}); */\n\n\n// Store the updated average weight data array in the flow context\nflow.set('averageWeightData', averageWeightData);\n\n// Prepare the data for the chart\nmsg.payload = {\n    packstemp: packstemp,\n    averageWeightData: averageWeightData\n};    \n\nreturn msg;",
+        "func": "// Retrieve the existing average weight data array from the flow context\nvar averageWeightData = flow.get('averageWeightData') || [];\n\n// Map the incoming payload to the desired format\nvar packstemp = msg.payload.map(function (el) {\n    function getDevice(device) {\n        return device ? device.name : null;\n    } \n\n    function getActualNetWeight(actualNetWeight) {\n        return actualNetWeight ? actualNetWeight.value : null;\n    }\n\n    function getError(error) {\n        return error ? error.flag : null;\n    }\n\n    // Format the timestamp\n    var formattedTimestamp = new Date(el.timestamp).toLocaleString('en-US', { \n        year: 'numeric', \n        month: '2-digit', \n        day: '2-digit', \n        hour: '2-digit', \n        minute: '2-digit', \n        second: '2-digit'\n    });\n\n    return {\n        timestamp: formattedTimestamp,\n        articleNumber: el.articleNumber,\n        articleName: el.articleName,\n        customerNumber: el.customerNumber,\n        device: getDevice(el.device),\n        actualNetWeight: getActualNetWeight(el.actualNetWeight),\n        error: getError(el.error)\n    };\n});\n\n// Sort the data by timestamp\n//packstemp.sort((a, b) => a.timestamp - b.timestamp);\npackstemp.sort((a, b) => new Date(a.timestamp - b.timestamp));\n\n// Calculate the average actualNetWeight dynamically for the last 'numRecords' records\nlet totalWeight = 0;\nlet count = 0;\n\n\nfor (let i = 0  ; i < packstemp.length; i++) {\n    let el = packstemp[i];\n    if (el.actualNetWeight !== null) {\n        totalWeight += el.actualNetWeight;\n        count++;\n    }\n}\n \n\n// Calculate the average weight\nlet averageWeight = count > 0 ? parseFloat((totalWeight / count).toFixed(2)) : 0;\n\n// Get the current timestamp\nlet currentTimestamp = new Date().toLocaleString('en-US', { \n    year: 'numeric', \n    month: '2-digit', \n    day: '2-digit', \n    hour: '2-digit', \n    minute: '2-digit', \n    second: '2-digit'\n});\n\n// Add the current average weight and timestamp to the average weight data array\naverageWeightData.push({\n    timestamp: currentTimestamp,\n    averageWeight: averageWeight\n});\n/*\n// save to array\npackstemp.forEach((el, index) => {\n    if (index < packstemp.length ) { \n        el.averageWeight = averageWeight; // Or any other default value you prefer\n    }\n}); */\n\n\n// Store the updated average weight data array in the flow context\nflow.set('averageWeightData', averageWeightData);\n\n// Prepare the data for the chart\nmsg.payload = {\n    packstemp: packstemp,\n    averageWeightData: averageWeightData\n};    \n\nmsg.value = averageWeight;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1816,8 +1815,8 @@
         "wires": [
             [
                 "3cc61dbee9210ef5",
-                "09a1a95dc2605039",
-                "70344c1962290601"
+                "70344c1962290601",
+                "2b098c3efa415110"
             ]
         ]
     },
@@ -1962,8 +1961,8 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 1030,
-        "y": 1160,
+        "x": 1270,
+        "y": 1100,
         "wires": []
     },
     {
@@ -2343,7 +2342,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 960,
+        "x": 1020,
         "y": 1220,
         "wires": [
             [
@@ -2373,27 +2372,6 @@
         ]
     },
     {
-        "id": "09a1a95dc2605039",
-        "type": "function",
-        "z": "8eab0a3c643bf6ac",
-        "g": "96d22616b20b6ec0",
-        "name": "avg",
-        "func": "//msg.payload = \"# of new packs \" + flow.get('newRecords') + \" recordTimestamp \" + flow.get('recordTimestamp') + \n//\" lastProcessedTimestamp \" +   flow.get('lastProcessedTimestamp');\n\n\n\nmsg.value = flow.get('averageWeight');\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 630,
-        "y": 1240,
-        "wires": [
-            [
-                "2b098c3efa415110"
-            ]
-        ]
-    },
-    {
         "id": "2b098c3efa415110",
         "type": "ui_gauge",
         "z": "8eab0a3c643bf6ac",
@@ -2418,8 +2396,8 @@
         "seg2": "5.2",
         "diff": false,
         "className": "",
-        "x": 830,
-        "y": 1300,
+        "x": 890,
+        "y": 1280,
         "wires": []
     },
     {
@@ -2442,7 +2420,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 940,
+        "x": 1040,
         "y": 1100,
         "wires": [
             [
