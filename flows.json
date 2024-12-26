@@ -2235,7 +2235,7 @@
         "topic": "topic",
         "topicType": "msg",
         "min": 0,
-        "max": "1440",
+        "max": "60",
         "step": 1,
         "className": "",
         "x": 190,
