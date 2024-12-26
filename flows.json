@@ -2298,7 +2298,7 @@
                 "rows": null
             },
             {
-                "label": "Block avg calc",
+                "label": "Block size f avg calc",
                 "value": "block",
                 "type": "number",
                 "required": false,
