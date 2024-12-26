@@ -1877,7 +1877,7 @@
         "g": "96d22616b20b6ec0",
         "group": "6794d2e26b7f5c97",
         "name": "",
-        "order": 12,
+        "order": 10,
         "width": "22",
         "height": "5",
         "columns": [
@@ -2425,7 +2425,7 @@
         "g": "96d22616b20b6ec0",
         "name": "",
         "group": "6794d2e26b7f5c97",
-        "order": 10,
+        "order": 11,
         "width": "7",
         "height": "7",
         "gtype": "gage",
