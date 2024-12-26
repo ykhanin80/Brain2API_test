@@ -163,15 +163,17 @@
             "0908448ce6b52139",
             "e9331c3e628b73e6",
             "6562c9f1b47e5be6",
-            "8f37f2f68e6c0bc8",
             "3cc61dbee9210ef5",
             "a0a7cdf1ee901aa2",
-            "8562755038a62abf"
+            "8562755038a62abf",
+            "09a1a95dc2605039",
+            "2b098c3efa415110",
+            "211dfd6a3b4e0835"
         ],
         "x": 14,
-        "y": 1039,
+        "y": 1059,
         "w": 1352,
-        "h": 402
+        "h": 382
     },
     {
         "id": "b35b991b388efa02",
@@ -1808,8 +1810,8 @@
             [
                 "65c99e9a7518480d",
                 "3cc61dbee9210ef5",
-                "8f37f2f68e6c0bc8",
-                "8562755038a62abf"
+                "8562755038a62abf",
+                "09a1a95dc2605039"
             ]
         ]
     },
@@ -2341,23 +2343,6 @@
         ]
     },
     {
-        "id": "8f37f2f68e6c0bc8",
-        "type": "debug",
-        "z": "8eab0a3c643bf6ac",
-        "g": "96d22616b20b6ec0",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 920,
-        "y": 1080,
-        "wires": []
-    },
-    {
         "id": "e85a4dd03127e8b4",
         "type": "debug",
         "z": "8eab0a3c643bf6ac",
@@ -2444,5 +2429,78 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "09a1a95dc2605039",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "avg",
+        "func": "msg.payload = \"Agerage Weight, Lbs: \" + flow.get('averageWeight');\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1240,
+        "wires": [
+            [
+                "2b098c3efa415110",
+                "211dfd6a3b4e0835"
+            ]
+        ]
+    },
+    {
+        "id": "2b098c3efa415110",
+        "type": "ui_gauge",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "name": "",
+        "group": "6794d2e26b7f5c97",
+        "order": 10,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "avgWt",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 790,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "211dfd6a3b4e0835",
+        "type": "ui_text",
+        "z": "8eab0a3c643bf6ac",
+        "g": "96d22616b20b6ec0",
+        "group": "6794d2e26b7f5c97",
+        "order": 9,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": true,
+        "font": "Courier,monospace",
+        "fontSize": "20",
+        "color": "#000000",
+        "x": 790,
+        "y": 1240,
+        "wires": []
     }
 ]
