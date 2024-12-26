@@ -471,7 +471,7 @@
         "z": "8eab0a3c643bf6ac",
         "name": "spacer",
         "group": "6794d2e26b7f5c97",
-        "order": 9,
+        "order": 8,
         "width": "27",
         "height": "1"
     },
@@ -1877,7 +1877,7 @@
         "g": "96d22616b20b6ec0",
         "group": "6794d2e26b7f5c97",
         "name": "",
-        "order": 10,
+        "order": 9,
         "width": "22",
         "height": "5",
         "columns": [
@@ -2453,7 +2453,7 @@
         "z": "8eab0a3c643bf6ac",
         "g": "96d22616b20b6ec0",
         "group": "6794d2e26b7f5c97",
-        "order": 8,
+        "order": 10,
         "width": "6",
         "height": "1",
         "name": "",
