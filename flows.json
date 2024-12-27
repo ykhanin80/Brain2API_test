@@ -96,8 +96,7 @@
             "543843c227a08779",
             "2f01a6f9a03ab032",
             "18899c2688504e11",
-            "f26b6e1f0c4a5849",
-            "e85a4dd03127e8b4"
+            "f26b6e1f0c4a5849"
         ],
         "x": 14,
         "y": 819,
@@ -146,7 +145,6 @@
             "029ef244aebf0100",
             "c6fcb661d08e1e5e",
             "855f9fc3669603b2",
-            "65c99e9a7518480d",
             "be30eb4e98508bb6",
             "6c8c9c726eae0d3c",
             "66b730256f79af1d",
@@ -163,15 +161,12 @@
             "6562c9f1b47e5be6",
             "3cc61dbee9210ef5",
             "a0a7cdf1ee901aa2",
-            "2b098c3efa415110",
-            "70344c1962290601",
-            "d7fe5f7485945e95",
-            "cc3ead504f6d82d9"
+            "2b098c3efa415110"
         ],
         "x": 14,
         "y": 1059,
         "w": 1352,
-        "h": 422
+        "h": 382
     },
     {
         "id": "b35b991b388efa02",
@@ -779,8 +774,7 @@
         "wires": [
             [
                 "ddcc55230b0734d7",
-                "543843c227a08779",
-                "e85a4dd03127e8b4"
+                "543843c227a08779"
             ]
         ]
     },
@@ -1749,7 +1743,7 @@
         "finalize": "",
         "libs": [],
         "x": 450,
-        "y": 1140,
+        "y": 1100,
         "wires": [
             [
                 "32a1b02f054958ee",
@@ -1775,7 +1769,7 @@
         "senderr": false,
         "headers": [],
         "x": 370,
-        "y": 1200,
+        "y": 1160,
         "wires": [
             [
                 "029ef244aebf0100"
@@ -1792,7 +1786,7 @@
         "action": "",
         "pretty": false,
         "x": 590,
-        "y": 1200,
+        "y": 1160,
         "wires": [
             [
                 "c6fcb661d08e1e5e"
@@ -1813,13 +1807,11 @@
         "finalize": "",
         "libs": [],
         "x": 790,
-        "y": 1200,
+        "y": 1160,
         "wires": [
             [
                 "3cc61dbee9210ef5",
-                "70344c1962290601",
-                "2b098c3efa415110",
-                "cc3ead504f6d82d9"
+                "2b098c3efa415110"
             ]
         ]
     },
@@ -1863,100 +1855,12 @@
         "useDifferentColor": false,
         "className": "",
         "x": 1230,
-        "y": 1260,
+        "y": 1220,
         "wires": [
             [
                 "9cf2c353ad2f24fe"
             ]
         ]
-    },
-    {
-        "id": "65c99e9a7518480d",
-        "type": "ui_table",
-        "z": "8eab0a3c643bf6ac",
-        "g": "96d22616b20b6ec0",
-        "group": "6794d2e26b7f5c97",
-        "name": "",
-        "order": 8,
-        "width": "22",
-        "height": "3",
-        "columns": [
-            {
-                "field": "timestamp",
-                "title": "Timestamp",
-                "width": "15%",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "articleNumber",
-                "title": "PLU#",
-                "width": "10%",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "customerNumber",
-                "title": "Customer#",
-                "width": "5%",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "articleName",
-                "title": "Description",
-                "width": "20%",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "device",
-                "title": "Device",
-                "width": "10%",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "actualNetWeight",
-                "title": "Weight",
-                "width": "15%",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "error",
-                "title": "Error Flag",
-                "width": "10%",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            }
-        ],
-        "outputs": 0,
-        "cts": false,
-        "x": 1270,
-        "y": 1140,
-        "wires": []
     },
     {
         "id": "be30eb4e98508bb6",
@@ -1966,7 +1870,7 @@
         "name": "link in 2",
         "links": [],
         "x": 55,
-        "y": 1140,
+        "y": 1100,
         "wires": [
             []
         ]
@@ -1985,7 +1889,7 @@
         "finalize": "",
         "libs": [],
         "x": 220,
-        "y": 1140,
+        "y": 1100,
         "wires": [
             [
                 "156a1f6a76f6999a"
@@ -2011,7 +1915,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 630,
-        "y": 1140,
+        "y": 1100,
         "wires": []
     },
     {
@@ -2033,7 +1937,7 @@
         "allowrate": true,
         "outputs": 1,
         "x": 830,
-        "y": 1440,
+        "y": 1400,
         "wires": [
             [
                 "4b929a17e96e0c2a"
@@ -2054,7 +1958,7 @@
         "finalize": "",
         "libs": [],
         "x": 600,
-        "y": 1440,
+        "y": 1400,
         "wires": [
             [
                 "b32fd34dc6ed11e3"
@@ -2080,7 +1984,7 @@
         "fontSize": "",
         "color": "#000000",
         "x": 410,
-        "y": 1280,
+        "y": 1240,
         "wires": []
     },
     {
@@ -2097,7 +2001,7 @@
         "finalize": "",
         "libs": [],
         "x": 1010,
-        "y": 1440,
+        "y": 1400,
         "wires": [
             [
                 "b32fd34dc6ed11e3",
@@ -2129,7 +2033,7 @@
         "repair": false,
         "outputs": 2,
         "x": 180,
-        "y": 1320,
+        "y": 1280,
         "wires": [
             [
                 "bb819c13b2e71912"
@@ -2153,7 +2057,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 1340,
+        "y": 1300,
         "wires": [
             [
                 "b32fd34dc6ed11e3"
@@ -2182,7 +2086,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 1150,
-        "y": 1200,
+        "y": 1160,
         "wires": [
             [
                 "b812d32eb48eaca9"
@@ -2203,7 +2107,7 @@
         "finalize": "",
         "libs": [],
         "x": 1290,
-        "y": 1200,
+        "y": 1160,
         "wires": [
             [
                 "b32fd34dc6ed11e3"
@@ -2231,7 +2135,7 @@
         "step": 1,
         "className": "",
         "x": 190,
-        "y": 1380,
+        "y": 1340,
         "wires": [
             [
                 "a0a7cdf1ee901aa2"
@@ -2269,7 +2173,7 @@
         "splitLayout": "",
         "className": "",
         "x": 140,
-        "y": 1440,
+        "y": 1400,
         "wires": [
             [
                 "6562c9f1b47e5be6"
@@ -2290,30 +2194,13 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 1440,
+        "y": 1400,
         "wires": [
             [
                 "e9331c3e628b73e6",
                 "351038b48d5cd366"
             ]
         ]
-    },
-    {
-        "id": "e85a4dd03127e8b4",
-        "type": "debug",
-        "z": "8eab0a3c643bf6ac",
-        "g": "803e952a6482c9ec",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1020,
-        "y": 860,
-        "wires": []
     },
     {
         "id": "3cc61dbee9210ef5",
@@ -2336,7 +2223,7 @@
         "to": "",
         "reg": false,
         "x": 1020,
-        "y": 1260,
+        "y": 1220,
         "wires": [
             [
                 "855f9fc3669603b2"
@@ -2357,7 +2244,7 @@
         "finalize": "",
         "libs": [],
         "x": 460,
-        "y": 1380,
+        "y": 1340,
         "wires": [
             [
                 "6c8c9c726eae0d3c"
@@ -2390,101 +2277,7 @@
         "diff": false,
         "className": "",
         "x": 890,
-        "y": 1320,
+        "y": 1280,
         "wires": []
-    },
-    {
-        "id": "70344c1962290601",
-        "type": "change",
-        "z": "8eab0a3c643bf6ac",
-        "g": "96d22616b20b6ec0",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.packstemp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1040,
-        "y": 1140,
-        "wires": [
-            [
-                "65c99e9a7518480d"
-            ]
-        ]
-    },
-    {
-        "id": "d7fe5f7485945e95",
-        "type": "ui_table",
-        "z": "8eab0a3c643bf6ac",
-        "g": "96d22616b20b6ec0",
-        "group": "6794d2e26b7f5c97",
-        "name": "",
-        "order": 9,
-        "width": "22",
-        "height": "3",
-        "columns": [
-            {
-                "field": "timestamp",
-                "title": "Timestamp",
-                "width": "15%",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "averageWeight",
-                "title": "AverageWeight",
-                "width": "",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            }
-        ],
-        "outputs": 0,
-        "cts": false,
-        "x": 1270,
-        "y": 1100,
-        "wires": []
-    },
-    {
-        "id": "cc3ead504f6d82d9",
-        "type": "change",
-        "z": "8eab0a3c643bf6ac",
-        "g": "96d22616b20b6ec0",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.averageWeightData",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1040,
-        "y": 1100,
-        "wires": [
-            [
-                "d7fe5f7485945e95"
-            ]
-        ]
     }
 ]
