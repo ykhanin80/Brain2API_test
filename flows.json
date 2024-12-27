@@ -1880,7 +1880,7 @@
         "name": "",
         "order": 8,
         "width": "22",
-        "height": "5",
+        "height": "3",
         "columns": [
             {
                 "field": "timestamp",
@@ -2430,13 +2430,13 @@
         "group": "6794d2e26b7f5c97",
         "name": "",
         "order": 9,
-        "width": 0,
-        "height": 0,
+        "width": "22",
+        "height": "3",
         "columns": [
             {
                 "field": "timestamp",
                 "title": "Timestamp",
-                "width": "10",
+                "width": "15",
                 "align": "left",
                 "formatter": "plaintext",
                 "formatterParams": {
@@ -2471,7 +2471,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "payload.averageWeight",
+                "to": "payload.averageWeightData",
                 "tot": "msg"
             }
         ],
