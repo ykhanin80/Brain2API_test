@@ -2262,7 +2262,7 @@
         "width": "5",
         "height": "5",
         "gtype": "wave",
-        "title": "target Wt 5-5.2lb",
+        "title": "Average Wt",
         "label": "lbs",
         "format": "{{value}}",
         "min": 0,
@@ -2276,7 +2276,7 @@
         "seg2": "5.2",
         "diff": false,
         "className": "",
-        "x": 890,
+        "x": 870,
         "y": 1280,
         "wires": []
     }
