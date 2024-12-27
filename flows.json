@@ -309,7 +309,7 @@
         "type": "ui_tab",
         "name": "Selection Page",
         "icon": "dashboard",
-        "order": 4,
+        "order": 2,
         "disabled": false,
         "hidden": false
     },
@@ -318,7 +318,7 @@
         "type": "ui_tab",
         "name": "Package Records",
         "icon": "dashboard",
-        "order": 3,
+        "order": 4,
         "disabled": false,
         "hidden": false
     },
@@ -402,7 +402,7 @@
         "type": "ui_tab",
         "name": "Time interval capture",
         "icon": "dashboard",
-        "order": 2,
+        "order": 3,
         "disabled": false,
         "hidden": false
     },
