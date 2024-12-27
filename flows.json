@@ -1069,7 +1069,7 @@
         "z": "8eab0a3c643bf6ac",
         "g": "f8d98a8bcd1abe89",
         "name": "var device",
-        "func": "var device = msg.payload;\nflow.set(\"device\",device);\n\n//msg.payload =\"Time interval capture\";\nreturn msg;",
+        "func": "var device = msg.payload;\nflow.set(\"device\",device);\n\nmsg.payload =\"Selection Page\";\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1079,7 +1079,9 @@
         "x": 1270,
         "y": 400,
         "wires": [
-            []
+            [
+                "c0e14ed5320e33b2"
+            ]
         ]
     },
     {
