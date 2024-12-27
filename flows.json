@@ -2046,7 +2046,7 @@
         "z": "8eab0a3c643bf6ac",
         "g": "96d22616b20b6ec0",
         "name": "Initialize Countdown",
-        "func": "flow.set('countdown2', flow.get('interval') );\n\nmsg.payload = flow.get('countdown2');\nmsg.rate =1000;\n\n\n\nreturn msg;",
+        "func": "flow.set('countdown2', flow.get('interval') );\nvar averageWeightData =  [];\nvar packstemp = [];\n\n\nmsg.payload = flow.get('countdown2');\nmsg.rate =1000;\n\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
