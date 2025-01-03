@@ -178,7 +178,8 @@
             "96fc6de53366877d",
             "c185e7e44e9b4862",
             "2d62c02ca60e8fce",
-            "31f17e57569d915f"
+            "31f17e57569d915f",
+            "18b910afb183b402"
         ],
         "x": 14,
         "y": 1479,
@@ -2176,8 +2177,7 @@
         "y": 1560,
         "wires": [
             [
-                "2428b474cdfbc164",
-                "31f17e57569d915f"
+                "2428b474cdfbc164"
             ]
         ]
     },
@@ -2358,6 +2358,28 @@
         "statusType": "auto",
         "x": 960,
         "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "18b910afb183b402",
+        "type": "ui_text",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "group": "c3da64604f938861",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "To generate label preview with PLU data select Project, PLU and label number",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 520,
+        "y": 1520,
         "wires": []
     }
 ]
