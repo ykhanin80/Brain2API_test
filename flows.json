@@ -449,7 +449,7 @@
     {
         "id": "1ab2a88a04aba926",
         "type": "ui_tab",
-        "name": "Label preview",
+        "name": "Labels Preview",
         "icon": "dashboard",
         "order": 7,
         "disabled": false,
@@ -2329,7 +2329,7 @@
         "bgcolor": "",
         "className": "",
         "icon": "",
-        "payload": "Label Projects",
+        "payload": "Labels Preview",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
