@@ -191,7 +191,9 @@
             "967a0a98c0e7bc54",
             "a1a6ecb31beaa9ca",
             "2f308082d8326147",
-            "6eab239d647915c3"
+            "6eab239d647915c3",
+            "37bd4bf7f7e9f47b",
+            "ef5b96128f1defa7"
         ],
         "x": 14,
         "y": 1479,
@@ -2292,7 +2294,7 @@
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "Submit",
+        "label": "Read projects",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -2302,11 +2304,11 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 100,
-        "y": 1520,
+        "x": 120,
+        "y": 1560,
         "wires": [
             [
-                "96fc6de53366877d"
+                "84abaf12d166c742"
             ]
         ]
     },
@@ -2317,8 +2319,8 @@
         "g": "30adcaace5951d9c",
         "name": "Display Label Projects",
         "events": "change",
-        "x": 180,
-        "y": 1560,
+        "x": 560,
+        "y": 1520,
         "wires": [
             []
         ]
@@ -2451,7 +2453,7 @@
         "topic": "",
         "topicType": "str",
         "className": "",
-        "x": 790,
+        "x": 1070,
         "y": 1680,
         "wires": [
             [
@@ -2472,7 +2474,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 980,
+        "x": 1260,
         "y": 1680,
         "wires": [
             []
@@ -2504,7 +2506,7 @@
         "topic": "",
         "topicType": "str",
         "className": "",
-        "x": 800,
+        "x": 1080,
         "y": 1720,
         "wires": [
             [
@@ -2525,7 +2527,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
+        "x": 1250,
         "y": 1720,
         "wires": [
             []
@@ -2544,7 +2546,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 120,
+        "x": 400,
         "y": 1680,
         "wires": [
             [
@@ -2569,7 +2571,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 290,
+        "x": 570,
         "y": 1680,
         "wires": [
             [
@@ -2586,7 +2588,7 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 490,
+        "x": 770,
         "y": 1680,
         "wires": [
             [
@@ -2607,7 +2609,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 640,
+        "x": 920,
         "y": 1680,
         "wires": [
             [
@@ -2629,7 +2631,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 120,
+        "x": 400,
         "y": 1720,
         "wires": [
             [
@@ -2654,7 +2656,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 310,
+        "x": 590,
         "y": 1720,
         "wires": [
             [
@@ -2671,7 +2673,7 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 490,
+        "x": 770,
         "y": 1720,
         "wires": [
             [
@@ -2692,11 +2694,69 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 640,
+        "x": 920,
         "y": 1720,
         "wires": [
             [
                 "5cce785db05077c3"
+            ]
+        ]
+    },
+    {
+        "id": "37bd4bf7f7e9f47b",
+        "type": "ui_button",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "",
+        "group": "43768ad03e62b0f1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Read PLUs",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 1680,
+        "wires": [
+            [
+                "e0b2381c77cdaf5b"
+            ]
+        ]
+    },
+    {
+        "id": "ef5b96128f1defa7",
+        "type": "ui_button",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "",
+        "group": "c96693a245cef7d1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Read layouts",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 1720,
+        "wires": [
+            [
+                "967a0a98c0e7bc54"
             ]
         ]
     }
