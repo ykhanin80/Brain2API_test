@@ -2320,9 +2320,7 @@
         "x": 180,
         "y": 1560,
         "wires": [
-            [
-                "84abaf12d166c742"
-            ]
+            []
         ]
     },
     {
@@ -2602,7 +2600,7 @@
         "z": "8eab0a3c643bf6ac",
         "g": "30adcaace5951d9c",
         "name": "dropdown",
-        "func": "\nmsg.options = msg.payload.map(function(el) {\n    return el.number;\n});\n\nreturn msg;\n",
+        "func": "\nmsg.options = msg.payload.map(function(el) {\n    return el.number,\n    el.name;\n});\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -2613,7 +2611,8 @@
         "y": 1680,
         "wires": [
             [
-                "11ac995680dd176a"
+                "11ac995680dd176a",
+                "31f17e57569d915f"
             ]
         ]
     },
