@@ -179,12 +179,24 @@
             "c185e7e44e9b4862",
             "2d62c02ca60e8fce",
             "31f17e57569d915f",
-            "18b910afb183b402"
+            "18b910afb183b402",
+            "11ac995680dd176a",
+            "c0ca09a3e5f4d924",
+            "5cce785db05077c3",
+            "ad824b1587c2ab2e",
+            "e0b2381c77cdaf5b",
+            "14186e369ace0e27",
+            "02bddf4c8369dca6",
+            "abce7689fc3c2c7f",
+            "967a0a98c0e7bc54",
+            "a1a6ecb31beaa9ca",
+            "2f308082d8326147",
+            "6eab239d647915c3"
         ],
         "x": 14,
         "y": 1479,
         "w": 1352,
-        "h": 182
+        "h": 282
     },
     {
         "id": "b35b991b388efa02",
@@ -2414,5 +2426,279 @@
         "x": 320,
         "y": 1520,
         "wires": []
+    },
+    {
+        "id": "11ac995680dd176a",
+        "type": "ui_dropdown",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "",
+        "label": "PLU",
+        "tooltip": "",
+        "place": "Select PLU",
+        "group": "43768ad03e62b0f1",
+        "order": 1,
+        "width": 6,
+        "height": 2,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "topicType": "str",
+        "className": "",
+        "x": 790,
+        "y": 1680,
+        "wires": [
+            [
+                "c0ca09a3e5f4d924"
+            ]
+        ]
+    },
+    {
+        "id": "c0ca09a3e5f4d924",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "var PLUnumber",
+        "func": "var PLUnumber = msg.payload;\nflow.set('PLUnumber',PLUnumber);\n\n//msg.payload =\"Label Preview\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 1680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5cce785db05077c3",
+        "type": "ui_dropdown",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "",
+        "label": "Layouts",
+        "tooltip": "",
+        "place": "Select layout",
+        "group": "c96693a245cef7d1",
+        "order": 1,
+        "width": 6,
+        "height": 2,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "topicType": "str",
+        "className": "",
+        "x": 800,
+        "y": 1720,
+        "wires": [
+            [
+                "ad824b1587c2ab2e"
+            ]
+        ]
+    },
+    {
+        "id": "ad824b1587c2ab2e",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "var layouts",
+        "func": "var layout = msg.payload;\nflow.set('layout',layout);\n\n//msg.payload =\"Label Preview\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 1720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e0b2381c77cdaf5b",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "header and url",
+        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/v1/articles/labeler?skip=0&take=100&sort=Number%2B\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 120,
+        "y": 1680,
+        "wires": [
+            [
+                "14186e369ace0e27"
+            ]
+        ]
+    },
+    {
+        "id": "14186e369ace0e27",
+        "type": "http request",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "/PLU",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "b35b991b388efa02",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 290,
+        "y": 1680,
+        "wires": [
+            [
+                "02bddf4c8369dca6"
+            ]
+        ]
+    },
+    {
+        "id": "02bddf4c8369dca6",
+        "type": "json",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 490,
+        "y": 1680,
+        "wires": [
+            [
+                "abce7689fc3c2c7f"
+            ]
+        ]
+    },
+    {
+        "id": "abce7689fc3c2c7f",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "dropdown",
+        "func": "\nmsg.options = msg.payload.map(function(el) {\n    return el.number;\n});\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 1680,
+        "wires": [
+            [
+                "11ac995680dd176a"
+            ]
+        ]
+    },
+    {
+        "id": "967a0a98c0e7bc54",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "header and url",
+        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/label-layouts?labelProjectName=\"\n+ flow.get('project');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 120,
+        "y": 1720,
+        "wires": [
+            [
+                "a1a6ecb31beaa9ca"
+            ]
+        ]
+    },
+    {
+        "id": "a1a6ecb31beaa9ca",
+        "type": "http request",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "/label-layouts",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "b35b991b388efa02",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 310,
+        "y": 1720,
+        "wires": [
+            [
+                "2f308082d8326147"
+            ]
+        ]
+    },
+    {
+        "id": "2f308082d8326147",
+        "type": "json",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 490,
+        "y": 1720,
+        "wires": [
+            [
+                "6eab239d647915c3"
+            ]
+        ]
+    },
+    {
+        "id": "6eab239d647915c3",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "dropdown",
+        "func": "\nmsg.options = msg.payload.map(function(el) {\n    return el.layoutNumber,\n    el.layoutName;\n});\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 1720,
+        "wires": [
+            [
+                "5cce785db05077c3"
+            ]
+        ]
     }
 ]
