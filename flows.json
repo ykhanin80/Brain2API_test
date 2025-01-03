@@ -10,7 +10,7 @@
         "id": "f8d98a8bcd1abe89",
         "type": "group",
         "z": "8eab0a3c643bf6ac",
-        "name": "Devices",
+        "name": "Select Application",
         "style": {
             "label": true
         },
@@ -19,16 +19,14 @@
             "e51a5a36f48595f2",
             "0a6a80f78db83902",
             "be145a87d0f9ed31",
-            "4c6373056476d714",
             "286452fbf2bb89a8",
-            "9eff3d8207985c45",
-            "4d61ed1a0d509096",
             "fb631216c054d071",
             "ab559ee6616650e4",
             "c0913ae221e0aae6",
             "c0e14ed5320e33b2",
             "4aea9c849745e92c",
-            "4fef0e295ba31e6b"
+            "4fef0e295ba31e6b",
+            "216448de3caafb63"
         ],
         "x": 14,
         "y": 319,
@@ -114,9 +112,6 @@
             "4e029ffa1e1ff8c8",
             "3275b0e1a403ace7",
             "8d95fa5d680ca63e",
-            "bda26a1d71c2361e",
-            "c9cd2a0af1544a77",
-            "3c45294ec406e1d0",
             "a3543e10ae77a1b8",
             "22cb37e8560c7b3a",
             "380f85e9d66eb3bf",
@@ -126,7 +121,7 @@
         ],
         "x": 14,
         "y": 599,
-        "w": 1332,
+        "w": 1312,
         "h": 202
     },
     {
@@ -164,6 +159,30 @@
         "y": 1059,
         "w": 1332,
         "h": 382
+    },
+    {
+        "id": "30adcaace5951d9c",
+        "type": "group",
+        "z": "8eab0a3c643bf6ac",
+        "name": "Label layout preview",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "84abaf12d166c742",
+            "08250c3a74961fc8",
+            "41ccfb58906cbdc4",
+            "2428b474cdfbc164",
+            "93d9736ba906a6f2",
+            "2838cddfe79a1708",
+            "96fc6de53366877d",
+            "c185e7e44e9b4862",
+            "2d62c02ca60e8fce"
+        ],
+        "x": 14,
+        "y": 1479,
+        "w": 1352,
+        "h": 182
     },
     {
         "id": "b35b991b388efa02",
@@ -426,6 +445,47 @@
         "order": 7,
         "width": "27",
         "height": "1"
+    },
+    {
+        "id": "1ab2a88a04aba926",
+        "type": "ui_tab",
+        "name": "Label preview",
+        "icon": "dashboard",
+        "order": 7,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c3da64604f938861",
+        "type": "ui_group",
+        "name": "Select Project",
+        "tab": "1ab2a88a04aba926",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0f68419fc75db64e",
+        "type": "ui_spacer",
+        "z": "8eab0a3c643bf6ac",
+        "name": "spacer",
+        "group": "8821f8eafdf5cf1e",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "7f05f0458a78dfcf",
+        "type": "ui_group",
+        "name": "Select Label Project",
+        "tab": "83728c03327c5a04",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "dd9a228b504e8ed4",
@@ -753,164 +813,6 @@
         "wires": [
             [
                 "286452fbf2bb89a8"
-            ]
-        ]
-    },
-    {
-        "id": "4c6373056476d714",
-        "type": "change",
-        "z": "8eab0a3c643bf6ac",
-        "g": "f8d98a8bcd1abe89",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "options",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 940,
-        "y": 460,
-        "wires": [
-            [
-                "286452fbf2bb89a8"
-            ]
-        ]
-    },
-    {
-        "id": "9eff3d8207985c45",
-        "type": "function",
-        "z": "8eab0a3c643bf6ac",
-        "g": "f8d98a8bcd1abe89",
-        "name": "Clear dropdown",
-        "func": "var e=[];\nmsg.payload= e;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 720,
-        "y": 460,
-        "wires": [
-            [
-                "4c6373056476d714"
-            ]
-        ]
-    },
-    {
-        "id": "4d61ed1a0d509096",
-        "type": "inject",
-        "z": "8eab0a3c643bf6ac",
-        "g": "f8d98a8bcd1abe89",
-        "name": "Trigger reset",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 510,
-        "y": 460,
-        "wires": [
-            [
-                "9eff3d8207985c45"
-            ]
-        ]
-    },
-    {
-        "id": "bda26a1d71c2361e",
-        "type": "change",
-        "z": "8eab0a3c643bf6ac",
-        "g": "0346d96b42bc27b1",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "options",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1000,
-        "y": 760,
-        "wires": [
-            [
-                "8d95fa5d680ca63e"
-            ]
-        ]
-    },
-    {
-        "id": "c9cd2a0af1544a77",
-        "type": "function",
-        "z": "8eab0a3c643bf6ac",
-        "g": "0346d96b42bc27b1",
-        "name": "Clear dropdown",
-        "func": "var e=[];\nmsg.payload= e;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 780,
-        "y": 760,
-        "wires": [
-            [
-                "bda26a1d71c2361e"
-            ]
-        ]
-    },
-    {
-        "id": "3c45294ec406e1d0",
-        "type": "inject",
-        "z": "8eab0a3c643bf6ac",
-        "g": "0346d96b42bc27b1",
-        "name": "Trigger reset",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 570,
-        "y": 760,
-        "wires": [
-            [
-                "c9cd2a0af1544a77"
             ]
         ]
     },
@@ -1254,7 +1156,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1230,
+        "x": 1150,
         "y": 700,
         "wires": [
             [
@@ -2207,6 +2109,231 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 1230,
+        "y": 520,
+        "wires": [
+            [
+                "c0e14ed5320e33b2"
+            ]
+        ]
+    },
+    {
+        "id": "84abaf12d166c742",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "header and url",
+        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/label-projects\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1560,
+        "wires": [
+            [
+                "08250c3a74961fc8"
+            ]
+        ]
+    },
+    {
+        "id": "08250c3a74961fc8",
+        "type": "http request",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "/label-projects",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "b35b991b388efa02",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 600,
+        "y": 1560,
+        "wires": [
+            [
+                "41ccfb58906cbdc4"
+            ]
+        ]
+    },
+    {
+        "id": "41ccfb58906cbdc4",
+        "type": "json",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 770,
+        "y": 1560,
+        "wires": [
+            [
+                "2428b474cdfbc164"
+            ]
+        ]
+    },
+    {
+        "id": "2428b474cdfbc164",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "dropdown",
+        "func": "\nmsg.options = msg.payload.map(function(el) {\n    return el.name;\n});\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 1560,
+        "wires": [
+            [
+                "93d9736ba906a6f2"
+            ]
+        ]
+    },
+    {
+        "id": "93d9736ba906a6f2",
+        "type": "ui_dropdown",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "",
+        "label": "Projects",
+        "tooltip": "",
+        "place": "Select project",
+        "group": "c3da64604f938861",
+        "order": 1,
+        "width": 6,
+        "height": 2,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "topicType": "str",
+        "className": "",
+        "x": 1100,
+        "y": 1560,
+        "wires": [
+            [
+                "c185e7e44e9b4862"
+            ]
+        ]
+    },
+    {
+        "id": "2838cddfe79a1708",
+        "type": "ui_button",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "",
+        "group": "c3da64604f938861",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Label Projects",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "Label Projects",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 1520,
+        "wires": [
+            [
+                "96fc6de53366877d"
+            ]
+        ]
+    },
+    {
+        "id": "96fc6de53366877d",
+        "type": "ui_ui_control",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "Display Label Projects",
+        "events": "change",
+        "x": 180,
+        "y": 1560,
+        "wires": [
+            [
+                "84abaf12d166c742"
+            ]
+        ]
+    },
+    {
+        "id": "c185e7e44e9b4862",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "var device",
+        "func": "var project = msg.payload;\nflow.set('project',project);\n\nmsg.payload =\"Label Preview\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 1560,
+        "wires": [
+            [
+                "2d62c02ca60e8fce"
+            ]
+        ]
+    },
+    {
+        "id": "2d62c02ca60e8fce",
+        "type": "ui_ui_control",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "",
+        "events": "all",
+        "x": 1200,
+        "y": 1620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "216448de3caafb63",
+        "type": "ui_button",
+        "z": "8eab0a3c643bf6ac",
+        "g": "f8d98a8bcd1abe89",
+        "name": "",
+        "group": "7f05f0458a78dfcf",
+        "order": 2,
+        "width": "5",
+        "height": "1",
+        "passthru": false,
+        "label": "Label Projects",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "Label Projects",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 820,
         "y": 520,
         "wires": [
             [
