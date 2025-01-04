@@ -2602,7 +2602,7 @@
         "z": "8eab0a3c643bf6ac",
         "g": "30adcaace5951d9c",
         "name": "dropdown",
-        "func": "\nmsg.options = msg.payload.map(function(el) {\n    return  { Label: el.name, Value: el.number };\n});\nreturn msg;\n\n",
+        "func": "let name ='';\nlet number =0;\nnumber = msg.payload.map(function(el) {\n    return   el.number});\n\nname = msg.payload.map(function(el) {\n    return   el.name});\n\nmsg.options =  { number:name };\n\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
