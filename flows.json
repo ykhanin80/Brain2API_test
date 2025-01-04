@@ -2624,7 +2624,7 @@
         "z": "8eab0a3c643bf6ac",
         "g": "30adcaace5951d9c",
         "name": "header and url",
-        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/label-layouts?labelProjectName=\"\n+ flow.get('project');\nreturn msg;",
+        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/label-layouts?labelProjectName=\"+ flow.get(\"project\");\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
