@@ -2603,7 +2603,7 @@
         "z": "8eab0a3c643bf6ac",
         "g": "30adcaace5951d9c",
         "name": "dropdown",
-        "func": "/*\nmsg.options = msg.payload.map(function(el) {\n    let option = {};\n    option[`${el.number} - ${el.name}`] = el.number;\n    return option;\n});\n\nreturn msg;\n*/\nmsg.options = msg.payload.map(function(el) {\n    let option = {};\n    option[el.name] = el.number;\n    return option;\n});\n\nreturn msg;",
+        "func": "// Map through the payload to create options for the dropdown\nmsg.options = msg.payload.map(function(el) {\n    // Create an option object with the format \"label: value\"\n    let option = {};\n    // Concatenate the number and name for the label, and use the number as the value\n    option[`${el.number} - ${el.name}`] = el.number;\n    return option;\n});\n\n// Return the modified message object\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
