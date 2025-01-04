@@ -2468,7 +2468,7 @@
         "z": "8eab0a3c643bf6ac",
         "g": "30adcaace5951d9c",
         "name": "var PLUnumber",
-        "func": "var PLUnumber = msg.payload;\nflow.set('PLUnumber',PLUnumber);\n\nmsg.payload =flow.get('PLUnumber');\nreturn msg;",
+        "func": "var PLUnumber = msg.payload;\nflow.set('PLUnumber',PLUnumber);\n\n//msg.payload =flow.get('PLUnumber');\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -2478,9 +2478,7 @@
         "x": 1260,
         "y": 1680,
         "wires": [
-            [
-                "31f17e57569d915f"
-            ]
+            []
         ]
     },
     {
@@ -2689,7 +2687,7 @@
         "z": "8eab0a3c643bf6ac",
         "g": "30adcaace5951d9c",
         "name": "dropdown",
-        "func": "\nmsg.options = msg.payload.map(function(el) {\n    return el.layoutNumber,\n    el.layoutName;\n});\n\nreturn msg;\n",
+        "func": "\n// Map through the payload to create options for the dropdown\nmsg.options = msg.payload.map(function(el) {\n    // Create an option object with the format \"label: value\"\n    let option = {};\n    // Concatenate the number and name for the label, and use the number as the value\n    option[`${el.layoutNumber} - ${el.layoutName}`] = el.layoutNumber;\n    return option;\n});\n\n// Return the modified message object\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
