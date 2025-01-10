@@ -2295,6 +2295,7 @@
         "id": "2838cddfe79a1708",
         "type": "ui_button",
         "z": "8eab0a3c643bf6ac",
+        "d": true,
         "g": "6030b7fe55197e8f",
         "name": "",
         "group": "c3da64604f938861",
@@ -2678,6 +2679,7 @@
         "id": "37bd4bf7f7e9f47b",
         "type": "ui_button",
         "z": "8eab0a3c643bf6ac",
+        "d": true,
         "g": "6030b7fe55197e8f",
         "name": "",
         "group": "43768ad03e62b0f1",
@@ -2695,7 +2697,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 110,
+        "x": 70,
         "y": 1660,
         "wires": [
             []
@@ -2705,6 +2707,7 @@
         "id": "ef5b96128f1defa7",
         "type": "ui_button",
         "z": "8eab0a3c643bf6ac",
+        "d": true,
         "g": "6030b7fe55197e8f",
         "name": "",
         "group": "c96693a245cef7d1",
