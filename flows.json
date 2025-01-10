@@ -530,24 +530,15 @@
         "className": ""
     },
     {
-        "id": "a0e535b59379d5a4",
-        "type": "ui_group",
-        "name": "4. Label preview with PLU data",
-        "tab": "1ab2a88a04aba926",
-        "order": 5,
-        "disp": true,
-        "width": "10",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "57abc09c6a8a13ed",
         "type": "ui_group",
-        "name": "Group 5",
+        "name": "Label preview",
         "tab": "1ab2a88a04aba926",
         "order": 5,
         "disp": true,
-        "width": 20
+        "width": "20",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "6a0c70bd6c166c2f",
