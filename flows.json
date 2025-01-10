@@ -3017,10 +3017,10 @@
         "parameter8": "",
         "parameter8Type": "auto",
         "sendProperty": "payload",
-        "parameterCount": 6,
-        "jimpFunction": "print",
+        "parameterCount": 8,
+        "jimpFunction": "print2",
         "selectedJimpFunction": {
-            "name": "print",
+            "name": "print aligned",
             "fn": "print",
             "description": "Print text to the image",
             "parameters": [
@@ -3044,19 +3044,34 @@
                 },
                 {
                     "name": "text",
+                    "group": "options",
                     "type": "str",
                     "required": true,
                     "hint": "text to print"
                 },
                 {
+                    "name": "alignmentX",
+                    "group": "options",
+                    "type": "AlignX",
+                    "required": false,
+                    "hint": "X Alignment"
+                },
+                {
+                    "name": "alignmentY",
+                    "group": "options",
+                    "type": "AlignY",
+                    "required": false,
+                    "hint": "Y Alignment"
+                },
+                {
                     "name": "maxWidth",
-                    "type": "num",
+                    "type": "auto|num",
                     "required": false,
                     "hint": "wrap text at maxWidth"
                 },
                 {
                     "name": "maxHeight",
-                    "type": "num",
+                    "type": "auto|num",
                     "required": false,
                     "hint": "max height"
                 }
