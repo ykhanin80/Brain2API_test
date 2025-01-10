@@ -177,7 +177,6 @@
             "2838cddfe79a1708",
             "96fc6de53366877d",
             "c185e7e44e9b4862",
-            "2d62c02ca60e8fce",
             "11ac995680dd176a",
             "c0ca09a3e5f4d924",
             "5cce785db05077c3",
@@ -543,6 +542,15 @@
         "width": "10",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "c36cf5c84f9837df",
+        "type": "ui_link",
+        "name": "Link 8",
+        "link": "",
+        "icon": "open_in_browser",
+        "target": "thistab",
+        "order": 8
     },
     {
         "id": "dd9a228b504e8ed4",
@@ -2353,19 +2361,6 @@
             [
                 "967a0a98c0e7bc54"
             ]
-        ]
-    },
-    {
-        "id": "2d62c02ca60e8fce",
-        "type": "ui_ui_control",
-        "z": "8eab0a3c643bf6ac",
-        "g": "6030b7fe55197e8f",
-        "name": "",
-        "events": "all",
-        "x": 480,
-        "y": 1500,
-        "wires": [
-            []
         ]
     },
     {
