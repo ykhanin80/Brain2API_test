@@ -210,7 +210,7 @@
         "x": 14,
         "y": 1459,
         "w": 1392,
-        "h": 502
+        "h": 562
     },
     {
         "id": "b35b991b388efa02",
@@ -3115,14 +3115,14 @@
         "order": 1,
         "width": "7",
         "height": "6",
-        "format": "<div><img src=\"data:image/png;base64,{{msg.payload}}\" style=\"width:100%; height:auto;\" /></div>",
+        "format": "<div><img src=\"{{msg.payload}}\" style=\"width:100%; height:auto;\" /></div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1240,
-        "y": 1920,
+        "x": 800,
+        "y": 1980,
         "wires": [
             []
         ]
