@@ -161,7 +161,7 @@
         "h": 382
     },
     {
-        "id": "30adcaace5951d9c",
+        "id": "6030b7fe55197e8f",
         "type": "group",
         "z": "8eab0a3c643bf6ac",
         "name": "Label layout preview",
@@ -202,12 +202,15 @@
             "22e884aa026840f8",
             "72b3a8263da646ff",
             "2c972761f82441e5",
-            "084fb6523e9af807"
+            "084fb6523e9af807",
+            "function-node",
+            "b4b8f84a.7e57a8",
+            "89489343.0b939"
         ],
         "x": 14,
         "y": 1459,
         "w": 1372,
-        "h": 422
+        "h": 482
     },
     {
         "id": "b35b991b388efa02",
@@ -2178,7 +2181,7 @@
         "id": "84abaf12d166c742",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "header and url",
         "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/label-projects\";\nreturn msg;",
         "outputs": 1,
@@ -2199,7 +2202,7 @@
         "id": "08250c3a74961fc8",
         "type": "http request",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "/label-projects",
         "method": "GET",
         "ret": "txt",
@@ -2224,7 +2227,7 @@
         "id": "41ccfb58906cbdc4",
         "type": "json",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "",
         "property": "payload",
         "action": "obj",
@@ -2241,7 +2244,7 @@
         "id": "2428b474cdfbc164",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "dropdown",
         "func": "\nmsg.options = msg.payload.map(function(el) {\n    return el.labelProjectName;\n});\n\nreturn msg;\n",
         "outputs": 1,
@@ -2262,7 +2265,7 @@
         "id": "93d9736ba906a6f2",
         "type": "ui_dropdown",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "",
         "label": "Projects",
         "tooltip": "",
@@ -2296,7 +2299,7 @@
         "id": "2838cddfe79a1708",
         "type": "ui_button",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "",
         "group": "c3da64604f938861",
         "order": 2,
@@ -2325,7 +2328,7 @@
         "id": "96fc6de53366877d",
         "type": "ui_ui_control",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "Display Label Projects",
         "events": "change",
         "x": 560,
@@ -2338,7 +2341,7 @@
         "id": "c185e7e44e9b4862",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "var device",
         "func": "var project = msg.payload;\nflow.set('project',project);\n\nmsg.payload =\"Label Preview\";\nreturn msg;",
         "outputs": 1,
@@ -2359,7 +2362,7 @@
         "id": "2d62c02ca60e8fce",
         "type": "ui_ui_control",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "",
         "events": "all",
         "x": 1200,
@@ -2401,7 +2404,7 @@
         "id": "11ac995680dd176a",
         "type": "ui_dropdown",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "",
         "label": "PLU",
         "tooltip": "",
@@ -2435,7 +2438,7 @@
         "id": "c0ca09a3e5f4d924",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "var PLUnumber",
         "func": "var PLUnumber = msg.payload;\nflow.set('PLUnumber',PLUnumber);\n\nmsg.payload =flow.get('PLUnumber');\nreturn msg;",
         "outputs": 1,
@@ -2456,7 +2459,7 @@
         "id": "5cce785db05077c3",
         "type": "ui_dropdown",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "",
         "label": "Layouts",
         "tooltip": "",
@@ -2490,7 +2493,7 @@
         "id": "ad824b1587c2ab2e",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "var layouts",
         "func": "var layout = msg.payload;\nflow.set('layout',layout);\n\n//msg.payload =\"Label Preview\";\nreturn msg;",
         "outputs": 1,
@@ -2509,7 +2512,7 @@
         "id": "e0b2381c77cdaf5b",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "header and url",
         "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/articles/labeler?skip=0&take=100&sort=Number%2B\";\nreturn msg;",
         "outputs": 1,
@@ -2530,7 +2533,7 @@
         "id": "14186e369ace0e27",
         "type": "http request",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "/PLU list",
         "method": "GET",
         "ret": "txt",
@@ -2555,7 +2558,7 @@
         "id": "02bddf4c8369dca6",
         "type": "json",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "",
         "property": "payload",
         "action": "obj",
@@ -2572,7 +2575,7 @@
         "id": "abce7689fc3c2c7f",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "dropdown",
         "func": "// Map through the payload to create options for the dropdown\nmsg.options = msg.payload.map(function(el) {\n    // Create an option object with the format \"label: value\"\n    let option = {};\n    // Concatenate the number and name for the label, and use the number as the value\n    option[`${el.number} - ${el.name}`] = el.number;\n    return option;\n});\n\n// Return the modified message object\nreturn msg;",
         "outputs": 1,
@@ -2593,7 +2596,7 @@
         "id": "967a0a98c0e7bc54",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "header and url",
         "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/label-layouts?labelProjectName=\"+ flow.get(\"project\");\nreturn msg;",
         "outputs": 1,
@@ -2614,7 +2617,7 @@
         "id": "a1a6ecb31beaa9ca",
         "type": "http request",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "/label-layouts",
         "method": "GET",
         "ret": "txt",
@@ -2639,7 +2642,7 @@
         "id": "2f308082d8326147",
         "type": "json",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "",
         "property": "payload",
         "action": "obj",
@@ -2656,7 +2659,7 @@
         "id": "6eab239d647915c3",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "dropdown",
         "func": "\n// Map through the payload to create options for the dropdown\nmsg.options = msg.payload.map(function(el) {\n    // Create an option object with the format \"label: value\"\n    let option = {};\n    // Concatenate the number and name for the label, and use the number as the value\n    option[`${el.layoutNumber} - ${el.layoutName}`] = el.layoutNumber;\n    return option;\n});\n\n// Return the modified message object\nreturn msg;\n",
         "outputs": 1,
@@ -2677,7 +2680,7 @@
         "id": "37bd4bf7f7e9f47b",
         "type": "ui_button",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "",
         "group": "43768ad03e62b0f1",
         "order": 2,
@@ -2706,7 +2709,7 @@
         "id": "ef5b96128f1defa7",
         "type": "ui_button",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "",
         "group": "c96693a245cef7d1",
         "order": 2,
@@ -2735,7 +2738,7 @@
         "id": "cffc6c3c4df5e596",
         "type": "ui_button",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "",
         "group": "a0e535b59379d5a4",
         "order": 1,
@@ -2764,7 +2767,7 @@
         "id": "22d3e8a8b5d5ecfe",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "header and url",
         "func": "msg.headers = {\n  'accept': 'text/plain',\n  'Authorization' : flow.get(\"bearer_token\"),\n  'Content-Type': 'application/json-patch+json'\n};\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/label-preview\";\n\nmsg.payload = JSON.stringify({\n  labelProjectName: flow.get('project'),\n  layoutNumber: flow.get('layout'),\n  codeFields: {\n    codeNumber1: 0,\n    codeNumber2: 0,\n    codeNumber3: 0,\n    codeNumber4: 0,\n    codeNumber5: 0,\n    codeNumber6: 0,\n    codeNumber7: 0,\n    codeSubstring1: \"123\",\n    codeSubstring2: \"\",\n    codeSubstring3: \"\",\n    codeSubstring4: \"\",\n    codeSubstring5: \"\",\n    codeSubstring6: \"\",\n    codeSubstring7: \"\"\n  },\n  dateFields: {\n    dateText1: \"\",\n    dateText2: \"\",\n    dateText3: \"\",\n    shelfLifeDays1: 0,\n    shelfLifeDays2: 0\n  },\n  graphicFields: {\n    logo1: 0,\n    logo2: 0,\n    logo3: 0,\n    logo4: 0,\n    logo5: 0,\n    logo6: 0,\n    logo7: 0,\n    logo8: 0,\n    logo9: 0,\n    logo10: 0\n  },\n  numberFields: {\n    generalNumbers: {\n      generalNumber1: 0,\n      generalNumber2: 0,\n      generalNumber3: 0,\n      generalNumber4: 0,\n      generalNumber5: 0,\n      generalNumber6: 0,\n      generalNumber7: 0,\n      generalNumber8: 0,\n      generalNumber9: 0,\n      generalNumber10: 0,\n      generalNumber11: 0,\n      generalNumber12: 0,\n      generalNumber13: 0,\n      generalNumber14: 0,\n      generalNumber15: 0,\n      generalNumber16: 0,\n      generalNumber17: 0,\n      generalNumber18: 0,\n      generalNumber19: 0,\n      generalNumber20: 0\n    },\n    specificNumbers: {\n      batchNumber: 0,\n      customerNumber: \"\",\n      deviceNumber: 0,\n      lotNumber: 0,\n      numerator: 0,\n      operatorNumber: 0,\n      pcsPerPackage: \"\",\n      pieceTotal: 0,\n      pluNumber: flow.get('PLUnumber'),\n      plusDays: 0,\n      wgNumber: 0\n    }\n  },\n  priceFields: {\n    specialUnitPrice: \"\",\n    unitPrice: \"\"\n  },\n  textFields: {\n    articleText: \"should be article text\",\n    simpleTexts: {\n      simpleText1: \"\",\n      simpleText2: \"\",\n      simpleText3: \"\",\n      simpleText4: \"\",\n      simpleText5: \"\",\n      simpleText6: \"\",\n      simpleText7: \"\",\n      simpleText8: \"\",\n      simpleText9: \"\",\n      simpleText10: \"\",\n      simpleText11: \"\",\n      simpleText12: \"\",\n      simpleText13: \"\",\n      simpleText14: \"\",\n      simpleText15: \"\",\n      simpleText16: \"\",\n      simpleText17: \"\",\n      simpleText18: \"\",\n      simpleText19: \"\",\n      simpleText20: \"\",\n      simpleText21: \"\",\n      simpleText22: \"\",\n      simpleText23: \"\",\n      simpleText24: \"\",\n      simpleText25: \"\",\n      simpleText26: \"\",\n      simpleText27: \"\",\n      simpleText28: \"\",\n      simpleText29: \"\",\n      simpleText30: \"\"\n    },\n    staticTexts: {\n      staticText1: \"\",\n      staticText2: \"\",\n      staticText3: \"\",\n      staticText4: \"\",\n      staticText5: \"\",\n      staticText6: \"\",\n      staticText7: \"\",\n      staticText8: \"\",\n      staticText9: \"\",\n      staticText10: \"\",\n      staticText11: \"\",\n      staticText12: \"\",\n      staticText13: \"\",\n      staticText14: \"\",\n      staticText15: \"\",\n      staticText16: \"\",\n      staticText17: \"\",\n      staticText18: \"\",\n      staticText19: \"\",\n      staticText20: \"\",\n      staticText21: \"\",\n      staticText22: \"\",\n      staticText23: \"\",\n      staticText24: \"\",\n      staticText25: \"\",\n      staticText26: \"\",\n      staticText27: \"\",\n      staticText28: \"\",\n      staticText29: \"\",\n      staticText30: \"\",\n      staticText31: \"\",\n      staticText32: \"\",\n      staticText33: \"\",\n      staticText34: \"\",\n      staticText35: \"\",\n      staticText36: \"\",\n      staticText37: \"\",\n      staticText38: \"\",\n      staticText39: \"\",\n      staticText40: \"\",\n      staticText41: \"\",\n      staticText42: \"\",\n      staticText43: \"\",\n      staticText44: \"\",\n      staticText45: \"\",\n      staticText46: \"\",\n      staticText47: \"\",\n      staticText48: \"\",\n      staticText49: \"\",\n      staticText50: \"\"\n    },\n    generalTexts: {\n      generalText1: \"\",\n      generalText2: \"\",\n      generalText3: \"\",\n      generalText4: \"\",\n      generalText5: \"\",\n      generalText6: \"\",\n      generalText7: \"\",\n      generalText8: \"\",\n      generalText9: \"\",\n      generalText10: \"\",\n      generalText11: \"\",\n      generalText12: \"\",\n      generalText13: \"\",\n      generalText14: \"\",\n      generalText15: \"\",\n      generalText16: \"\",\n      generalText17: \"\",\n      generalText18: \"\",\n      generalText19: \"\",\n      generalText20: \"\"\n    }\n  }\n});\n\n;\n\nreturn msg;",
         "outputs": 1,
@@ -2785,7 +2788,7 @@
         "id": "1321422e33c2337e",
         "type": "http request",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "/label-preview",
         "method": "POST",
         "ret": "txt",
@@ -2810,7 +2813,7 @@
         "id": "dd053f3b5d60251f",
         "type": "json",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "",
         "property": "payload",
         "action": "obj",
@@ -2827,7 +2830,7 @@
         "id": "ddae55592cab8c3f",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "dropdown",
         "func": "let data =\"\";\ndata = msg.payload.data;\nflow.set('data',data);\nmsg.payload = flow.get('data');\n\nreturn msg;\n",
         "outputs": 1,
@@ -2849,7 +2852,7 @@
         "id": "3c760ec6271044ec",
         "type": "ui_template",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "group": "a0e535b59379d5a4",
         "name": "",
         "order": 2,
@@ -2871,7 +2874,7 @@
         "id": "15325af9ce5c4fdc",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "header and url",
         "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/articles/\" + flow.get('PLUnumber') + \"/labeler\";\nreturn msg;",
         "outputs": 1,
@@ -2892,7 +2895,7 @@
         "id": "22e884aa026840f8",
         "type": "http request",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "/Labeler PLU",
         "method": "GET",
         "ret": "txt",
@@ -2917,7 +2920,7 @@
         "id": "72b3a8263da646ff",
         "type": "json",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "",
         "property": "payload",
         "action": "obj",
@@ -2934,7 +2937,7 @@
         "id": "2c972761f82441e5",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "get PLU data",
         "func": "\n// Parse the incoming payload\nvar payload = msg.payload;\n\n// Save each element to a flow variable\nflow.set(\"isEnabledForLabelers\", payload.isEnabledForLabelers);\nflow.set(\"weightUnit\", payload.weightUnit);\nflow.set(\"weightDecimalPlaces\", payload.weightDecimalPlaces);\n\n// Save elements from articlePLU\nvar articlePLU = payload.articlePLU;\nflow.set(\"dateTextField1_number\", articlePLU.dateTextField1.number);\nflow.set(\"dateTextField1_text\", articlePLU.dateTextField1.text);\nflow.set(\"dateTextField2_number\", articlePLU.dateTextField2.number);\nflow.set(\"dateTextField2_text\", articlePLU.dateTextField2.text);\nflow.set(\"dateTextField3_number\", articlePLU.dateTextField3.number);\nflow.set(\"dateTextField3_text\", articlePLU.dateTextField3.text);\nflow.set(\"textField1_number\", articlePLU.textField1.number);\nflow.set(\"textField1_text\", articlePLU.textField1.text);\nflow.set(\"textField2_number\", articlePLU.textField2.number);\nflow.set(\"textField2_text\", articlePLU.textField2.text);\nflow.set(\"textField3_number\", articlePLU.textField3.number);\nflow.set(\"textField3_text\", articlePLU.textField3.text);\nflow.set(\"textField4_number\", articlePLU.textField4.number);\nflow.set(\"textField4_text\", articlePLU.textField4.text);\nflow.set(\"textField5_number\", articlePLU.textField5.number);\nflow.set(\"textField5_text\", articlePLU.textField5.text);\nflow.set(\"textField6_number\", articlePLU.textField6.number);\nflow.set(\"textField6_text\", articlePLU.textField6.text);\nflow.set(\"textField7_number\", articlePLU.textField7.number);\nflow.set(\"textField7_text\", articlePLU.textField7.text);\nflow.set(\"textField8_number\", articlePLU.textField8.number);\nflow.set(\"textField8_text\", articlePLU.textField8.text);\nflow.set(\"textField9_number\", articlePLU.textField9.number);\nflow.set(\"textField9_text\", articlePLU.textField9.text);\nflow.set(\"textField10_number\", articlePLU.textField10.number);\nflow.set(\"textField10_text\", articlePLU.textField10.text);\nflow.set(\"textField11_number\", articlePLU.textField11.number);\nflow.set(\"textField11_text\", articlePLU.textField11.text);\nflow.set(\"textField12_number\", articlePLU.textField12.number);\nflow.set(\"textField12_text\", articlePLU.textField12.text);\nflow.set(\"textField13_number\", articlePLU.textField13.number);\nflow.set(\"textField13_text\", articlePLU.textField13.text);\nflow.set(\"textField14_number\", articlePLU.textField14.number);\nflow.set(\"textField14_text\", articlePLU.textField14.text);\nflow.set(\"textField15_number\", articlePLU.textField15.number);\nflow.set(\"textField15_text\", articlePLU.textField15.text);\nflow.set(\"textField16_number\", articlePLU.textField16.number);\nflow.set(\"textField16_text\", articlePLU.textField16.text);\nflow.set(\"textField17_number\", articlePLU.textField17.number);\nflow.set(\"textField17_text\", articlePLU.textField17.text);\nflow.set(\"textField18_number\", articlePLU.textField18.number);\nflow.set(\"textField18_text\", articlePLU.textField18.text);\nflow.set(\"textField19_number\", articlePLU.textField19.number);\nflow.set(\"textField19_text\", articlePLU.textField19.text);\nflow.set(\"textField20_number\", articlePLU.textField20.number);\nflow.set(\"textField20_text\", articlePLU.textField20.text);\nflow.set(\"logoField1\", articlePLU.logoField1);\nflow.set(\"logoField2\", articlePLU.logoField2);\nflow.set(\"logoField3\", articlePLU.logoField3);\nflow.set(\"logoField4\", articlePLU.logoField4);\nflow.set(\"logoField5\", articlePLU.logoField5);\nflow.set(\"logoField6\", articlePLU.logoField6);\nflow.set(\"logoField7\", articlePLU.logoField7);\nflow.set(\"logoField8\", articlePLU.logoField8);\nflow.set(\"logoField9\", articlePLU.logoField9);\nflow.set(\"logoField10\", articlePLU.logoField10);\nflow.set(\"codeField1\", articlePLU.codeField1);\nflow.set(\"codeField2\", articlePLU.codeField2);\nflow.set(\"codeField3\", articlePLU.codeField3);\nflow.set(\"codeField4\", articlePLU.codeField4);\nflow.set(\"codeField5\", articlePLU.codeField5);\nflow.set(\"codeField6\", articlePLU.codeField6);\nflow.set(\"codeField7\", articlePLU.codeField7);\nflow.set(\"codeString1\", articlePLU.codeString1);\nflow.set(\"codeString2\", articlePLU.codeString2);\nflow.set(\"codeString3\", articlePLU.codeString3);\nflow.set(\"codeString4\", articlePLU.codeString4);\nflow.set(\"codeString5\", articlePLU.codeString5);\nflow.set(\"codeString6\", articlePLU.codeString6);\nflow.set(\"codeString7\", articlePLU.codeString7);\nflow.set(\"generalNumber1\", articlePLU.generalNumber1);\nflow.set(\"generalNumber2\", articlePLU.generalNumber2);\nflow.set(\"generalNumber3\", articlePLU.generalNumber3);\nflow.set(\"generalNumber4\", articlePLU.generalNumber4);\nflow.set(\"generalNumber5\", articlePLU.generalNumber5);\nflow.set(\"generalNumber6\", articlePLU.generalNumber6);\nflow.set(\"generalNumber7\", articlePLU.generalNumber7);\nflow.set(\"generalNumber8\", articlePLU.generalNumber8);\nflow.set(\"generalNumber9\", articlePLU.generalNumber9);\nflow.set(\"generalNumber10\", articlePLU.generalNumber10);\nflow.set(\"generalNumber11\", articlePLU.generalNumber11);\nflow.set(\"generalNumber12\", articlePLU.generalNumber12);\nflow.set(\"generalNumber13\", articlePLU.generalNumber13);\nflow.set(\"generalNumber14\", articlePLU.generalNumber14);\nflow.set(\"generalNumber15\", articlePLU.generalNumber15);\nflow.set(\"generalNumber16\", articlePLU.generalNumber16);\nflow.set(\"generalNumber17\", articlePLU.generalNumber17);\nflow.set(\"generalNumber18\", articlePLU.generalNumber18);\nflow.set(\"generalNumber19\", articlePLU.generalNumber19);\nflow.set(\"generalNumber20\", articlePLU.generalNumber20);\nflow.set(\"simpleText1\", articlePLU.simpleText1);\nflow.set(\"simpleText2\", articlePLU.simpleText2);\nflow.set(\"simpleText3\", articlePLU.simpleText3);\nflow.set(\"simpleText4\", articlePLU.simpleText4);\nflow.set(\"simpleText5\", articlePLU.simpleText5);\nflow.set(\"simpleText6\", articlePLU.simpleText6);\nflow.set(\"simpleText7\", articlePLU.simpleText7);\nflow.set(\"simpleText8\", articlePLU.simpleText8);\nflow.set(\"simpleText9\", articlePLU.simpleText9);\nflow.set(\"simpleText10\", articlePLU.simpleText10);\nflow.set(\"simpleText11\", articlePLU.simpleText11);\nflow.set(\"simpleText12\", articlePLU.simpleText12);\nflow.set(\"simpleText13\", articlePLU.simpleText13);\nflow.set(\"simpleText14\", articlePLU.simpleText14);\nflow.set(\"simpleText15\", articlePLU.simpleText15);\nflow.set(\"simpleText16\", articlePLU.simpleText16);\nflow.set(\"simpleText17\", articlePLU.simpleText17);\nflow.set(\"simpleText18\", articlePLU.simpleText18);\nflow.set(\"simpleText19\", articlePLU.simpleText19);\nflow.set(\"simpleText20\", articlePLU.simpleText20);\nflow.set(\"simpleText21\", articlePLU.simpleText21);\nflow.set(\"simpleText22\", articlePLU.simpleText22);\nflow.set(\"simpleText23\", articlePLU.simpleText23);\nflow.set(\"simpleText24\", articlePLU.simpleText24);\nflow.set(\"simpleText25\", articlePLU.simpleText25);\nflow.set(\"simpleText26\", articlePLU.simpleText26);\nflow.set(\"simpleText27\", articlePLU.simpleText27);\nflow.set(\"simpleText28\", articlePLU.simpleText28);\nflow.set(\"simpleText29\", articlePLU.simpleText29);\nflow.set(\"simpleText30\", articlePLU.simpleText30);\n\n// Save other elements from the payload\nflow.set(\"name\", payload.name);\nflow.set(\"description\", payload.description);\nflow.set(\"fixedWeightValue\", articlePLU.fixedWeightValue);\nflow.set(\"tareWeightValue\", articlePLU.tareWeightValue);\nflow.set(\"staticTextNumber\",articlePLU.staticText);\nflow.set(\"Currency\", articlePLU.gxPriceCurrencyCode);\n\nreturn msg;\n\n",
         "outputs": 1,
@@ -2955,7 +2958,7 @@
         "id": "084fb6523e9af807",
         "type": "debug",
         "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
+        "g": "6030b7fe55197e8f",
         "name": "debug 1",
         "active": true,
         "tosidebar": true,
@@ -2970,32 +2973,10 @@
         "wires": []
     },
     {
-        "id": "inject-node",
-        "type": "inject",
-        "z": "8eab0a3c643bf6ac",
-        "name": "Inject Base64 Data",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "",
-        "topic": "",
-        "payload": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAHgCAYAAAA10dzkAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAFxpJREFUeF7t09Fu4zoTpdF5/5f+Z3xRALGnlJDuSPGprAZWX+x8pOQE/j//+9//AAD4Q9oRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudqRmf7fv9d//5/sJsrPXLK7Uz67ZHeXfG7Jjs+Rf6uSXSfPlOx+Wj6vZPeX5O+iZDdZfvaSHc9pR2bKL17JbqL8zCW7O+WzS3Z3yeeW7Pgc+bcq2XXyTMnup+XzSnZ/Sf4uSnaT5Wcv2fGcdmSm/OKV7CbKz1yyu1M+u2R3l3xuyY7PkX+rkl0nz5Tsflo+r2T3l+TvomQ3WX72kh3PaUdmyi9eyW6i/Mwluzvls0t2d8nnluz4HPm3Ktl18kzJ7qfl80p2f0n+Lkp2k+VnL9nxnHZkpvzilewmys9csrtTPrtkd5d8bsmOz5F/q5JdJ8+U7H5aPq9k95fk76JkN1l+9pIdz2lHZsovXsluovzMJbs75bNLdnfJ55bs+Bz5tyrZdfJMye6n5fNKdn9J/i5KdpPlZy/Z8Zx2ZKb84pXsJsrPXLK7Uz67ZHeXfG7Jjs+Rf6uS3SfJdy3Z/SX5uyjZTZafvWTHc9qRmfKLV7KbKD9zye5O+eyS3V3yuSU7Pkf+rUp2nyTftWT3l+TvomQ3WX72kh3PaUdmyi9eyW6i/Mwluzvls0t2d8nnluz4HPm3Ktl9knzXkt1fkr+Lkt1k+dlLdjynHZkpv3glu4nyM5fs7pTPLtndJZ9bsuNz5N+qZPdJ8l1Ldn9J/i5KdpPlZy/Z8Zx2ZKb84pXsJsrPXLK7Uz67ZHeXfG7Jjs+Rf6uS3SfJdy3Z/SX5uyjZTZafvWTHc9qRmfKLV7KbKD9zye5O+eyS3V3yuSU7Pkf+rUp2nyTftWT3l+TvomQ3WX72kh3PaUdmyi9eyW6i/Mwluzvls0t2d8nnluz4HPm3Ktl9knzXkt1fkr+Lkt1k+dlLdjynHZkpv3glu4nyM5fs7pTPLtndJZ9bsuNz5N+qZPdJ8l1Ldn9J/i5KdpPlZy/Z8Zx2ZKb84pXsJsrPXLK7Uz67ZHeXfG7Jjs+Rf6uS3SfJdy3Z/SX5uyjZTZafvWTHc9qRmfKLV7KbKD9zye5O+eyS3V3yuSU7Pkf+rUp2nyTftWT3l+TvomQ3WX72kh3PaUc+T35pruS5Vba78p6v5NkreW6VbcmuZFdOm3+Vd+/Ke+6Sz92V93wlz17Jc0/J99iV96yyLe90+bNTO3etTcr2Sp5bZVuy+xd595U895R8j1N53yrbK3lulW3J7kqeKzvNrvUu7tGOfJ78clzJc6tsd+U9X8mzV/LcKtuSXcmunDb/Ku/elffcJZ+7K+/5Sp69kueeku+xK+9ZZVve6fJnp3buWpuU7ZU8t8q2ZPcv8u4ree4p+R6n8r5Vtlfy3Crbkt2VPFd2ml3rXdyjHfkc+aXYlfe8ZHMq71tluyvvecmmZFeyK6fNu/LOU3nfXfK5p/K+Vba78p675fNP5X0v2ZR3uvzZqZ271qZksyvvecmmZPeOvHNX3nO3fP6pvO8lm115z0s2Jbsrea7sNLvWu7hHO/I58kuxK+95yeZU3rfKdlfe85JNya5kV06bd+Wdp/K+u+RzT+V9q2x35T13y+efyvtesinvdPmzUzt3rU3JZlfe85JNye4deeeuvOdu+fxTed9LNrvynpdsSnZX8lzZaXatd3GPduT35ZfhXZPuXJtVduW0OZV3vSvvvUs+911333mnfO67du787uelup32Ozt37TSndu5cm1N517vy3rvkc0/95F1lvbNkU7Ir2ZXsXrI5lffx89qR35dfhndNunNtVtmV0+ZU3vWuvPcu+dx33X3nnfK579q587ufl+p22u/s3LXTnNq5c21O5V3vynvvks899ZN3lfXOkk3JrmRXsnvJ5lTex89rR35ffhnSbn/afNWVd9rcU3VftWuzyq6cNqfyrrTbZ3eXfG7Z7co7be6puk+R75dO2ivrHVfyTMmuk2fKTlNOu6/atTmVd6XT7mn5HiW7Tp5Jp90qm5Jdya5k18kzJTue0478vvySpN3+tPmqK++0uafqvmrXZpVdOW1O5V1pt8/uLvncstuVd9rcU3WfIt8vnbRX1juu5JmSXSfPlJ2mnHZftWtzKu9Kp93T8j1Kdp08k067VTYlu5Jdya6TZ0p2PKcd+X35JSnZnci7SnYlu3LarLIrp80qu3LanMq7SnYlu5LdXfK5JbuSXTltVtmV7D5FvmfZaa6sZ7+TZ0t2nTxTTptVduW0OZV3lexKdiW7p+R7lOw6eaZkV7Ir2a2yLbs/35FnS3Y8px35ffklKdmdyLtKdiW7ctqssiunzSq7ctqcyrtKdiW7kt1d8rklu5JdOW1W2ZXsPkW+Z9lprqxnv5NnS3adPFNOm1V25bQ5lXeV7Ep2Jbun5HuU7Dp5pmRXsivZrbItuz/fkWdLdjynHfl9+SVJ2e/IO0p2Jbty2qyyK6fNKrty2pzKu0p2JbuS3V3yuSW7kl05bVbZlew+Rb5n2WnSemZX3lGy6+SZctqcyrtKdifyrpJdya5k95R8j5JdJ8+U7Ep2JbtVtmX35zvybMmO57Qjvy+/JCn7HXlHya5kV06bVXbltFllV06bU3lXya5kV7K7Sz63ZFeyK6fNKruS3afI9yw7TVrP7Mo7SnadPFNOm1N5V8nuRN5VsivZleyeku9RsuvkmZJdya5kt8q27P58R54t2fGcduT35ZfkO3m+k2dKdiW7ctqssiunzSq7ctqcyrtKdiW7kt1d8rklu5Jd2WlOrXc+Kd9j18kda3sq7yrZdfJMOW1O5V0luxN517vy3qfke5TsOnnmXXlvJ89cyXM78o6SHc9pR35ffkm+k+c7eaZkV7Irp80qu3LarLIrp82pvKtkV7Ir2d0ln1uyK9mVnebUeueT8j12ndyxtqfyrpJdJ8+U0+ZU3lWyO5F3vSvvfUq+R8muk2felfd28syVPLcj7yjZ8Zx25HPkl2VX3vOSTcmuZFdOm1V25bRZZVdOm1N5V8muZFeyu0s+t2RXsis7zan1zifk80/t3LU278o7S3adPFNOm1N5V8nuRN71rrz3KfkeJbtOnnlX3tvJM1fy3I68o2THc9qRz5Ffll15z0s2JbuSXTltVtmV02aVXTltTuVdJbuSXcnuLvnckl3Jruw0p9Y7n5DPP7Vz19q8K+8s2XXyTDltTuVdJbsTede78t6n5HuU7Dp55l15byfPXMlzO/KOkh3PaUc+V355vrNzdm1W2ZXTZpVdOW1W2ZXT5lTeVbIr2ZXs7pLPLdmV7Mpp80nyPd+1c+favCvvLNl18kw5bU7lXSW7E3lXye5T5XuX7Dp5pmT3E/IZV/LcjryjZMdz2pHPlV+e7+ycXZtVduW0WWVXTptVduW0OZV3lexKdiW7u+RzS3Ylu3LafJJ8z3ft3Lk278o7S3adPFNOm1N5V8nuRN5VsvtU+d4lu06eKdn9hHzGlTy3I+8o2fGcduS/I79Maaddm1V25bRZZVdOm1V25bQ5lXeV7Ep2Jbu75HNLdiW7ctp8knzPtNufNu/KO0t2nTxTTptTeVfJ7kTeVbL7VPneJbtOninZ/Yu8u+z+fEeeLdnxnHbkvyO/TGmnXZtVduW0WWVXTptVduW0OZV3lexKdiW7u+RzS3Ylu3LafJJ8z7TbnzbvyjtLdp08U06bU3lXye5E3lWy+1T53iW7Tp4p2f2LvLvs/nxHni3Z8Zx25L8nv1TltFllV06bVXbltFllV06bVXbltFllV7K7Sz63ZFeyK6fNKruS3V3yuSW7kl05bd6Vd5bsOnmmnDar7Mpps8qunDar7Ep2T8n3KNl18kzJrmRXsltlW3Z/viPPlux4Tjvy35NfqnLarLIrp80qu3LarLIrp80qu3LarLIr2d0ln1uyK9mV02aVXcnuLvnckl3Jrpw278o7S3adPFNOm1V25bRZZVdOm1V2Jbun5HuU7Dp5pmRXsivZrbItuz/fkWdLdjynHfl9+SUpu13ZaddmlV3Zacppd9p+1e805bQ7bb/qs7tLPrfsduWdNvdU3d3yuWm3P23elXem7FfZlp2mnHYnbe6pupM291Td0/I9UvarbNNpt8qmZFeyK9l18kzKnvu1I78vvxxltys77dqssis7TTntTtuv+p2mnHan7Vd9dnfJ55bdrrzT5p6qu1s+N+32p8278s6U/SrbstOU0+6kzT1Vd9Lmnqp7Wr5Hyn6VbTrtVtmU7Ep2JbtOnknZc7925Pfll+NdO3euzSq7stOccuf98rnvuvvOO+Vz37Vz59q8K+/8zs7ZnebUf/HOJ+V7fOdfzl5Z7yzZlOxKdiW7Tp75Tp7n57Ujvy+/DO/auXNtVtmVneaUO++Xz33X3XfeKZ/7rp071+Zdeed3ds7uNKf+i3c+Kd/jO/9y9sp6Z8mmZFeyK9l18sx38jw/rx35HPml2JX3vGRTsivZlexestmV96yyPZX3vWSzK+9ZZXsq77tLPvdU3rfKdlfe85R8j1M7d63Nv8q7r+ycWZuSza68Z5Xtrrxnle2uvOe35HtdyXMv2ezKe16yKdldyXMlu06euZLn+HntyOfIL8WuvOclm5Jdya5k95LNrrxnle2pvO8lm115zyrbU3nfXfK5p/K+Vba78p6n5Huc2rlrbf5V3n1l58zalGx25T2rbHflPatsd+U9vyXf60qee8lmV97zkk3J7kqeK9l18syVPMfPa0c+T345ruS5VbYlu5JdyW6V7ZU895U8uyvvWWV7Jc99Jc/uynvuks/dlfd8Jc9eyXO/Jd9r184da/NT8hlpp12blO2VPPeVPHslz30lz17Jc58i3zNlv8r2Sp5bZVuyu5LnSnZfybMpe35eO/J58stxJc+tsi3ZlexKdqtsr+S5r+TZXXnPKtsree4reXZX3nOXfO6uvOcrefZKnvst+V67du5Ym5+Sz0g77dqkbK/kua/k2St57it59kqe+xT5nin7VbZX8twq25LdlTxXsvtKnk3Z8/PaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAudoRAIC52hEAgLnaEQCAqf73f/4vTb9/T2XR6d4AAAAASUVORK5CYII=",
-        "payloadType": "str",
-        "x": 130,
-        "y": 2060,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "function-node",
         "type": "function",
         "z": "8eab0a3c643bf6ac",
+        "g": "6030b7fe55197e8f",
         "name": "Set Base64 Data",
         "func": "msg.payload = \"data:image/jpeg;base64,\" + flow.get('data');\nreturn msg;",
         "outputs": 1,
@@ -3004,7 +2985,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
+        "x": 950,
         "y": 1900,
         "wires": [
             [
@@ -3013,52 +2994,11 @@
         ]
     },
     {
-        "id": "debug-node",
-        "type": "debug",
-        "z": "8eab0a3c643bf6ac",
-        "name": "Debug Output",
-        "active": true,
-        "console": "false",
-        "complete": "true",
-        "x": 810,
-        "y": 1900,
-        "wires": []
-    },
-    {
-        "id": "c529b2fc.8eb0d",
-        "type": "inject",
-        "z": "8eab0a3c643bf6ac",
-        "name": "base64",
-        "props": [
-            {
-                "p": "payload",
-                "v": "data:image/jpeg;base64,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",
-                "vt": "str"
-            },
-            {
-                "p": "topic",
-                "v": "",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "data:image/jpeg;base64,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",
-        "payloadType": "str",
-        "x": 110,
-        "y": 1980,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "b4b8f84a.7e57a8",
         "type": "jimp-image",
         "z": "8eab0a3c643bf6ac",
-        "name": "Top line",
+        "g": "6030b7fe55197e8f",
+        "name": "Preview",
         "data": "payload",
         "dataType": "msg",
         "ret": "img",
@@ -3068,129 +3008,21 @@
         "parameter2Type": "num",
         "parameter3": "0",
         "parameter3Type": "num",
-        "parameter4": "Resistance to Node-RED",
+        "parameter4": " ",
         "parameter4Type": "str",
         "parameter5": "HORIZONTAL_ALIGN_CENTER",
-        "parameter5Type": "AlignX",
+        "parameter5Type": "none",
         "parameter6": "VERTICAL_ALIGN_TOP",
-        "parameter6Type": "AlignY",
-        "parameter7": "",
-        "parameter7Type": "auto",
-        "parameter8": "",
-        "parameter8Type": "auto",
-        "parameterCount": 8,
-        "jimpFunction": "print2",
-        "selectedJimpFunction": {
-            "name": "print aligned",
-            "fn": "print",
-            "description": "Print text to the image",
-            "parameters": [
-                {
-                    "name": "font|str",
-                    "type": "jimpFont",
-                    "required": true,
-                    "hint": "font to print. NOTE: This can be one of the presets or the path to a fon file"
-                },
-                {
-                    "name": "x",
-                    "type": "num",
-                    "required": true,
-                    "hint": "x coordinate to print text"
-                },
-                {
-                    "name": "y",
-                    "type": "num",
-                    "required": true,
-                    "hint": "y coordinate to print text"
-                },
-                {
-                    "name": "text",
-                    "group": "options",
-                    "type": "str",
-                    "required": true,
-                    "hint": "text to print"
-                },
-                {
-                    "name": "alignmentX",
-                    "group": "options",
-                    "type": "AlignX",
-                    "required": false,
-                    "hint": "X Alignment"
-                },
-                {
-                    "name": "alignmentY",
-                    "group": "options",
-                    "type": "AlignY",
-                    "required": false,
-                    "hint": "Y Alignment"
-                },
-                {
-                    "name": "maxWidth",
-                    "type": "auto|num",
-                    "required": false,
-                    "hint": "wrap text at maxWidth"
-                },
-                {
-                    "name": "maxHeight",
-                    "type": "auto|num",
-                    "required": false,
-                    "hint": ""
-                }
-            ]
-        },
-        "x": 300,
-        "y": 1980,
-        "wires": [
-            [
-                "89489343.0b939"
-            ]
-        ],
-        "icon": "font-awesome/fa-image"
-    },
-    {
-        "id": "29e5dcb1.bf77e4",
-        "type": "image viewer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "",
-        "width": 160,
-        "data": "payload",
-        "dataType": "msg",
-        "active": true,
-        "x": 870,
-        "y": 1980,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "38f08b84.83ddd4",
-        "type": "jimp-image",
-        "z": "8eab0a3c643bf6ac",
-        "name": "Bottom Line",
-        "data": "payload",
-        "dataType": "msg",
-        "ret": "img",
-        "parameter1": "FONT_SANS_64_BLACK",
-        "parameter1Type": "jimpFont",
-        "parameter2": "0",
-        "parameter2Type": "num",
-        "parameter3": "0",
-        "parameter3Type": "num",
-        "parameter4": "is futile",
-        "parameter4Type": "str",
-        "parameter5": "HORIZONTAL_ALIGN_CENTER",
-        "parameter5Type": "AlignX",
-        "parameter6": "VERTICAL_ALIGN_BOTTOM",
-        "parameter6Type": "AlignY",
+        "parameter6Type": "none",
         "parameter7": "",
         "parameter7Type": "auto",
         "parameter8": "",
         "parameter8Type": "auto",
         "sendProperty": "payload",
-        "parameterCount": 8,
-        "jimpFunction": "print2",
+        "parameterCount": 6,
+        "jimpFunction": "print",
         "selectedJimpFunction": {
-            "name": "print aligned",
+            "name": "print",
             "fn": "print",
             "description": "Print text to the image",
             "parameters": [
@@ -3214,44 +3046,29 @@
                 },
                 {
                     "name": "text",
-                    "group": "options",
                     "type": "str",
                     "required": true,
                     "hint": "text to print"
                 },
                 {
-                    "name": "alignmentX",
-                    "group": "options",
-                    "type": "AlignX",
-                    "required": false,
-                    "hint": "X Alignment"
-                },
-                {
-                    "name": "alignmentY",
-                    "group": "options",
-                    "type": "AlignY",
-                    "required": false,
-                    "hint": "Y Alignment"
-                },
-                {
                     "name": "maxWidth",
-                    "type": "auto|num",
+                    "type": "num",
                     "required": false,
                     "hint": "wrap text at maxWidth"
                 },
                 {
                     "name": "maxHeight",
-                    "type": "auto|num",
+                    "type": "num",
                     "required": false,
                     "hint": "max height"
                 }
             ]
         },
-        "x": 730,
-        "y": 1980,
+        "x": 1160,
+        "y": 1900,
         "wires": [
             [
-                "29e5dcb1.bf77e4"
+                "89489343.0b939"
             ]
         ],
         "icon": "font-awesome/fa-image"
@@ -3260,13 +3077,14 @@
         "id": "89489343.0b939",
         "type": "image viewer",
         "z": "8eab0a3c643bf6ac",
+        "g": "6030b7fe55197e8f",
         "name": "",
         "width": 160,
         "data": "payload",
         "dataType": "msg",
         "active": true,
-        "x": 430,
-        "y": 1980,
+        "x": 1290,
+        "y": 1900,
         "wires": [
             []
         ]
