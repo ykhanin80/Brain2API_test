@@ -205,12 +205,11 @@
             "084fb6523e9af807",
             "function-node",
             "b4b8f84a.7e57a8",
-            "89489343.0b939",
-            "73dba72e415c6f4e"
+            "89489343.0b939"
         ],
         "x": 14,
         "y": 1459,
-        "w": 1412,
+        "w": 1372,
         "h": 502
     },
     {
@@ -2739,6 +2738,7 @@
         "id": "cffc6c3c4df5e596",
         "type": "ui_button",
         "z": "8eab0a3c643bf6ac",
+        "d": true,
         "g": "6030b7fe55197e8f",
         "name": "",
         "group": "a0e535b59379d5a4",
@@ -2759,9 +2759,7 @@
         "x": 130,
         "y": 1840,
         "wires": [
-            [
-                "22d3e8a8b5d5ecfe"
-            ]
+            []
         ]
     },
     {
@@ -2952,7 +2950,7 @@
         "y": 1720,
         "wires": [
             [
-                "73dba72e415c6f4e"
+                "22d3e8a8b5d5ecfe"
             ]
         ]
     },
@@ -3105,27 +3103,5 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "73dba72e415c6f4e",
-        "type": "ui_text",
-        "z": "8eab0a3c643bf6ac",
-        "g": "6030b7fe55197e8f",
-        "group": "a0e535b59379d5a4",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "article text",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1330,
-        "y": 1720,
-        "wires": []
     }
 ]
