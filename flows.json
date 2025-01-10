@@ -321,7 +321,7 @@
         "type": "ui_tab",
         "name": "Gx Devices",
         "icon": "dashboard",
-        "order": 6,
+        "order": 5,
         "disabled": false,
         "hidden": false
     },
@@ -330,7 +330,7 @@
         "type": "ui_tab",
         "name": "Production Lines",
         "icon": "dashboard",
-        "order": 7,
+        "order": 6,
         "disabled": false,
         "hidden": false
     },
@@ -339,7 +339,7 @@
         "type": "ui_tab",
         "name": "Authenticate",
         "icon": "dashboard",
-        "order": 2,
+        "order": 1,
         "disabled": false,
         "hidden": false
     },
@@ -348,7 +348,7 @@
         "type": "ui_tab",
         "name": "Selection Page",
         "icon": "dashboard",
-        "order": 3,
+        "order": 2,
         "disabled": false,
         "hidden": false
     },
@@ -357,7 +357,7 @@
         "type": "ui_tab",
         "name": "Package Records",
         "icon": "dashboard",
-        "order": 5,
+        "order": 4,
         "disabled": false,
         "hidden": false
     },
@@ -441,7 +441,7 @@
         "type": "ui_tab",
         "name": "Time interval capture",
         "icon": "dashboard",
-        "order": 4,
+        "order": 3,
         "disabled": false,
         "hidden": false
     },
@@ -471,7 +471,7 @@
         "type": "ui_tab",
         "name": "Labels Preview",
         "icon": "dashboard",
-        "order": 1,
+        "order": 7,
         "disabled": false,
         "hidden": false
     },
