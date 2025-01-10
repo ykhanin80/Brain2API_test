@@ -174,7 +174,6 @@
             "41ccfb58906cbdc4",
             "2428b474cdfbc164",
             "93d9736ba906a6f2",
-            "2838cddfe79a1708",
             "96fc6de53366877d",
             "c185e7e44e9b4862",
             "11ac995680dd176a",
@@ -189,8 +188,6 @@
             "a1a6ecb31beaa9ca",
             "2f308082d8326147",
             "6eab239d647915c3",
-            "37bd4bf7f7e9f47b",
-            "ef5b96128f1defa7",
             "22d3e8a8b5d5ecfe",
             "1321422e33c2337e",
             "dd053f3b5d60251f",
@@ -202,10 +199,10 @@
             "function-node",
             "ui-template-node"
         ],
-        "x": -26,
-        "y": 1459,
-        "w": 1312,
-        "h": 442
+        "x": 14,
+        "y": 1479,
+        "w": 1252,
+        "h": 362
     },
     {
         "id": "b35b991b388efa02",
@@ -544,13 +541,73 @@
         "className": ""
     },
     {
-        "id": "c36cf5c84f9837df",
-        "type": "ui_link",
-        "name": "Link 8",
-        "link": "",
-        "icon": "open_in_browser",
-        "target": "thistab",
-        "order": 8
+        "id": "57abc09c6a8a13ed",
+        "type": "ui_group",
+        "name": "Group 5",
+        "tab": "1ab2a88a04aba926",
+        "order": 5,
+        "disp": true,
+        "width": 20
+    },
+    {
+        "id": "6a0c70bd6c166c2f",
+        "type": "ui_spacer",
+        "z": "8eab0a3c643bf6ac",
+        "name": "spacer",
+        "group": "a0e535b59379d5a4",
+        "order": 2,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "8a88e844fa216010",
+        "type": "ui_spacer",
+        "z": "8eab0a3c643bf6ac",
+        "name": "spacer",
+        "group": "a0e535b59379d5a4",
+        "order": 3,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "128b313f3925f148",
+        "type": "ui_spacer",
+        "z": "8eab0a3c643bf6ac",
+        "name": "spacer",
+        "group": "a0e535b59379d5a4",
+        "order": 4,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "ecd1e52ed0606619",
+        "type": "ui_spacer",
+        "z": "8eab0a3c643bf6ac",
+        "name": "spacer",
+        "group": "a0e535b59379d5a4",
+        "order": 5,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "c8e358b264dacbcd",
+        "type": "ui_spacer",
+        "z": "8eab0a3c643bf6ac",
+        "name": "spacer",
+        "group": "a0e535b59379d5a4",
+        "order": 6,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "9e75093755ad32f6",
+        "type": "ui_spacer",
+        "z": "8eab0a3c643bf6ac",
+        "name": "spacer",
+        "group": "a0e535b59379d5a4",
+        "order": 7,
+        "width": 3,
+        "height": 1
     },
     {
         "id": "dd9a228b504e8ed4",
@@ -2194,8 +2251,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
-        "y": 1540,
+        "x": 180,
+        "y": 1560,
         "wires": [
             [
                 "08250c3a74961fc8"
@@ -2219,8 +2276,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 520,
-        "y": 1540,
+        "x": 380,
+        "y": 1560,
         "wires": [
             [
                 "41ccfb58906cbdc4"
@@ -2236,8 +2293,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 690,
-        "y": 1540,
+        "x": 550,
+        "y": 1560,
         "wires": [
             [
                 "2428b474cdfbc164"
@@ -2257,8 +2314,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 840,
-        "y": 1540,
+        "x": 700,
+        "y": 1560,
         "wires": [
             [
                 "93d9736ba906a6f2"
@@ -2291,40 +2348,12 @@
         "topic": "",
         "topicType": "str",
         "className": "",
-        "x": 1020,
-        "y": 1540,
+        "x": 880,
+        "y": 1560,
         "wires": [
             [
                 "c185e7e44e9b4862"
             ]
-        ]
-    },
-    {
-        "id": "2838cddfe79a1708",
-        "type": "ui_button",
-        "z": "8eab0a3c643bf6ac",
-        "d": true,
-        "g": "6030b7fe55197e8f",
-        "name": "",
-        "group": "c3da64604f938861",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Read projects",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "Label Projects",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 80,
-        "y": 1540,
-        "wires": [
-            []
         ]
     },
     {
@@ -2334,8 +2363,8 @@
         "g": "6030b7fe55197e8f",
         "name": "Display Label Projects",
         "events": "change",
-        "x": 280,
-        "y": 1500,
+        "x": 140,
+        "y": 1520,
         "wires": [
             [
                 "84abaf12d166c742"
@@ -2355,8 +2384,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1190,
-        "y": 1540,
+        "x": 1130,
+        "y": 1560,
         "wires": [
             [
                 "967a0a98c0e7bc54"
@@ -2418,8 +2447,8 @@
         "topic": "",
         "topicType": "str",
         "className": "",
-        "x": 990,
-        "y": 1660,
+        "x": 870,
+        "y": 1680,
         "wires": [
             [
                 "c0ca09a3e5f4d924"
@@ -2439,8 +2468,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1180,
-        "y": 1660,
+        "x": 1140,
+        "y": 1680,
         "wires": [
             [
                 "15325af9ce5c4fdc"
@@ -2473,8 +2502,8 @@
         "topic": "",
         "topicType": "str",
         "className": "",
-        "x": 1000,
-        "y": 1600,
+        "x": 880,
+        "y": 1620,
         "wires": [
             [
                 "ad824b1587c2ab2e"
@@ -2494,8 +2523,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1170,
-        "y": 1600,
+        "x": 1130,
+        "y": 1620,
         "wires": [
             [
                 "e0b2381c77cdaf5b"
@@ -2515,8 +2544,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
-        "y": 1660,
+        "x": 180,
+        "y": 1680,
         "wires": [
             [
                 "14186e369ace0e27"
@@ -2540,8 +2569,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 500,
-        "y": 1660,
+        "x": 360,
+        "y": 1680,
         "wires": [
             [
                 "02bddf4c8369dca6"
@@ -2557,8 +2586,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 690,
-        "y": 1660,
+        "x": 550,
+        "y": 1680,
         "wires": [
             [
                 "abce7689fc3c2c7f"
@@ -2578,8 +2607,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 840,
-        "y": 1660,
+        "x": 700,
+        "y": 1680,
         "wires": [
             [
                 "11ac995680dd176a"
@@ -2599,8 +2628,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
-        "y": 1600,
+        "x": 180,
+        "y": 1620,
         "wires": [
             [
                 "a1a6ecb31beaa9ca"
@@ -2624,8 +2653,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 510,
-        "y": 1600,
+        "x": 370,
+        "y": 1620,
         "wires": [
             [
                 "2f308082d8326147"
@@ -2641,8 +2670,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 690,
-        "y": 1600,
+        "x": 550,
+        "y": 1620,
         "wires": [
             [
                 "6eab239d647915c3"
@@ -2662,68 +2691,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 840,
-        "y": 1600,
+        "x": 700,
+        "y": 1620,
         "wires": [
             [
                 "5cce785db05077c3"
             ]
-        ]
-    },
-    {
-        "id": "37bd4bf7f7e9f47b",
-        "type": "ui_button",
-        "z": "8eab0a3c643bf6ac",
-        "d": true,
-        "g": "6030b7fe55197e8f",
-        "name": "",
-        "group": "43768ad03e62b0f1",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Read PLUs",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 70,
-        "y": 1660,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ef5b96128f1defa7",
-        "type": "ui_button",
-        "z": "8eab0a3c643bf6ac",
-        "d": true,
-        "g": "6030b7fe55197e8f",
-        "name": "",
-        "group": "c96693a245cef7d1",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Read layouts",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 70,
-        "y": 1600,
-        "wires": [
-            []
         ]
     },
     {
@@ -2739,8 +2712,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
-        "y": 1780,
+        "x": 170,
+        "y": 1800,
         "wires": [
             [
                 "1321422e33c2337e"
@@ -2764,8 +2737,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 520,
-        "y": 1780,
+        "x": 380,
+        "y": 1800,
         "wires": [
             [
                 "dd053f3b5d60251f"
@@ -2781,8 +2754,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 690,
-        "y": 1780,
+        "x": 550,
+        "y": 1800,
         "wires": [
             [
                 "ddae55592cab8c3f"
@@ -2802,8 +2775,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 840,
-        "y": 1780,
+        "x": 700,
+        "y": 1800,
         "wires": [
             [
                 "function-node"
@@ -2823,8 +2796,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
-        "y": 1720,
+        "x": 180,
+        "y": 1740,
         "wires": [
             [
                 "22e884aa026840f8"
@@ -2848,8 +2821,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 510,
-        "y": 1720,
+        "x": 370,
+        "y": 1740,
         "wires": [
             [
                 "72b3a8263da646ff"
@@ -2865,8 +2838,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 690,
-        "y": 1720,
+        "x": 550,
+        "y": 1740,
         "wires": [
             [
                 "2c972761f82441e5"
@@ -2886,8 +2859,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 940,
-        "y": 1720,
+        "x": 1060,
+        "y": 1740,
         "wires": [
             [
                 "22d3e8a8b5d5ecfe"
@@ -2907,8 +2880,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
-        "y": 1860,
+        "x": 890,
+        "y": 1800,
         "wires": [
             [
                 "ui-template-node"
@@ -2920,19 +2893,19 @@
         "type": "ui_template",
         "z": "8eab0a3c643bf6ac",
         "g": "6030b7fe55197e8f",
-        "group": "a0e535b59379d5a4",
+        "group": "57abc09c6a8a13ed",
         "name": "Display Base64 Image",
         "order": 1,
-        "width": 7,
-        "height": 6,
+        "width": "20",
+        "height": "20",
         "format": "<div style=\"background-color: white;\">\n    <img src=\"{{msg.payload}}\" style=\"width:100%; height:auto;\" />\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 860,
-        "y": 1860,
+        "x": 1140,
+        "y": 1800,
         "wires": [
             []
         ]
