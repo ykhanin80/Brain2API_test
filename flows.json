@@ -537,7 +537,7 @@
         "tab": "1ab2a88a04aba926",
         "order": 5,
         "disp": true,
-        "width": "6",
+        "width": "10",
         "collapse": false,
         "className": ""
     },
@@ -2865,7 +2865,7 @@
         "group": "a0e535b59379d5a4",
         "name": "",
         "order": 2,
-        "width": "6",
+        "width": "10",
         "height": "12",
         "format": "<div style=\"white-space: pre-wrap; word-wrap: break-word; font-size: 6px;\">\n    {{msg.payload}}\n</div>",
         "storeOutMessages": true,
