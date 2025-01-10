@@ -2988,9 +2988,7 @@
         "x": 210,
         "y": 1900,
         "wires": [
-            [
-                "b4b8f84a.7e57a8"
-            ]
+            []
         ]
     },
     {
@@ -2998,12 +2996,19 @@
         "type": "function",
         "z": "8eab0a3c643bf6ac",
         "name": "Set Base64 Data",
-        "func": "msg.payload = {\n    image: msg.payload,\n    type: 'base64'\n};\nreturn msg;",
+        "func": "msg.payload = \"data:image/jpeg;base64,\" + flow.get('data');\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 430,
         "y": 1900,
         "wires": [
-            []
+            [
+                "b4b8f84a.7e57a8"
+            ]
         ]
     },
     {
@@ -3262,33 +3267,7 @@
         "x": 430,
         "y": 1980,
         "wires": [
-            [
-                "885dd34f.7aa82"
-            ]
-        ]
-    },
-    {
-        "id": "885dd34f.7aa82",
-        "type": "delay",
-        "z": "8eab0a3c643bf6ac",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "2",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "outputs": 1,
-        "x": 580,
-        "y": 1980,
-        "wires": [
-            [
-                "38f08b84.83ddd4"
-            ]
+            []
         ]
     }
 ]
