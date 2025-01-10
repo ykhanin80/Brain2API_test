@@ -178,7 +178,6 @@
             "96fc6de53366877d",
             "c185e7e44e9b4862",
             "2d62c02ca60e8fce",
-            "31f17e57569d915f",
             "11ac995680dd176a",
             "c0ca09a3e5f4d924",
             "5cce785db05077c3",
@@ -198,12 +197,18 @@
             "1321422e33c2337e",
             "dd053f3b5d60251f",
             "ddae55592cab8c3f",
-            "3c760ec6271044ec"
+            "3c760ec6271044ec",
+            "cfa7dd93c3c29629",
+            "15325af9ce5c4fdc",
+            "22e884aa026840f8",
+            "72b3a8263da646ff",
+            "2c972761f82441e5",
+            "084fb6523e9af807"
         ],
         "x": 14,
         "y": 1479,
-        "w": 1352,
-        "h": 402
+        "w": 1372,
+        "h": 422
     },
     {
         "id": "b35b991b388efa02",
@@ -2394,24 +2399,6 @@
         ]
     },
     {
-        "id": "31f17e57569d915f",
-        "type": "debug",
-        "z": "8eab0a3c643bf6ac",
-        "g": "30adcaace5951d9c",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1260,
-        "y": 1840,
-        "wires": []
-    },
-    {
         "id": "11ac995680dd176a",
         "type": "ui_dropdown",
         "z": "8eab0a3c643bf6ac",
@@ -2461,7 +2448,9 @@
         "x": 1260,
         "y": 1680,
         "wires": [
-            []
+            [
+                "15325af9ce5c4fdc"
+            ]
         ]
     },
     {
@@ -2491,7 +2480,7 @@
         "topicType": "str",
         "className": "",
         "x": 1080,
-        "y": 1740,
+        "y": 1800,
         "wires": [
             [
                 "ad824b1587c2ab2e"
@@ -2512,7 +2501,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 1740,
+        "y": 1800,
         "wires": [
             []
         ]
@@ -2543,7 +2532,7 @@
         "type": "http request",
         "z": "8eab0a3c643bf6ac",
         "g": "30adcaace5951d9c",
-        "name": "/PLU",
+        "name": "/PLU list",
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
@@ -2555,7 +2544,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 570,
+        "x": 580,
         "y": 1680,
         "wires": [
             [
@@ -2615,7 +2604,7 @@
         "finalize": "",
         "libs": [],
         "x": 400,
-        "y": 1740,
+        "y": 1800,
         "wires": [
             [
                 "a1a6ecb31beaa9ca"
@@ -2640,7 +2629,7 @@
         "senderr": false,
         "headers": [],
         "x": 590,
-        "y": 1740,
+        "y": 1800,
         "wires": [
             [
                 "2f308082d8326147"
@@ -2657,7 +2646,7 @@
         "action": "obj",
         "pretty": false,
         "x": 770,
-        "y": 1740,
+        "y": 1800,
         "wires": [
             [
                 "6eab239d647915c3"
@@ -2678,7 +2667,7 @@
         "finalize": "",
         "libs": [],
         "x": 920,
-        "y": 1740,
+        "y": 1800,
         "wires": [
             [
                 "5cce785db05077c3"
@@ -2736,7 +2725,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 110,
-        "y": 1740,
+        "y": 1800,
         "wires": [
             [
                 "967a0a98c0e7bc54"
@@ -2765,7 +2754,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 130,
-        "y": 1800,
+        "y": 1860,
         "wires": [
             [
                 "22d3e8a8b5d5ecfe"
@@ -2786,7 +2775,7 @@
         "finalize": "",
         "libs": [],
         "x": 400,
-        "y": 1800,
+        "y": 1860,
         "wires": [
             [
                 "1321422e33c2337e"
@@ -2811,7 +2800,7 @@
         "senderr": false,
         "headers": [],
         "x": 600,
-        "y": 1800,
+        "y": 1860,
         "wires": [
             [
                 "dd053f3b5d60251f"
@@ -2828,7 +2817,7 @@
         "action": "obj",
         "pretty": false,
         "x": 770,
-        "y": 1800,
+        "y": 1860,
         "wires": [
             [
                 "ddae55592cab8c3f"
@@ -2849,10 +2838,9 @@
         "finalize": "",
         "libs": [],
         "x": 920,
-        "y": 1800,
+        "y": 1860,
         "wires": [
             [
-                "31f17e57569d915f",
                 "3c760ec6271044ec"
             ]
         ]
@@ -2874,9 +2862,128 @@
         "templateScope": "local",
         "className": "",
         "x": 1100,
-        "y": 1800,
+        "y": 1860,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "cfa7dd93c3c29629",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "var PLUnumber",
+        "func": "var PLUnumber = msg.payload;\nflow.set('PLUnumber',PLUnumber);\n\n//msg.payload =flow.get('PLUnumber');\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 1740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "15325af9ce5c4fdc",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "header and url",
+        "func": "msg.headers = {\n  'Authorization' : flow.get(\"bearer_token\")\n};\nmsg.url = \"https://\" + flow.get(\"ServerIP\") + \":9998/api/v1/articles/\" + flow.get('PLUnumber') + \"labeler\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1740,
+        "wires": [
+            [
+                "22e884aa026840f8"
+            ]
+        ]
+    },
+    {
+        "id": "22e884aa026840f8",
+        "type": "http request",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "/Labeler PLU",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "b35b991b388efa02",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 590,
+        "y": 1740,
+        "wires": [
+            [
+                "72b3a8263da646ff"
+            ]
+        ]
+    },
+    {
+        "id": "72b3a8263da646ff",
+        "type": "json",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 770,
+        "y": 1740,
+        "wires": [
+            [
+                "084fb6523e9af807"
+            ]
+        ]
+    },
+    {
+        "id": "2c972761f82441e5",
+        "type": "function",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "dropdown",
+        "func": "// Map through the payload to create options for the dropdown\nmsg.options = msg.payload.map(function(el) {\n    // Create an option object with the format \"label: value\"\n    let option = {};\n    // Concatenate the number and name for the label, and use the number as the value\n    option[`${el.number} - ${el.name}`] = el.number;\n    return option;\n});\n\n// Return the modified message object\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 1740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "084fb6523e9af807",
+        "type": "debug",
+        "z": "8eab0a3c643bf6ac",
+        "g": "30adcaace5951d9c",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1280,
+        "y": 1860,
+        "wires": []
     }
 ]
