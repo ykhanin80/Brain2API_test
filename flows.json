@@ -3115,7 +3115,7 @@
         "order": 1,
         "width": "7",
         "height": "6",
-        "format": "<div><img src=\"{{msg.payload}}\" style=\"width:100%; height:auto;\" /></div>",
+        "format": "<div style=\"background-color: white;\">\n    <img src=\"{{msg.payload}}\" style=\"width:100%; height:auto;\" />\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
