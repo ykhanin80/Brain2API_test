@@ -2908,7 +2908,7 @@
         "style": true,
         "font": "Arial Narrow,Nimbus Sans L,sans-serif",
         "fontSize": "5",
-        "color": "#000000",
+        "color": "#ffffff",
         "x": 1090,
         "y": 1800,
         "wires": []
