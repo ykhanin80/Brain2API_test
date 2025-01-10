@@ -2709,7 +2709,6 @@
         "id": "ef5b96128f1defa7",
         "type": "ui_button",
         "z": "8eab0a3c643bf6ac",
-        "d": true,
         "g": "6030b7fe55197e8f",
         "name": "",
         "group": "c96693a245cef7d1",
@@ -2730,13 +2729,16 @@
         "x": 110,
         "y": 1780,
         "wires": [
-            []
+            [
+                "967a0a98c0e7bc54"
+            ]
         ]
     },
     {
         "id": "cffc6c3c4df5e596",
         "type": "ui_button",
         "z": "8eab0a3c643bf6ac",
+        "d": true,
         "g": "6030b7fe55197e8f",
         "name": "",
         "group": "a0e535b59379d5a4",
@@ -2757,9 +2759,7 @@
         "x": 130,
         "y": 1840,
         "wires": [
-            [
-                "22d3e8a8b5d5ecfe"
-            ]
+            []
         ]
     },
     {
@@ -2949,7 +2949,7 @@
         "y": 1720,
         "wires": [
             [
-                "967a0a98c0e7bc54"
+                "22d3e8a8b5d5ecfe"
             ]
         ]
     },
