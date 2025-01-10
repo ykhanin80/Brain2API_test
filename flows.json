@@ -197,7 +197,8 @@
             "72b3a8263da646ff",
             "2c972761f82441e5",
             "function-node",
-            "ui-template-node"
+            "ui-template-node",
+            "3ac4fa9b483a9e20"
         ],
         "x": 14,
         "y": 1479,
@@ -2738,7 +2739,8 @@
         "y": 1800,
         "wires": [
             [
-                "ddae55592cab8c3f"
+                "ddae55592cab8c3f",
+                "3ac4fa9b483a9e20"
             ]
         ]
     },
@@ -2889,5 +2891,22 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "3ac4fa9b483a9e20",
+        "type": "debug",
+        "z": "8eab0a3c643bf6ac",
+        "g": "6030b7fe55197e8f",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 1520,
+        "wires": []
     }
 ]
