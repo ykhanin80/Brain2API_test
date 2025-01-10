@@ -3164,7 +3164,7 @@
         "data": "payload",
         "dataType": "msg",
         "ret": "img",
-        "parameter1": "FONT_SANS_14_BLACK",
+        "parameter1": "FONT_SANS_64_BLACK",
         "parameter1Type": "jimpFont",
         "parameter2": "0",
         "parameter2Type": "num",
