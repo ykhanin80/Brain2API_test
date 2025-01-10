@@ -197,7 +197,6 @@
             "1321422e33c2337e",
             "dd053f3b5d60251f",
             "ddae55592cab8c3f",
-            "3c760ec6271044ec",
             "15325af9ce5c4fdc",
             "22e884aa026840f8",
             "72b3a8263da646ff",
@@ -205,11 +204,12 @@
             "084fb6523e9af807",
             "function-node",
             "b4b8f84a.7e57a8",
-            "89489343.0b939"
+            "89489343.0b939",
+            "ui-template-node"
         ],
         "x": 14,
         "y": 1459,
-        "w": 1372,
+        "w": 1392,
         "h": 502
     },
     {
@@ -2842,31 +2842,8 @@
         "y": 1840,
         "wires": [
             [
-                "3c760ec6271044ec",
                 "function-node"
             ]
-        ]
-    },
-    {
-        "id": "3c760ec6271044ec",
-        "type": "ui_template",
-        "z": "8eab0a3c643bf6ac",
-        "g": "6030b7fe55197e8f",
-        "group": "a0e535b59379d5a4",
-        "name": "",
-        "order": 2,
-        "width": "10",
-        "height": "12",
-        "format": "<div style=\"white-space: pre-wrap; word-wrap: break-word; font-size: 6px;\">\n    {{msg.payload}}\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1100,
-        "y": 1840,
-        "wires": [
-            []
         ]
     },
     {
@@ -2968,7 +2945,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1280,
+        "x": 1300,
         "y": 1840,
         "wires": []
     },
@@ -2989,7 +2966,8 @@
         "y": 1920,
         "wires": [
             [
-                "b4b8f84a.7e57a8"
+                "b4b8f84a.7e57a8",
+                "ui-template-node"
             ]
         ]
     },
@@ -3124,15 +3102,14 @@
         "x": 190,
         "y": 2020,
         "wires": [
-            [
-                "ui-template-node"
-            ]
+            []
         ]
     },
     {
         "id": "ui-template-node",
         "type": "ui_template",
         "z": "8eab0a3c643bf6ac",
+        "g": "6030b7fe55197e8f",
         "group": "a0e535b59379d5a4",
         "name": "Display Base64 Image",
         "order": 1,
@@ -3144,8 +3121,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 440,
-        "y": 2020,
+        "x": 1240,
+        "y": 1920,
         "wires": [
             []
         ]
