@@ -901,7 +901,7 @@
         "type": "ui_tab",
         "name": "Forced Telegrams",
         "icon": "call_made",
-        "order": 2,
+        "order": 8,
         "disabled": false,
         "hidden": false
     },
@@ -910,7 +910,7 @@
         "type": "ui_tab",
         "name": "Spontanious Telegrams",
         "icon": "call_received",
-        "order": 3,
+        "order": 9,
         "disabled": false,
         "hidden": false
     },
@@ -3879,6 +3879,18 @@
         "type": "inject",
         "z": "db8a5a42.d628d8",
         "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "localhost",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": true,
@@ -4154,6 +4166,18 @@
         "type": "inject",
         "z": "db8a5a42.d628d8",
         "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "GLP",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": true,
