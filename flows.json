@@ -7,6 +7,302 @@
         "info": ""
     },
     {
+        "id": "db8a5a42.d628d8",
+        "type": "tab",
+        "label": "Connect Service",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4aad7a60.200634",
+        "type": "subflow",
+        "name": "PassThrough Ping",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 60,
+                "wires": [
+                    {
+                        "id": "fcfa54f3.4750c8"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1220,
+                "y": 60,
+                "wires": [
+                    {
+                        "id": "b1da5bc1.22d348",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "host",
+                "type": "str",
+                "value": "localhost",
+                "ui": {
+                    "type": "input",
+                    "opts": {
+                        "types": [
+                            "str"
+                        ]
+                    },
+                    "label": {}
+                }
+            },
+            {
+                "name": "retries",
+                "type": "num",
+                "value": "5",
+                "ui": {
+                    "type": "input",
+                    "opts": {
+                        "types": [
+                            "num"
+                        ]
+                    },
+                    "label": {}
+                }
+            },
+            {
+                "name": "delay",
+                "type": "num",
+                "value": "2000",
+                "ui": {
+                    "type": "input",
+                    "opts": {
+                        "types": [
+                            "num"
+                        ]
+                    },
+                    "label": {}
+                }
+            }
+        ],
+        "color": "#FDF0C2",
+        "icon": "node-red/alert.svg",
+        "status": {
+            "x": 760,
+            "y": 160,
+            "wires": [
+                {
+                    "id": "d78eeeb5.e54e1",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
+        "id": "e773f0a6.da437",
+        "type": "subflow",
+        "name": "Gate",
+        "info": "",
+        "category": "utility",
+        "in": [
+            {
+                "x": 140,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "df42c387.22de2"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 380,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "df42c387.22de2",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "Trigger by topic",
+                "type": "str",
+                "value": "Gate"
+            },
+            {
+                "name": "Send last msg by topic",
+                "type": "str",
+                "value": "Send"
+            },
+            {
+                "name": "Initial pass on",
+                "type": "bool",
+                "value": "true"
+            }
+        ],
+        "color": "#C0C0C0",
+        "icon": "font-awesome/fa-lock",
+        "status": {
+            "x": 380,
+            "y": 140,
+            "wires": [
+                {
+                    "id": "9f08f2c1.57c39",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
+        "id": "1e781e8.d2ba3e2",
+        "type": "subflow",
+        "name": "Evaluate Env Expressions",
+        "info": "",
+        "category": "utility",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "dcda33b6.2ec8d"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 240,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "dcda33b6.2ec8d",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "__env_vars",
+                "type": "json",
+                "value": "{}",
+                "ui": {
+                    "icon": "font-awesome/fa-percent",
+                    "label": {
+                        "en-US": "Env Vars"
+                    },
+                    "type": "input",
+                    "opts": {
+                        "types": [
+                            "json",
+                            "env"
+                        ]
+                    }
+                }
+            },
+            {
+                "name": "__store_property",
+                "type": "str",
+                "value": "args",
+                "ui": {
+                    "icon": "font-awesome/fa-download",
+                    "label": {
+                        "en-US": "Store in"
+                    },
+                    "type": "input",
+                    "opts": {
+                        "types": [
+                            "str",
+                            "env"
+                        ]
+                    }
+                }
+            }
+        ],
+        "color": "#C0C0C0",
+        "icon": "font-awesome/fa-percent"
+    },
+    {
+        "id": "5e666db0.10f024",
+        "type": "subflow",
+        "name": "Connect Web Service",
+        "info": "",
+        "category": "connectService",
+        "in": [
+            {
+                "x": 100,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "d3f71f8a.07168"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 300,
+                "y": 320,
+                "wires": [
+                    {
+                        "id": "3ff349b9.b9a8da",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "host",
+                "type": "str",
+                "value": "localhost"
+            },
+            {
+                "name": "port",
+                "type": "str",
+                "value": "2020"
+            },
+            {
+                "name": "timeout",
+                "type": "str",
+                "value": "5000"
+            },
+            {
+                "name": "command",
+                "type": "str",
+                "value": "SendMessage"
+            },
+            {
+                "name": "device",
+                "type": "str",
+                "value": "GLP"
+            },
+            {
+                "name": "message",
+                "type": "str",
+                "value": "A?DV05|DW01|1|LX02"
+            }
+        ],
+        "color": "#AAAA66",
+        "icon": "font-awesome/fa-bold",
+        "status": {
+            "x": 320,
+            "y": 380,
+            "wires": [
+                {
+                    "id": "77af783f.c8dab8",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
         "id": "f8d98a8bcd1abe89",
         "type": "group",
         "z": "8eab0a3c643bf6ac",
@@ -521,74 +817,599 @@
         "className": ""
     },
     {
-        "id": "6a0c70bd6c166c2f",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "a0e535b59379d5a4",
-        "order": 2,
-        "width": 3,
-        "height": 1
+        "id": "9d2c2882.3d8ee",
+        "type": "ui_group",
+        "name": "Server",
+        "tab": "aca2e81c.87ec6",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
     },
     {
-        "id": "8a88e844fa216010",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "a0e535b59379d5a4",
+        "id": "649208c4.c68fdc",
+        "type": "ui_group",
+        "name": "Device Command",
+        "tab": "aca2e81c.87ec6",
         "order": 3,
-        "width": 3,
-        "height": 1
+        "disp": true,
+        "width": "6",
+        "collapse": false
     },
     {
-        "id": "128b313f3925f148",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "a0e535b59379d5a4",
-        "order": 4,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "ecd1e52ed0606619",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "a0e535b59379d5a4",
-        "order": 5,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "c8e358b264dacbcd",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "a0e535b59379d5a4",
-        "order": 6,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "9e75093755ad32f6",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "a0e535b59379d5a4",
-        "order": 7,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "4f41e1ec422063fd",
-        "type": "ui_spacer",
-        "z": "8eab0a3c643bf6ac",
-        "name": "spacer",
-        "group": "7f05f0458a78dfcf",
+        "id": "44915758.d4df2",
+        "type": "ui_group",
+        "name": "Server Command",
+        "tab": "aca2e81c.87ec6",
         "order": 2,
-        "width": 1,
-        "height": 1
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "20ee85d3.5ebd72",
+        "type": "ui_group",
+        "name": "Response",
+        "tab": "aca2e81c.87ec6",
+        "order": 5,
+        "disp": true,
+        "width": 16,
+        "collapse": false
+    },
+    {
+        "id": "70bc17fc.94c184",
+        "type": "ui_group",
+        "name": "Send",
+        "tab": "aca2e81c.87ec6",
+        "order": 4,
+        "disp": true,
+        "width": 16,
+        "collapse": false
+    },
+    {
+        "id": "686e7d6a.546544",
+        "type": "ui_group",
+        "name": "Status",
+        "tab": "aca2e81c.87ec6",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "65a62e2.e3d4cd",
+        "type": "ui_group",
+        "name": "Operation",
+        "tab": "1f646364.883e5d",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "4b15a40f.01a05c",
+        "type": "ui_group",
+        "name": "Receive",
+        "tab": "1f646364.883e5d",
+        "order": 2,
+        "disp": true,
+        "width": 20,
+        "collapse": false
+    },
+    {
+        "id": "aca2e81c.87ec6",
+        "type": "ui_tab",
+        "name": "Forced Telegrams",
+        "icon": "call_made",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1f646364.883e5d",
+        "type": "ui_tab",
+        "name": "Spontanious Telegrams",
+        "icon": "call_received",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "71aa9257.c06ffc",
+        "type": "change",
+        "z": "4aad7a60.200634",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ping",
+                "pt": "msg",
+                "to": "msg.payload ? true:false",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 60,
+        "wires": [
+            [
+                "b1da5bc1.22d348"
+            ]
+        ]
+    },
+    {
+        "id": "fcfa54f3.4750c8",
+        "type": "subflow:1e781e8.d2ba3e2",
+        "z": "4aad7a60.200634",
+        "name": "",
+        "env": [
+            {
+                "name": "__env_vars",
+                "value": "{\"host\":\"string\", \"retries\":\"number\", \"delay\":\"number\"}",
+                "type": "json"
+            }
+        ],
+        "x": 230,
+        "y": 60,
+        "wires": [
+            [
+                "863ecb5b.0e8a58"
+            ]
+        ]
+    },
+    {
+        "id": "d78eeeb5.e54e1",
+        "type": "status",
+        "z": "4aad7a60.200634",
+        "name": "",
+        "scope": [
+            "f4f2a184.d8d25"
+        ],
+        "x": 660,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "863ecb5b.0e8a58",
+        "type": "function",
+        "z": "4aad7a60.200634",
+        "name": "map",
+        "func": "msg.host = msg.args.host;\nmsg.delay = msg.args.delay;\nmsg.retry = 0;\n\nif (msg.host == \"localhost\") {\n    msg.host = \"127.0.0.1\" \n} \n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 60,
+        "wires": [
+            [
+                "f4f2a184.d8d25"
+            ]
+        ]
+    },
+    {
+        "id": "b1da5bc1.22d348",
+        "type": "change",
+        "z": "4aad7a60.200634",
+        "name": "clean up payload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ping",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "_topic",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "_payload",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "_payload",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "_topic",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "timeout",
+                "pt": "msg",
+                "to": "(msg.retry >= msg.args.retries) ? true:false",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1070,
+        "y": 60,
+        "wires": [
+            [
+                "856ca365.8ae3a"
+            ]
+        ]
+    },
+    {
+        "id": "856ca365.8ae3a",
+        "type": "switch",
+        "z": "4aad7a60.200634",
+        "name": "not successful",
+        "property": "ping",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "false",
+                "vt": "jsonata"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 200,
+        "y": 120,
+        "wires": [
+            [
+                "c935754e.6187f8"
+            ]
+        ]
+    },
+    {
+        "id": "eb4cbfc0.096e",
+        "type": "delay",
+        "z": "4aad7a60.200634",
+        "name": "delay",
+        "pauseType": "delayv",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 120,
+        "wires": [
+            [
+                "f4f2a184.d8d25"
+            ]
+        ]
+    },
+    {
+        "id": "c935754e.6187f8",
+        "type": "function",
+        "z": "4aad7a60.200634",
+        "name": "retry ?",
+        "func": "msg.retry ++;\n\nif (msg.retry > msg.args.retries) {\n    resMsg = {\"reset\" : null};\n    return resMsg;\n} else {\n    return msg;    \n}    \n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 120,
+        "wires": [
+            [
+                "eb4cbfc0.096e"
+            ]
+        ]
+    },
+    {
+        "id": "f4f2a184.d8d25",
+        "type": "conf ping",
+        "z": "4aad7a60.200634",
+        "name": "",
+        "host": "",
+        "timeout": "1",
+        "requests": "1",
+        "x": 690,
+        "y": 60,
+        "wires": [
+            [
+                "71aa9257.c06ffc"
+            ]
+        ]
+    },
+    {
+        "id": "df42c387.22de2",
+        "type": "function",
+        "z": "e773f0a6.da437",
+        "name": "Gate",
+        "func": "const triggerByTopic = env.get('Trigger by topic')\nconst sendlastMsgTopic = env.get('Send last msg by topic')\nconst initPassOn = env.get('Initial pass on')\n\nvar pass = context.get(\"passOn\") || initPassOn;\n// var lastMsg = context.get(\"lastMsg\") || {};\n\nswitch (msg.topic) {\n    case triggerByTopic:\n        if (typeof msg.payload === 'boolean') {\n            context.set(\"passOn\", msg.payload);\n            if (msg.payload) {\n                node.status({fill:\"green\", shape:\"dot\", text:'gate opened'});\n            } else {\n                node.status({fill:\"red\", shape:\"dot\", text:'gate closed'});\n            }\n        } else {\n            node.status({fill:\"red\", shape:\"dot\", text:'no change: msg.payload is not boolean: ' + msg.payload});\n        }\n\n        break;\n    case  sendlastMsgTopic:\n        if (!pass) {\n            node.status({fill:\"green\",shape:\"ring\", text:'last msg sent: ' + msg.topic});\n            return context.get(\"lastMsg\");\n        }\n\n        break;\n    default:\n        if (pass) {\n            node.status({fill:\"green\", shape:\"ring\", text:'msg passed: ' + msg.topic});\n            return msg;\n        } else {\n            context.set(\"lastMsg\", msg);\n            node.status({fill:\"yellow\", shape:\"ring\" ,text:'msg blocked and saved: ' + msg.topic});\n            return null;\n        }   \n}\n\n\n/*\n\nif(msg.topic === triggerByTopic){\n    if (typeof msg.payload === 'boolean') {\n        context.set(\"passOn\", msg.payload);\n        if (msg.payload) {\n            node.status({fill:\"green\", shape:\"dot\", text:'gate opened'});\n        } else {\n            node.status({fill:\"red\", shape:\"dot\", text:'gate closed'});\n        }\n    } else {\n        node.status({fill:\"red\", shape:\"dot\", text:'no change: msg.payload is not boolean: ' + msg.payload});\n    }\n    return\n} else {\n    lastMsg = msg;\n    if (pass) {\n        node.status({fill:\"green\",shape:\"ring\",text:'msg passed: ' + msg.topic});\n        return msg;\n    } else {\n        node.status({fill:\"red\",shape:\"ring\",text:'msg blocked: ' + msg.topic});\n    }   \n}\n\n*/",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 250,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "info": "const initPassOn = env.get('Initial pass on')\n\nvar passOn = context.get(\"passOn\", initPassOn);\n\nif(msg.topic === \"**pass**\"){\n    if (typeof msg.payload === 'boolean') {\n        context.set(\"passOn\", msg.payload);\n        if (msg.payload) {\n            node.status({fill:\"green\", shape:\"ring\", text:'gate open: ' + msg.topic});\n        } else {\n            node.status({fill:\"red\", shape:\"ring\", text:'gate closed: '  + msg.topic});\n        }\n    } else {\n        node.status({fill:\"red\", shape:\"ring\", text:'no change: msg.payload is not boolean'});\n    }\n    return\n} else {\n    if (passOn) {\n        node.status({fill:\"green\",shape:\"dot\",text:'msg passed: ' + msg.topic});\n        return msg;\n    } else {\n        node.status({fill:\"red\",shape:\"dot\",text:'msg blocked: ' + msg.topic});\n    }   \n}\n"
+    },
+    {
+        "id": "9f08f2c1.57c39",
+        "type": "status",
+        "z": "e773f0a6.da437",
+        "name": "Status",
+        "scope": null,
+        "x": 250,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dcda33b6.2ec8d",
+        "type": "function",
+        "z": "1e781e8.d2ba3e2",
+        "name": "",
+        "func": "const targets = env.get('__env_vars');\nconst property = env.get('__store_property');\nif(!isObj(targets)) throw error(`env vars must be an object`);\nif(!isObj(msg[property])) msg[property] = {};\nconst storage = msg[property];\n\nfor(const [key, type] of Object.entries(targets)) {\n    storage[key] = evalEnvExp(key, type);\n}\n\nreturn msg;\n\nfunction evalEnvExp(k, type) {\n    switch (type) {\n        case 'string': return evalEnvExpStr(k);\n        case 'number': return evalEnvExpNum(k);\n        case 'array': return evalEnvExpArr(k);\n        case 'boolean': return evalEnvExpBool(k);\n        case 'undefined': return evalEnvExpAny(k);\n        default: throw error(`unknown env exp type \"${type}\"`);\n    }\n}\nfunction evalEnvExpAny(k) {\n    let val = env.get(k);\n    \n    if (typeof val === 'string') {\n        if (val.startsWith('%')) {\n            val = contextEnvExp(val);\n        }\n    }\n    \n    return val;\n}\nfunction evalEnvExpBool(k) {\n    let val = env.get(k);\n    \n    if (typeof val === 'string') {\n        if (val.startsWith('%')) {\n            val = contextEnvExp(val);\n        }\n    }\n    \n    if(typeof val !== 'boolean') throw error(`\"${k}\" must be a bool`);\n    return val;\n}\nfunction evalEnvExpStr(k) {\n    let val = env.get(k);\n    \n    if (typeof val === 'string') {\n        if (val.startsWith('%')) {\n            val = contextEnvExp(val);\n        }\n    }\n    \n    if(typeof val !== 'string') throw error(`\"${k}\" must be a string`);\n    return val;\n}\nfunction evalEnvExpNum(k) {\n    let val = env.get(k);\n    \n    if (typeof val === 'string') {\n        if(val.startsWith('%')) {\n            val = contextEnvExp(val);\n        }\n        if(typeof val === 'string') {\n            val = val.replace(',', '.');\n        }\n    }\n    \n    val = parseFloat(val);\n    if(Number.isNaN(val)) throw error(`\"${k}\" must be a number`);\n    return val;\n}\nfunction evalEnvExpArr(k) {\n    let val = env.get(k);\n    \n    if (typeof val === 'string') {\n        if(!val) {\n            val = []; \n        }\n        else if (val.startsWith('%')) {\n            val = contextEnvExp(val);\n            if(!val) {\n                val = [];\n            }\n        }\n        \n        if(typeof val === 'string') {\n            val = val.split(',').map(x => x.trim());\n        }\n    }\n    \n    if(!isArr(val)) throw error(`\"${k}\" must be an array`);\n    return val;\n}\nfunction contextEnvExp(ctxExpr) {\n    let [ctx, expr] = splitFirst(ctxExpr, '.');\n\n    switch (ctx.slice(1)) {\n        case 'msg': return getObjectProperty(msg, expr);\n        case 'flow': return flow.get('$parent.$parent.' + expr);\n        case 'global': return global.get(expr);\n    }\n    \n    throw error(`invalid context \"${ctx}\"`);\n}\nfunction splitFirst(str, char) {\n    const idx = str.indexOf(char);\n    if (idx < 0) return [str];\n    const a = str.slice(0, idx);\n    const b = str.slice(idx+1);\n    return [a, b];\n}\nfunction regexSplitFirst(str, char) {\n    const idx = regexIndexOf(str, char);\n    if (idx < 0) return [str];\n    const a = str.slice(0, idx);\n    const b = str.slice(idx+1);\n    return [a, b];\n}\nfunction regexIndexOf(string, regex, start = 0) {\n    const pos = string.substring(start).search(regex);\n    return (pos >= 0) ? (pos + start) : pos;\n}\nfunction isObj(x) {\n    return typeof x == 'object' && x !== null && !Array.isArray(x)\n}\nfunction isArr(x) {\n    return Array.isArray(x)\n}\nfunction error(s) {\n    node.status({fill: 'red',shape: 'dot', text: s})\n    return new Error(s)\n}\nfunction warning(s, nolog) {\n    node.status({fill: 'yellow',shape: 'dot', text: s})\n    if(!nolog) node.warn(s)\n}\nfunction success(s) { \n    node.status({fill: 'green',shape: 'dot', text: s})\n}\nfunction arrayRemove(arr, pred) { \n    const idx = arr.findIndex(pred);\n    if(idx >= 0) return arr.splice(idx, 1);\n}\nfunction normalisePropertyExpression(str) {\n    var length = str.length;\n    if (length === 0) {\n        throw error(\"Invalid property expression: zero-length\");\n    }\n    var parts = [];\n    var start = 0;\n    var inString = false;\n    var inBox = false;\n    var quoteChar;\n    var v;\n    for (var i=0;i<length;i++) {\n        var c = str[i];\n        if (!inString) {\n            if (c === \"'\" || c === '\"') {\n                if (i != start) {\n                    throw error(\"Invalid property expression: unexpected \"+c+\" at position \"+i);\n                }\n                inString = true;\n                quoteChar = c;\n                start = i+1;\n            } else if (c === '.') {\n                if (i===0) {\n                    throw error(\"Invalid property expression: unexpected . at position 0\");\n                }\n                if (start != i) {\n                    v = str.substring(start,i);\n                    if (/^\\d+$/.test(v)) {\n                        parts.push(parseInt(v));\n                    } else {\n                        parts.push(v);\n                    }\n                }\n                if (i===length-1) {\n                    throw error(\"Invalid property expression: unterminated expression\");\n                }\n                // Next char is first char of an identifier: a-z 0-9 $ _\n                if (!/[a-z0-9\\$\\_]/i.test(str[i+1])) {\n                    throw error(\"Invalid property expression: unexpected \"+str[i+1]+\" at position \"+(i+1));\n                }\n                start = i+1;\n            } else if (c === '[') {\n                if (i === 0) {\n                    throw error(\"Invalid property expression: unexpected \"+c+\" at position \"+i);\n                }\n                if (start != i) {\n                    parts.push(str.substring(start,i));\n                }\n                if (i===length-1) {\n                    throw error(\"Invalid property expression: unterminated expression\");\n                }\n                // Next char is either a quote or a number\n                if (!/[\"'\\d]/.test(str[i+1])) {\n                    throw error(\"Invalid property expression: unexpected \"+str[i+1]+\" at position \"+(i+1));\n                }\n                start = i+1;\n                inBox = true;\n            } else if (c === ']') {\n                if (!inBox) {\n                    throw error(\"Invalid property expression: unexpected \"+c+\" at position \"+i);\n                }\n                if (start != i) {\n                    v = str.substring(start,i);\n                    if (/^\\d+$/.test(v)) {\n                        parts.push(parseInt(v));\n                    } else {\n                        throw error(\"Invalid property expression: unexpected array expression at position \"+start);\n                    }\n                }\n                start = i+1;\n                inBox = false;\n            } else if (c === ' ') {\n                //throw error(\"Invalid property expression: unexpected ' ' at position \"+i);\n            }\n        } else {\n            if (c === quoteChar) {\n                if (i-start === 0) {\n                    throw error(\"Invalid property expression: zero-length string at position \"+start);\n                }\n                parts.push(str.substring(start,i));\n                // If inBox, next char must be a ]. Otherwise it may be [ or .\n                if (inBox && !/\\]/.test(str[i+1])) {\n                    throw error(\"Invalid property expression: unexpected array expression at position \"+start);\n                } else if (!inBox && i+1!==length && !/[\\[\\.]/.test(str[i+1])) {\n                    throw error(\"Invalid property expression: unexpected \"+str[i+1]+\" expression at position \"+(i+1));\n                }\n                start = i+1;\n                inString = false;\n            }\n        }\n\n    }\n    if (inBox || inString) {\n        throw error(\"Invalid property expression: unterminated expression\");\n    }\n    if (start < length) {\n        parts.push(str.substring(start));\n    }\n    return parts;\n}\nfunction getObjectProperty(msg,expr) {\n    var result = null;\n    var msgPropParts = isArr(expr) ? expr : normalisePropertyExpression(expr);\n    msgPropParts.reduce(function(obj, key) {\n        result = (obj === undefined ? undefined : obj[key] === undefined ? undefined : obj[key]);\n        return result;\n    }, msg);\n    return result;\n}\nfunction setMessageProperty(msg,prop,value,createMissing) {\n    if (prop.indexOf('msg.')===0) {\n        prop = prop.substring(4);\n    }\n    return setObjectProperty(msg,prop,value,createMissing);\n}\nfunction setObjectProperty(msg,prop,value,createMissing) {\n    if (typeof createMissing === 'undefined') {\n        createMissing = (typeof value !== 'undefined');\n    }\n    var msgPropParts = isArr(prop) ? prop : normalisePropertyExpression(prop);\n    var depth = 0;\n    var length = msgPropParts.length;\n    var obj = msg;\n    var key;\n    for (var i=0;i<length-1;i++) {\n        key = msgPropParts[i];\n        if (typeof key === 'string' || (typeof key === 'number' && !Array.isArray(obj))) {\n            if (obj.hasOwnProperty(key)) {\n                obj = obj[key];\n            } else if (createMissing) {\n                if (typeof msgPropParts[i+1] === 'string') {\n                    obj[key] = {};\n                } else {\n                    obj[key] = [];\n                }\n                obj = obj[key];\n            } else {\n                return null;\n            }\n        } else if (typeof key === 'number') {\n            // obj is an array\n            if (obj[key] === undefined) {\n                if (createMissing) {\n                    if (typeof msgPropParts[i+1] === 'string') {\n                        obj[key] = {};\n                    } else {\n                        obj[key] = [];\n                    }\n                    obj = obj[key];\n                } else {\n                    return null;\n                }\n            } else {\n                obj = obj[key];\n            }\n        }\n    }\n    key = msgPropParts[length-1];\n    if (typeof value === \"undefined\") {\n        if (typeof key === 'number' && Array.isArray(obj)) {\n            obj.splice(key,1);\n        } else {\n            delete obj[key]\n        }\n    } else {\n        obj[key] = value;\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 150,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3bde5673.4fafe2",
+        "type": "function",
+        "z": "5e666db0.10f024",
+        "name": "assemble request",
+        "func": "let args = msg.args;\nlet suffix;\nlet method;\n\nswitch (args.command) {\n    case 'GetConnectVersion':\n    case 'GetConnectInfo':\n        method = 'GET';\n        suffix = args.command;\n        break;\n\n    case \"GetDeviceParameters\":\n    case \"GetCategory\":\n    case \"IsUnicodeDevice\":\n    case \"GetConnectionParameters\":\n    case \"CreateReceiveQueue\":\n        method = 'GET';\n        suffix = `${args.command}?connectName=${args.device}`;\n        break;\n\n    case \"SendMessage\":\n        method = 'GET';\n        suffix = `${args.command}?connectName=${args.device}&message=${args.message}&timeout=${args.timeout}`;\n        break;\n\n    case \"ReceiveMessage\":\n        method = 'GET';\n        suffix = `${args.command}?connectName=${args.device}&handle=DUSTBIN&timeout=${args.timeout}&sendAck=true`;\n        break;\n\n    default:\n        throw new Error('Command Not Implemented');\n}    \n\nmsg.method = method;\nmsg.url = `http://${args.host}:${args.port}/${args.service}/${args.protocol}/${suffix}`;\ndelete msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 610,
+        "y": 140,
+        "wires": [
+            [
+                "9267a54c.863bf8"
+            ]
+        ]
+    },
+    {
+        "id": "24d0d6d8.60f97a",
+        "type": "function",
+        "z": "5e666db0.10f024",
+        "name": "fixed args",
+        "func": "msg.args.service = 'ConnectService';\nmsg.args.protocol = 'json';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 140,
+        "wires": [
+            [
+                "3bde5673.4fafe2"
+            ]
+        ]
+    },
+    {
+        "id": "b6ae988d.71ef78",
+        "type": "http request",
+        "z": "5e666db0.10f024",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 510,
+        "y": 200,
+        "wires": [
+            [
+                "f4c219cd.e368f8"
+            ]
+        ]
+    },
+    {
+        "id": "587d9a50.ca44e8",
+        "type": "function",
+        "z": "5e666db0.10f024",
+        "name": "handle response",
+        "func": "msg.continue = false;\n\n// returns true if user should request again\nfunction handleResponse(obj) {\n    switch(obj.__type) {\n        case 'ConnectResponse:#Bizerba.ConnectService': {\n            let has_handle = obj.Response && obj.Response.startsWith('Q|');\n            switch(obj.Status) {\n                case 0: {\n                    // handle or last data to receive\n                    if(!has_handle) {\n                        msg.result = msg.result || [];\n                        msg.result.push(obj.Response);\n                    }\n                    \n                    return false;\n                }\n                case 1: {\n                    // timeout\n                    throw new Error(`timeout exceeded ${msg.args.timeout}`);\n                }\n                case 2: {\n                    // data to receive\n                    if (has_handle) {\n                        msg.handle = obj.Response;\n                    } else {\n                        msg.result = msg.result || [];\n                        msg.result.push(obj.Response);\n                    }\n                \n                    return true\n                }\n                default: {\n                    throw new Error(`unknown status \"${obj.Status}\" for \"${obj.__type}\"`);\n                }\n            }\n        }\n        break;\n        \n        case 'ConnectDeviceInfoBasic:#Bizerba.ConnectService': {\n            msg.result = msg.result || [];\n            msg.result.push(obj);\n            return false;\n        }\n        break;\n        \n        case 'ConnectDeviceInfo:#Bizerba.ConnectService': {\n            msg.result = msg.result || [];\n            msg.result.push(obj);\n            return false;\n        }\n        break;\n        \n        default: {\n            /* AcHo inserted for test */\n            msg.result = msg.result || [];\n            msg.result.push(obj);\n            return false;\n            // throw new Error(`unknown response type \"${obj.__type}\"`);\n        }\n    }\n}\n\nswitch(msg.statusCode) {\n    case 200: {\n        if (!msg.payload.d) {\n            throw new Error(`response property \"d\" is missing`);\n        }\n        \n        // make sure responses is an array\n        let responses = Array.isArray(msg.payload.d) ? msg.payload.d : [msg.payload.d];\n        msg.log = msg.log || [];\n        msg.log.push(msg.payload.d);\n        \n        for (let r of responses) {\n            msg.continue = handleResponse(r);\n        }\n        return msg;\n    }\n    default: {\n        throw new Error(`http status ${msg.statusCode}`);\n    }\n}\n\nthrow new Error('unreachable?');\n\nfunction isObj(o) {\n    return typeof o === \"object\" && o !== null;\n}\n\n// anaylze data \nvar msgType = isObj(msg.payload.d) && msg.payload.d.__type;\nvar msgResponse = { payload: isObj(msg.payload.d) && msg.payload.d.Response }\n\nvar svrMsg = { topic: msg.topic, payload: msg.payload.d };\nvar msgFin = { payload: true };\nvar connectHandle = null;\n\n/*\nOutputs:\n---- data (GxNet)\n---- call receive function\n---- answer from server request\n---- HTTP error\n---- finished\n*/\n\nswitch (msg.statusCode) {\n    case 200:   // http success\n        switch (msgType) {\n            case \"ConnectResponse:#Bizerba.ConnectService\":\n                if (msgResponse.payload.substring(0, 2) == \"Q|\") {\n                    // connectHandle = true;\n                    connectHandle = msgResponse;\n                }\n        \n                switch (msg.payload.d.Status) {\n                    case 0: // handle or data\n                        if (connectHandle) { // handle as end flag\n                            node.status({fill:\"green\",shape:\"ring\",text: \"handle: \" + msgResponse.payload});\n                            return [null, null, null, null, msgFin];\n                        } else { // you have asked for telegram data\n                            node.status({fill:\"green\",shape:\"dot\",text: \"tel: \" + msgResponse.payload});\n                            return [msgResponse, null, null, null, msgFin];\n                        }\n                    break;\n                \n                    case 1: // timeout\n                        node.status({fill:\"red\",shape:\"ring\",text: \"timeout > \" + msg.topic.ws.timeout});// handle as end flag\n                        return [null, null, null, null, msgFin];\n        \n                    case 2: // data to receive\n                        if (connectHandle) {\n                            node.status({fill:\"yellow\",shape:\"ring\",text: \"handle: \" + msgResponse.payload});\n                            msg.topic.handle = msgResponse.payload;\n                            return [null, msg, null, null, null];\n                        } else {\n                            node.status({fill:\"yellow\",shape:\"dot\",text: msgResponse.payload});\n                            return [msgResponse, msg, null, null, null];\n                        }\n                    break;\n                }    \n            break;\n            \n            default:\n                node.status({fill:\"yellow\",shape:\"ring\",text: \"??\"});\n                return [null, null, svrMsg, null, msgFin];\n        }        \n    break;\n\n    default: // http error\n        node.status({fill:\"red\",shape:\"dot\",text: \"???\"});\n        return [null, null, null, msg, msgFin];\n}\n\n\n        \n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 230,
+        "y": 260,
+        "wires": [
+            [
+                "14427978.114a13"
+            ]
+        ]
+    },
+    {
+        "id": "14427978.114a13",
+        "type": "switch",
+        "z": "5e666db0.10f024",
+        "name": "continue?",
+        "property": "continue",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 400,
+        "y": 260,
+        "wires": [
+            [
+                "724ad392.d2c5a8"
+            ],
+            [
+                "c2eb53ad.e2b7d"
+            ]
+        ]
+    },
+    {
+        "id": "f4c219cd.e368f8",
+        "type": "change",
+        "z": "5e666db0.10f024",
+        "name": "clean http output",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "headers",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 200,
+        "wires": [
+            [
+                "587d9a50.ca44e8"
+            ]
+        ]
+    },
+    {
+        "id": "724ad392.d2c5a8",
+        "type": "function",
+        "z": "5e666db0.10f024",
+        "name": "receive next",
+        "func": "// url: \"http://localhost:2020/ConnectService/json/SendMessage?connectName=29_GLPmaxx&message=A?GT02|0&timeout=5000\"\n// url: \"http://localhost:2020/ConnectService/json/ReceiveMessage?connectName=29_GLPmaxx&handle=Q|A|G|D|12022020|T|11:00:02:782.174|H|1&timeout=2000&sendAck=true\"\n\nlet args = msg.args;\nlet suffix = `ReceiveMessage?connectName=${args.device}&handle=${msg.handle}&timeout=${args.timeout}&sendAck=true`;\n\nmsg.method = 'GET';\nmsg.url = `http://${args.host}:${args.port}/${args.service}/${args.protocol}/${suffix}`;\ndelete msg.payload;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "9267a54c.863bf8"
+            ]
+        ]
+    },
+    {
+        "id": "77af783f.c8dab8",
+        "type": "status",
+        "z": "5e666db0.10f024",
+        "name": "",
+        "scope": [
+            "9267a54c.863bf8",
+            "3ff349b9.b9a8da"
+        ],
+        "x": 200,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d3f71f8a.07168",
+        "type": "subflow:1e781e8.d2ba3e2",
+        "z": "5e666db0.10f024",
+        "name": "",
+        "env": [
+            {
+                "name": "__env_vars",
+                "type": "json",
+                "value": "{\"host\":\"string\",\"port\":\"string\",\"timeout\":\"number\",\"device\":\"string\",\"command\":\"string\",\"message\":\"string\"}"
+            }
+        ],
+        "x": 250,
+        "y": 140,
+        "wires": [
+            [
+                "24d0d6d8.60f97a"
+            ]
+        ]
+    },
+    {
+        "id": "c2eb53ad.e2b7d",
+        "type": "change",
+        "z": "5e666db0.10f024",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "result",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 260,
+        "wires": [
+            [
+                "3ff349b9.b9a8da"
+            ]
+        ]
+    },
+    {
+        "id": "9267a54c.863bf8",
+        "type": "function",
+        "z": "5e666db0.10f024",
+        "name": "status",
+        "func": "msg.counter = msg.counter || 0;\nmsg.counter += 1;\nnode.status({\n    fill: `green`,\n    shape: `ring`,\n    text: `requesting... ${msg.counter}`\n});\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 200,
+        "wires": [
+            [
+                "b6ae988d.71ef78"
+            ]
+        ]
+    },
+    {
+        "id": "3ff349b9.b9a8da",
+        "type": "function",
+        "z": "5e666db0.10f024",
+        "name": "status",
+        "func": "node.status({\n    fill: `green`,\n    shape: `dot`,\n    text: `done`\n});\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 190,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bb00ef0d.ae457",
+        "type": "comment",
+        "z": "5e666db0.10f024",
+        "name": "Dokumentation",
+        "info": "- \"Evaluate Env Expressions\" ist von \"smarthome:1880\" kopiert\n  - subflow variablen werden in msg.args gespeichert\n  - subflow daten können direkt eingegeben werden z.B. \"localhost\"\n    oder mit Referenzen wie \"%msg.payload\", \"%flow.device\", \"%global.my.nested[0].hello\"\n  - subflow variablen müssen dazu in der node mit einem typ oder \"undefined\" definiert sein\n\n- msg.continue wird in \"handle response\" gesetzt und wenn true\n  dann wird erneut abgefragt (mit msg.handle das auch in \"handle response\" gesetzt wird)\n\n- msg.log enthält alle responses für debug zwecke\n  msg.results enthält die interessanten daten und wird\n  am ende msg.payload zugewiesen",
+        "x": 220,
+        "y": 80,
+        "wires": []
     },
     {
         "id": "dd9a228b504e8ed4",
@@ -2908,5 +3729,2338 @@
         "x": 1160,
         "y": 1520,
         "wires": []
+    },
+    {
+        "id": "da50bc82.4cd84",
+        "type": "inject",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 90,
+        "y": 580,
+        "wires": [
+            [
+                "a6b5d2c8.79001",
+                "12fecfb8.06b598"
+            ]
+        ]
+    },
+    {
+        "id": "c7eb50ce.e37c",
+        "type": "debug",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 790,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "a6b5d2c8.79001",
+        "type": "subflow:5e666db0.10f024",
+        "z": "db8a5a42.d628d8",
+        "name": "ws Server Requests",
+        "env": [
+            {
+                "name": "host",
+                "value": "%flow.host",
+                "type": "str"
+            },
+            {
+                "name": "port",
+                "value": "%flow.port",
+                "type": "str"
+            },
+            {
+                "name": "timeout",
+                "value": "%flow.timeout",
+                "type": "str"
+            },
+            {
+                "name": "command",
+                "value": "%flow.command",
+                "type": "str"
+            },
+            {
+                "name": "device",
+                "value": "%flow.device",
+                "type": "str"
+            },
+            {
+                "name": "message",
+                "value": "%flow.message",
+                "type": "str"
+            }
+        ],
+        "x": 580,
+        "y": 580,
+        "wires": [
+            [
+                "c7eb50ce.e37c",
+                "1862996b.46def3",
+                "9f41698d.07743"
+            ]
+        ]
+    },
+    {
+        "id": "1862996b.46def3",
+        "type": "debug",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 950,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "d017df60.61c",
+        "type": "ui_text_input",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "label": "Host",
+        "tooltip": "",
+        "group": "9d2c2882.3d8ee",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 330,
+        "y": 80,
+        "wires": [
+            [
+                "cce34d0b.f74c68"
+            ]
+        ]
+    },
+    {
+        "id": "3c274160.f2b87a",
+        "type": "ui_text_input",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "label": "Port",
+        "tooltip": "",
+        "group": "9d2c2882.3d8ee",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 330,
+        "y": 120,
+        "wires": [
+            [
+                "2c6d418b.417ef2"
+            ]
+        ]
+    },
+    {
+        "id": "646aaa70.dda498",
+        "type": "inject",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "localhost",
+        "payloadType": "str",
+        "x": 100,
+        "y": 80,
+        "wires": [
+            [
+                "d017df60.61c",
+                "cce34d0b.f74c68"
+            ]
+        ]
+    },
+    {
+        "id": "f8a3a9c8.82d9d8",
+        "type": "inject",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2020",
+        "payloadType": "str",
+        "x": 90,
+        "y": 120,
+        "wires": [
+            [
+                "3c274160.f2b87a",
+                "2c6d418b.417ef2"
+            ]
+        ]
+    },
+    {
+        "id": "cce34d0b.f74c68",
+        "type": "change",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "host",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2c6d418b.417ef2",
+        "type": "change",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "port",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8e0942a.8bab28",
+        "type": "ui_text_input",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "label": "Timeout",
+        "tooltip": "",
+        "group": "9d2c2882.3d8ee",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 340,
+        "y": 160,
+        "wires": [
+            [
+                "42021ebd.1344f8"
+            ]
+        ]
+    },
+    {
+        "id": "b7f2a34e.b1b9",
+        "type": "inject",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5000",
+        "payloadType": "str",
+        "x": 90,
+        "y": 160,
+        "wires": [
+            [
+                "8e0942a.8bab28",
+                "42021ebd.1344f8"
+            ]
+        ]
+    },
+    {
+        "id": "42021ebd.1344f8",
+        "type": "change",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "timeout",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5a500de.374a8f4",
+        "type": "inject",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "GetConnectVersion",
+        "payloadType": "str",
+        "x": 130,
+        "y": 440,
+        "wires": [
+            [
+                "684cb9a7.157eb8"
+            ]
+        ]
+    },
+    {
+        "id": "92d6ab18.f32688",
+        "type": "change",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f1fc6fb3.10d58",
+        "type": "ui_text_input",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "label": "Message",
+        "tooltip": "",
+        "group": "649208c4.c68fdc",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 340,
+        "y": 480,
+        "wires": [
+            [
+                "c19beab5.2edef8"
+            ]
+        ]
+    },
+    {
+        "id": "231d47c8.4f1244",
+        "type": "inject",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "A?GT02|0",
+        "payloadType": "str",
+        "x": 110,
+        "y": 480,
+        "wires": [
+            [
+                "f1fc6fb3.10d58",
+                "c19beab5.2edef8"
+            ]
+        ]
+    },
+    {
+        "id": "c19beab5.2edef8",
+        "type": "change",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "441c5c0d.d19cdc",
+        "type": "inject",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "GLP",
+        "payloadType": "str",
+        "x": 90,
+        "y": 260,
+        "wires": [
+            [
+                "1d7def53.cabfb1"
+            ]
+        ]
+    },
+    {
+        "id": "b2d31d75.873b8",
+        "type": "change",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "device",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 260,
+        "wires": [
+            [
+                "bc0b46b0.48e57",
+                "6ab908f.fd87ff8"
+            ]
+        ]
+    },
+    {
+        "id": "684cb9a7.157eb8",
+        "type": "ui_dropdown",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "label": "Command",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "44915758.d4df2",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "options": [
+            {
+                "label": "",
+                "value": "GetConnectVersion",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "GetConnectInfo",
+                "type": "str"
+            },
+            {
+                "label": "GetCategory (device)",
+                "value": "GetCategory",
+                "type": "str"
+            },
+            {
+                "label": "GetDeviceParameters (device)",
+                "value": "GetDeviceParameters",
+                "type": "str"
+            },
+            {
+                "label": "IsUnicodeDevice (device)",
+                "value": "IsUnicodeDevice",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "x": 350,
+        "y": 440,
+        "wires": [
+            [
+                "92d6ab18.f32688"
+            ]
+        ]
+    },
+    {
+        "id": "5094cbb.63b09f4",
+        "type": "ui_button",
+        "z": "db8a5a42.d628d8",
+        "name": "Refresh Devices",
+        "group": "44915758.d4df2",
+        "order": 2,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "refresh",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 100,
+        "y": 300,
+        "wires": [
+            [
+                "8ac630b0.35f9d8"
+            ]
+        ]
+    },
+    {
+        "id": "8ac630b0.35f9d8",
+        "type": "subflow:5e666db0.10f024",
+        "z": "db8a5a42.d628d8",
+        "name": "ws Get Devices",
+        "env": [
+            {
+                "name": "host",
+                "value": "%flow.host",
+                "type": "str"
+            },
+            {
+                "name": "port",
+                "value": "%flow.port",
+                "type": "str"
+            },
+            {
+                "name": "timeout",
+                "value": "%flow.timeout",
+                "type": "str"
+            },
+            {
+                "name": "command",
+                "value": "GetConnectInfo",
+                "type": "str"
+            },
+            {
+                "name": "device",
+                "value": "",
+                "type": "str"
+            },
+            {
+                "name": "message",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "x": 300,
+        "y": 320,
+        "wires": [
+            [
+                "5a03969e.44ecb4"
+            ]
+        ]
+    },
+    {
+        "id": "1d7def53.cabfb1",
+        "type": "ui_dropdown",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "label": "Device",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "44915758.d4df2",
+        "order": 1,
+        "width": 5,
+        "height": 1,
+        "passthru": true,
+        "options": [],
+        "payload": "",
+        "topic": "",
+        "x": 270,
+        "y": 260,
+        "wires": [
+            [
+                "b2d31d75.873b8"
+            ]
+        ]
+    },
+    {
+        "id": "6fbe54bb.3f97c8",
+        "type": "catch",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 280,
+        "y": 880,
+        "wires": [
+            [
+                "9e48912a.a35e",
+                "1d5bca59.1c1f66"
+            ]
+        ]
+    },
+    {
+        "id": "a280cdbe.2560e",
+        "type": "ui_template",
+        "z": "db8a5a42.d628d8",
+        "group": "20ee85d3.5ebd72",
+        "name": "Print Out Response",
+        "order": 1,
+        "width": 16,
+        "height": 12,
+        "format": "<pre ng-bind-html=\"msg.payload\"></pre>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 970,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9f41698d.07743",
+        "type": "json",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": true,
+        "x": 790,
+        "y": 680,
+        "wires": [
+            [
+                "a280cdbe.2560e"
+            ]
+        ]
+    },
+    {
+        "id": "f60cb992.bab38",
+        "type": "ui_button",
+        "z": "db8a5a42.d628d8",
+        "name": "Server Cmd",
+        "group": "44915758.d4df2",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Execute",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-rocket",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 110,
+        "y": 580,
+        "wires": [
+            [
+                "a6b5d2c8.79001",
+                "12fecfb8.06b598"
+            ]
+        ]
+    },
+    {
+        "id": "d158abc1.e28548",
+        "type": "status",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "scope": [
+            "a6b5d2c8.79001",
+            "8ac630b0.35f9d8",
+            "15b515ac.3cdfa6",
+            "985b13f6.76564",
+            "fe982c23.24234"
+        ],
+        "x": 280,
+        "y": 820,
+        "wires": [
+            [
+                "b3cd3361.be13e"
+            ]
+        ]
+    },
+    {
+        "id": "b3cd3361.be13e",
+        "type": "change",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "status.text",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 820,
+        "wires": [
+            [
+                "1be75e24.650ede"
+            ]
+        ]
+    },
+    {
+        "id": "e6506849.689c4",
+        "type": "change",
+        "z": "db8a5a42.d628d8",
+        "name": "error.message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "error.message",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 900,
+        "wires": [
+            [
+                "1be75e24.650ede"
+            ]
+        ]
+    },
+    {
+        "id": "9e48912a.a35e",
+        "type": "debug",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 430,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "5a03969e.44ecb4",
+        "type": "change",
+        "z": "db8a5a42.d628d8",
+        "name": "set options",
+        "rules": [
+            {
+                "t": "set",
+                "p": "options",
+                "pt": "msg",
+                "to": "msg.payload.Name",
+                "tot": "jsonata"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 320,
+        "wires": [
+            [
+                "1d7def53.cabfb1"
+            ]
+        ]
+    },
+    {
+        "id": "706d79a9.0b25ec",
+        "type": "inject",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 90,
+        "y": 340,
+        "wires": [
+            [
+                "8ac630b0.35f9d8"
+            ]
+        ]
+    },
+    {
+        "id": "3d39eaff.0089f2",
+        "type": "change",
+        "z": "db8a5a42.d628d8",
+        "name": "payload.message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.Message",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 860,
+        "wires": [
+            [
+                "1be75e24.650ede"
+            ]
+        ]
+    },
+    {
+        "id": "1d5bca59.1c1f66",
+        "type": "switch",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "500",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 430,
+        "y": 880,
+        "wires": [
+            [
+                "3d39eaff.0089f2"
+            ],
+            [
+                "e6506849.689c4"
+            ]
+        ]
+    },
+    {
+        "id": "2f8093a4.ef373c",
+        "type": "comment",
+        "z": "db8a5a42.d628d8",
+        "name": "AcHo",
+        "info": "A!LV01|GW09|2|XX04|LX02\n\nWenn Fehler z.B Auszeichnung gesperrt, dann soll\npayload.Message angezeigt werden.\n\nWeiß nicht woher \"statusCode: 500\" kommt\n\nErgebnis:\n----------\nResponse\n\nError Number: 150\nSystem Number: 3\nError Text: Auszeichnung gesperrt\nError Header: A!LV00|LW01|LW02|LW03|LW05|LX02\nError Data: 150|17921|0|-24572",
+        "x": 810,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "452e38a2.f286ac",
+        "type": "inject",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 90,
+        "y": 660,
+        "wires": [
+            [
+                "15b515ac.3cdfa6",
+                "b0029bfc.455ad8"
+            ]
+        ]
+    },
+    {
+        "id": "15b515ac.3cdfa6",
+        "type": "subflow:5e666db0.10f024",
+        "z": "db8a5a42.d628d8",
+        "name": "ws SendMessage",
+        "env": [
+            {
+                "name": "host",
+                "value": "%flow.host",
+                "type": "str"
+            },
+            {
+                "name": "port",
+                "value": "%flow.port",
+                "type": "str"
+            },
+            {
+                "name": "timeout",
+                "value": "%flow.timeout",
+                "type": "str"
+            },
+            {
+                "name": "device",
+                "value": "%flow.device",
+                "type": "str"
+            },
+            {
+                "name": "message",
+                "value": "%flow.message",
+                "type": "str"
+            }
+        ],
+        "x": 570,
+        "y": 660,
+        "wires": [
+            [
+                "9f41698d.07743"
+            ]
+        ]
+    },
+    {
+        "id": "bc0b46b0.48e57",
+        "type": "ui_text",
+        "z": "db8a5a42.d628d8",
+        "group": "649208c4.c68fdc",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Device",
+        "label": "Selected Device",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 590,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "90fcfbbb.9ecf48",
+        "type": "ui_button",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "group": "649208c4.c68fdc",
+        "order": 16,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Print Label",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "A!LV01|GW09|2|XX04|LX02",
+        "payloadType": "str",
+        "topic": "",
+        "x": 110,
+        "y": 1480,
+        "wires": [
+            [
+                "ae5c4dcd.00188"
+            ]
+        ]
+    },
+    {
+        "id": "76195b3c.a1c004",
+        "type": "link in",
+        "z": "db8a5a42.d628d8",
+        "name": "SendMessage",
+        "links": [
+            "ae5c4dcd.00188",
+            "dd38b64.a2b1f08",
+            "ccf98f28.6baf88",
+            "3785b601.6f941e",
+            "a115c175.d6bef",
+            "1a1f8ac1.c1f37d",
+            "ea58614f.3be4b",
+            "89b6f529.f32518",
+            "8341a21e.eeda8",
+            "c079e26b.096e6",
+            "76b5e47d.044f38"
+        ],
+        "x": 235,
+        "y": 700,
+        "wires": [
+            [
+                "985b13f6.76564",
+                "c136257b.de6e9"
+            ]
+        ]
+    },
+    {
+        "id": "ae5c4dcd.00188",
+        "type": "link out",
+        "z": "db8a5a42.d628d8",
+        "name": "SendMessage",
+        "links": [
+            "76195b3c.a1c004"
+        ],
+        "x": 255,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "985b13f6.76564",
+        "type": "subflow:5e666db0.10f024",
+        "z": "db8a5a42.d628d8",
+        "name": "ws SendMessage",
+        "env": [
+            {
+                "name": "host",
+                "value": "%flow.host",
+                "type": "str"
+            },
+            {
+                "name": "port",
+                "value": "%flow.port",
+                "type": "str"
+            },
+            {
+                "name": "timeout",
+                "value": "%flow.timeout",
+                "type": "str"
+            },
+            {
+                "name": "device",
+                "value": "%flow.device",
+                "type": "str"
+            },
+            {
+                "name": "message",
+                "value": "%msg.payload",
+                "type": "str"
+            }
+        ],
+        "x": 570,
+        "y": 700,
+        "wires": [
+            [
+                "9f41698d.07743"
+            ]
+        ]
+    },
+    {
+        "id": "43c8035d.912cac",
+        "type": "ui_button",
+        "z": "db8a5a42.d628d8",
+        "name": "Device Cmd",
+        "group": "649208c4.c68fdc",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Execute",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-rocket",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 110,
+        "y": 660,
+        "wires": [
+            [
+                "15b515ac.3cdfa6",
+                "b0029bfc.455ad8"
+            ]
+        ]
+    },
+    {
+        "id": "c136257b.de6e9",
+        "type": "json",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": true,
+        "x": 330,
+        "y": 760,
+        "wires": [
+            [
+                "c3b0e415.e857d"
+            ]
+        ]
+    },
+    {
+        "id": "c3b0e415.e857d",
+        "type": "ui_template",
+        "z": "db8a5a42.d628d8",
+        "group": "70bc17fc.94c184",
+        "name": "Print Out Send Tel",
+        "order": 1,
+        "width": 16,
+        "height": 1,
+        "format": "<pre ng-bind-html=\"msg.payload\"></pre>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 570,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "54b85a84.4ed7e",
+        "type": "ui_button",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "group": "649208c4.c68fdc",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Get all Articles",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "A?DV05|DW01|0|LX02",
+        "payloadType": "str",
+        "topic": "",
+        "x": 120,
+        "y": 1240,
+        "wires": [
+            [
+                "dd38b64.a2b1f08"
+            ]
+        ]
+    },
+    {
+        "id": "7ed68dd0.2044f",
+        "type": "ui_button",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "group": "649208c4.c68fdc",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Get all Texts",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "A?DV05|DW01|1|LX02",
+        "payloadType": "str",
+        "topic": "",
+        "x": 110,
+        "y": 1200,
+        "wires": [
+            [
+                "ccf98f28.6baf88"
+            ]
+        ]
+    },
+    {
+        "id": "dd38b64.a2b1f08",
+        "type": "link out",
+        "z": "db8a5a42.d628d8",
+        "name": "SendMessage",
+        "links": [
+            "76195b3c.a1c004"
+        ],
+        "x": 255,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "ccf98f28.6baf88",
+        "type": "link out",
+        "z": "db8a5a42.d628d8",
+        "name": "SendMessage",
+        "links": [
+            "76195b3c.a1c004"
+        ],
+        "x": 255,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "b0029bfc.455ad8",
+        "type": "change",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "message",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 660,
+        "wires": [
+            [
+                "c3b0e415.e857d"
+            ]
+        ]
+    },
+    {
+        "id": "12fecfb8.06b598",
+        "type": "change",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "command",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 580,
+        "wires": [
+            [
+                "c3b0e415.e857d"
+            ]
+        ]
+    },
+    {
+        "id": "3156d7d3.cada98",
+        "type": "ui_button",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "group": "649208c4.c68fdc",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Get Device Version",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "A?WT0C|0",
+        "payloadType": "str",
+        "topic": "",
+        "x": 130,
+        "y": 1040,
+        "wires": [
+            [
+                "3785b601.6f941e"
+            ]
+        ]
+    },
+    {
+        "id": "3785b601.6f941e",
+        "type": "link out",
+        "z": "db8a5a42.d628d8",
+        "name": "SendMessage",
+        "links": [
+            "76195b3c.a1c004"
+        ],
+        "x": 255,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "650e40e7.498ce8",
+        "type": "ui_button",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "group": "649208c4.c68fdc",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Get Textfield 2",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "A?GT02|0",
+        "payloadType": "str",
+        "topic": "",
+        "x": 120,
+        "y": 1080,
+        "wires": [
+            [
+                "a115c175.d6bef"
+            ]
+        ]
+    },
+    {
+        "id": "a115c175.d6bef",
+        "type": "link out",
+        "z": "db8a5a42.d628d8",
+        "name": "SendMessage",
+        "links": [
+            "76195b3c.a1c004"
+        ],
+        "x": 255,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "37c8a19d.bc5b86",
+        "type": "ui_button",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "group": "649208c4.c68fdc",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Get all Layouts",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "A?EV00|EX01|LX02|",
+        "payloadType": "str",
+        "topic": "",
+        "x": 120,
+        "y": 1280,
+        "wires": [
+            [
+                "1a1f8ac1.c1f37d"
+            ]
+        ]
+    },
+    {
+        "id": "1a1f8ac1.c1f37d",
+        "type": "link out",
+        "z": "db8a5a42.d628d8",
+        "name": "SendMessage",
+        "links": [
+            "76195b3c.a1c004"
+        ],
+        "x": 255,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "297a78a9.67daf4",
+        "type": "ui_button",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "group": "649208c4.c68fdc",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Get Fixed Weight",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "A?GD01|KG;0;0|",
+        "payloadType": "str",
+        "topic": "",
+        "x": 130,
+        "y": 1120,
+        "wires": [
+            [
+                "ea58614f.3be4b"
+            ]
+        ]
+    },
+    {
+        "id": "ea58614f.3be4b",
+        "type": "link out",
+        "z": "db8a5a42.d628d8",
+        "name": "SendMessage",
+        "links": [
+            "76195b3c.a1c004"
+        ],
+        "x": 255,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "6b9a133b.a8c57",
+        "type": "ui_button",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "group": "649208c4.c68fdc",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Get Tare",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "A?GD02|KG;0;0|",
+        "payloadType": "str",
+        "topic": "",
+        "x": 100,
+        "y": 1160,
+        "wires": [
+            [
+                "89b6f529.f32518"
+            ]
+        ]
+    },
+    {
+        "id": "89b6f529.f32518",
+        "type": "link out",
+        "z": "db8a5a42.d628d8",
+        "name": "SendMessage",
+        "links": [
+            "76195b3c.a1c004"
+        ],
+        "x": 255,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "4f466d0.9e67394",
+        "type": "ui_numeric",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "label": "PLU",
+        "tooltip": "",
+        "group": "649208c4.c68fdc",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "999999999",
+        "step": 1,
+        "x": 210,
+        "y": 1400,
+        "wires": [
+            [
+                "8d5c815a.6251d"
+            ]
+        ]
+    },
+    {
+        "id": "aacac6b9.83cb18",
+        "type": "inject",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "102",
+        "payloadType": "str",
+        "x": 90,
+        "y": 1400,
+        "wires": [
+            [
+                "4f466d0.9e67394"
+            ]
+        ]
+    },
+    {
+        "id": "8d5c815a.6251d",
+        "type": "change",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "article",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f8f4c45.80a9778",
+        "type": "ui_button",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "group": "649208c4.c68fdc",
+        "order": 15,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "PLU Call",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 100,
+        "y": 1440,
+        "wires": [
+            [
+                "f87703d4.a7a61"
+            ]
+        ]
+    },
+    {
+        "id": "8341a21e.eeda8",
+        "type": "link out",
+        "z": "db8a5a42.d628d8",
+        "name": "SendMessage",
+        "links": [
+            "76195b3c.a1c004"
+        ],
+        "x": 415,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "f87703d4.a7a61",
+        "type": "function",
+        "z": "db8a5a42.d628d8",
+        "name": "assemble command",
+        "func": "msg.payload = \"A!XV00|GL19|\" + flow.get('article') + \"|LX02\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 280,
+        "y": 1440,
+        "wires": [
+            [
+                "8341a21e.eeda8"
+            ]
+        ]
+    },
+    {
+        "id": "49655074.a2438c",
+        "type": "ui_button",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "group": "649208c4.c68fdc",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Set Textfield 2",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "A!GT02|Hello from Node-RED",
+        "payloadType": "str",
+        "topic": "",
+        "x": 120,
+        "y": 1360,
+        "wires": [
+            [
+                "c079e26b.096e6"
+            ]
+        ]
+    },
+    {
+        "id": "c079e26b.096e6",
+        "type": "link out",
+        "z": "db8a5a42.d628d8",
+        "name": "SendMessage",
+        "links": [
+            "76195b3c.a1c004"
+        ],
+        "x": 255,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "74ac02d1.8bb5c4",
+        "type": "inject",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 90,
+        "y": 620,
+        "wires": [
+            [
+                "fe982c23.24234"
+            ]
+        ]
+    },
+    {
+        "id": "d5b5d8d3.a4508",
+        "type": "ui_button",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "group": "44915758.d4df2",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Receive from 'DUSTBIN'",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 270,
+        "y": 620,
+        "wires": [
+            [
+                "fe982c23.24234"
+            ]
+        ]
+    },
+    {
+        "id": "fe982c23.24234",
+        "type": "subflow:5e666db0.10f024",
+        "z": "db8a5a42.d628d8",
+        "name": "ws ReceiveMessage",
+        "env": [
+            {
+                "name": "host",
+                "value": "%flow.host",
+                "type": "str"
+            },
+            {
+                "name": "port",
+                "value": "%flow.port",
+                "type": "str"
+            },
+            {
+                "name": "timeout",
+                "value": "%flow.timeout",
+                "type": "str"
+            },
+            {
+                "name": "command",
+                "value": "ReceiveMessage",
+                "type": "str"
+            },
+            {
+                "name": "device",
+                "value": "%flow.device",
+                "type": "str"
+            },
+            {
+                "name": "message",
+                "value": "%flow.message",
+                "type": "str"
+            }
+        ],
+        "x": 580,
+        "y": 620,
+        "wires": [
+            [
+                "c7eb50ce.e37c",
+                "9f41698d.07743"
+            ]
+        ]
+    },
+    {
+        "id": "1be75e24.650ede",
+        "type": "ui_template",
+        "z": "db8a5a42.d628d8",
+        "group": "686e7d6a.546544",
+        "name": "Print Out Status",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "format": "<pre ng-bind-html=\"msg.payload\"></pre>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 840,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9a8c17e.ee8abe8",
+        "type": "inject",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 110,
+        "y": 1620,
+        "wires": [
+            [
+                "56d18d55.139d74"
+            ]
+        ]
+    },
+    {
+        "id": "7feb361f.5be1ec",
+        "type": "ui_button",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "group": "65a62e2.e3d4cd",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Receive from 'DUSTBIN'",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 290,
+        "y": 1620,
+        "wires": [
+            [
+                "56d18d55.139d74"
+            ]
+        ]
+    },
+    {
+        "id": "56d18d55.139d74",
+        "type": "subflow:5e666db0.10f024",
+        "z": "db8a5a42.d628d8",
+        "name": "ws ReceiveMessage (spont) ",
+        "env": [
+            {
+                "name": "host",
+                "value": "%flow.host",
+                "type": "str"
+            },
+            {
+                "name": "port",
+                "value": "%flow.port",
+                "type": "str"
+            },
+            {
+                "name": "timeout",
+                "value": "%flow.timeout",
+                "type": "str"
+            },
+            {
+                "name": "command",
+                "value": "ReceiveMessage",
+                "type": "str"
+            },
+            {
+                "name": "device",
+                "value": "%flow.device",
+                "type": "str"
+            },
+            {
+                "name": "message",
+                "value": "%flow.message",
+                "type": "str"
+            }
+        ],
+        "x": 560,
+        "y": 1620,
+        "wires": [
+            [
+                "28d9e607.f04406",
+                "17d4e4b8.ab40eb",
+                "824de62b.b543d8"
+            ]
+        ]
+    },
+    {
+        "id": "28d9e607.f04406",
+        "type": "debug",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 790,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "17d4e4b8.ab40eb",
+        "type": "json",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": true,
+        "x": 790,
+        "y": 1620,
+        "wires": [
+            [
+                "7608e73.8058258"
+            ]
+        ]
+    },
+    {
+        "id": "7608e73.8058258",
+        "type": "ui_template",
+        "z": "db8a5a42.d628d8",
+        "group": "4b15a40f.01a05c",
+        "name": "Print Out Response",
+        "order": 1,
+        "width": 20,
+        "height": 12,
+        "format": "<pre ng-bind-html=\"msg.payload\"></pre>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 970,
+        "y": 1620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6ab908f.fd87ff8",
+        "type": "ui_text",
+        "z": "db8a5a42.d628d8",
+        "group": "65a62e2.e3d4cd",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Device",
+        "label": "Selected Device",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 710,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3e021a25.317d0e",
+        "type": "status",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "scope": [
+            "56d18d55.139d74"
+        ],
+        "x": 240,
+        "y": 1720,
+        "wires": [
+            [
+                "3fa100cb.f34d78"
+            ]
+        ]
+    },
+    {
+        "id": "3fa100cb.f34d78",
+        "type": "change",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "status.text",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 1720,
+        "wires": [
+            [
+                "e826fa3f.23ab4"
+            ]
+        ]
+    },
+    {
+        "id": "e826fa3f.23ab4",
+        "type": "ui_template",
+        "z": "db8a5a42.d628d8",
+        "group": "65a62e2.e3d4cd",
+        "name": "Print Out Status",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "format": "<pre ng-bind-html=\"msg.payload\"></pre>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 780,
+        "y": 1720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "47971cf7.bf55d4",
+        "type": "catch",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "scope": [
+            "56d18d55.139d74"
+        ],
+        "uncaught": false,
+        "x": 230,
+        "y": 1780,
+        "wires": [
+            [
+                "af2b2922.7e61a8",
+                "824de62b.b543d8"
+            ]
+        ]
+    },
+    {
+        "id": "8190df74.21549",
+        "type": "change",
+        "z": "db8a5a42.d628d8",
+        "name": "error.message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "error.message",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 1800,
+        "wires": [
+            [
+                "e826fa3f.23ab4"
+            ]
+        ]
+    },
+    {
+        "id": "7b46456c.f283ac",
+        "type": "change",
+        "z": "db8a5a42.d628d8",
+        "name": "payload.message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.Message",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 1760,
+        "wires": [
+            [
+                "e826fa3f.23ab4"
+            ]
+        ]
+    },
+    {
+        "id": "af2b2922.7e61a8",
+        "type": "switch",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "500",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 390,
+        "y": 1780,
+        "wires": [
+            [
+                "7b46456c.f283ac"
+            ],
+            [
+                "8190df74.21549"
+            ]
+        ]
+    },
+    {
+        "id": "44835a6c.d2fdd",
+        "type": "comment",
+        "z": "db8a5a42.d628d8",
+        "name": "AcHo",
+        "info": "A!LV01|GW09|2|XX04|LX02\n\nWenn Fehler z.B Auszeichnung gesperrt, dann soll\npayload.Message angezeigt werden.\n\nWeiß nicht woher \"statusCode: 500\" kommt\n\nErgebnis:\n----------\nResponse\n\nError Number: 150\nSystem Number: 3\nError Text: Auszeichnung gesperrt\nError Header: A!LV00|LW01|LW02|LW03|LW05|LX02\nError Data: 150|17921|0|-24572",
+        "x": 810,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "7487f99b.e3591",
+        "type": "comment",
+        "z": "db8a5a42.d628d8",
+        "name": "Receive spontanious Telegrams",
+        "info": "",
+        "x": 170,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "58dedc0f.7de42c",
+        "type": "comment",
+        "z": "db8a5a42.d628d8",
+        "name": "Send forced Telegrams",
+        "info": "",
+        "x": 120,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "31e525a5.4a7a6a",
+        "type": "comment",
+        "z": "db8a5a42.d628d8",
+        "name": "Forced Telegrams - Quick buttons",
+        "info": "",
+        "x": 170,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "be8d77ea.d01bc",
+        "type": "comment",
+        "z": "db8a5a42.d628d8",
+        "name": "Webservice Configuration",
+        "info": "",
+        "x": 130,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "cc937579.945e78",
+        "type": "comment",
+        "z": "db8a5a42.d628d8",
+        "name": "Get Devices",
+        "info": "",
+        "x": 90,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "c2bb9729.f390d",
+        "type": "ui_switch",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "label": "Retrigger",
+        "tooltip": "",
+        "group": "65a62e2.e3d4cd",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "retrigger",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 240,
+        "y": 1660,
+        "wires": [
+            [
+                "824de62b.b543d8"
+            ]
+        ]
+    },
+    {
+        "id": "824de62b.b543d8",
+        "type": "subflow:e773f0a6.da437",
+        "z": "db8a5a42.d628d8",
+        "name": "Gate",
+        "env": [
+            {
+                "name": "Trigger by topic",
+                "value": "retrigger",
+                "type": "str"
+            },
+            {
+                "name": "Send last msg by topic",
+                "value": "<undefined>",
+                "type": "str"
+            },
+            {
+                "name": "Initial pass on",
+                "value": "false",
+                "type": "bool"
+            }
+        ],
+        "x": 390,
+        "y": 1660,
+        "wires": [
+            [
+                "56d18d55.139d74"
+            ]
+        ]
+    },
+    {
+        "id": "a472c2a3.0dd0a",
+        "type": "ui_button",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "group": "649208c4.c68fdc",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Get Device Diagnostics",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "A?MV0E|MW03|1007|LX02",
+        "payloadType": "str",
+        "topic": "",
+        "x": 150,
+        "y": 1320,
+        "wires": [
+            [
+                "76b5e47d.044f38"
+            ]
+        ]
+    },
+    {
+        "id": "76b5e47d.044f38",
+        "type": "link out",
+        "z": "db8a5a42.d628d8",
+        "name": "SendMessage",
+        "links": [
+            "76195b3c.a1c004"
+        ],
+        "x": 255,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "d3ba808d.aeb0c",
+        "type": "inject",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 110,
+        "y": 1900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9cd5f560.d99e48",
+        "type": "ui_button",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "group": "9d2c2882.3d8ee",
+        "order": 10,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Ping",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 110,
+        "y": 1900,
+        "wires": [
+            [
+                "1aabf1a7.22a0fe"
+            ]
+        ]
+    },
+    {
+        "id": "14974fd9.ed0df",
+        "type": "ui_template",
+        "z": "db8a5a42.d628d8",
+        "group": "9d2c2882.3d8ee",
+        "name": "Print Out Status",
+        "order": 11,
+        "width": 3,
+        "height": 1,
+        "format": "<pre ng-bind-html=\"msg.payload\"></pre>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 700,
+        "y": 1900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2f8d793f.e32376",
+        "type": "comment",
+        "z": "db8a5a42.d628d8",
+        "name": "Ping",
+        "info": "",
+        "x": 90,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "1aabf1a7.22a0fe",
+        "type": "subflow:4aad7a60.200634",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "env": [],
+        "x": 290,
+        "y": 1900,
+        "wires": [
+            [
+                "5c2ec5c4.32671c"
+            ]
+        ]
+    },
+    {
+        "id": "5c2ec5c4.32671c",
+        "type": "change",
+        "z": "db8a5a42.d628d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ping",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 1900,
+        "wires": [
+            [
+                "14974fd9.ed0df"
+            ]
+        ]
     }
 ]
